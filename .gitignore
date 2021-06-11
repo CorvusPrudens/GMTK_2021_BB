@@ -26,6 +26,9 @@ ExportedObj/
 *.opendb
 *.VC.db
 
+# Wwise generated
+*/Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset*
+
 # Unity3D generated meta files
 *.pidb.meta
 *.pdb.meta
