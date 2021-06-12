@@ -9,6 +9,7 @@ public class PlayerStats : MonoBehaviour, IDamageable, IUpdateStats
 
     private void Awake()
     {
+        EventBroker.applyPlayerStats += UpdateMaxStats;
         currentHealth = maxStats.health;
     }
 
@@ -19,12 +20,12 @@ public class PlayerStats : MonoBehaviour, IDamageable, IUpdateStats
         maxStats.health += statsToApply.health;
 
         currentHealth += statsToApply.health;
-        print(statsToApply);
+        print("health: " + maxStats.health + " strength: " + maxStats.strength + " speed: " + maxStats.speed);
     }
 
     public void TakeDamage(float damageTaken)
     {
-        currentHealth += damageTaken;
+        currentHealth -= damageTaken;
 
         if(currentHealth <= 0)
         {
