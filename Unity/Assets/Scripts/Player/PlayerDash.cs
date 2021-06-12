@@ -5,24 +5,18 @@ using UnityEngine;
 public class PlayerDash : MonoBehaviour
 {
     //References
-    private Rigidbody2D playerRb;
     private PlayerStats stats;
     private BoxCollider2D playerCollider;
     private PlayerMovement movement;
     //Dash parameters
-    private float dashSpeed = 1;
-    private float startDashTime = 0.3f;
+    private float startDashTime = 0.2f;
     private float dashTime;
-
-    private bool canDash = true;
     private bool isDashing;
-
     private Vector2 dashDirection;
 
     // Start is called before the first frame update
     void Awake()
     {
-        playerRb = GetComponent<Rigidbody2D>();
         stats = GetComponent<PlayerStats>();
         playerCollider = GetComponent<BoxCollider2D>();
         movement = GetComponent<PlayerMovement>();
@@ -35,22 +29,36 @@ public class PlayerDash : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing)
         {
-            isDashing = true;
-            dashDirection = movement.movementVector;
-            print("IS DASHING");
+            StartDash();
         }
-        if (isDashing)
+        if (isDashing)  
         {
             Dash();
         }
+    }
+
+    void StartDash()
+    {
+        isDashing = true;
+        movement.canMove = false;
+        dashDirection = movement.movementVector;
+
+        print("IS DASHING");
+    }
+
+    void ResetDash()
+    {
+        dashTime = startDashTime;
+        isDashing = false;
+        movement.canMove = true;
+        playerCollider.enabled = true;
     }
 
     void Dash()
     {
         if(dashTime <= 0)
         {
-            dashTime = startDashTime;
-            isDashing = false;
+            ResetDash();
         }
         else
         {
