@@ -30,6 +30,24 @@ public class Room : MonoBehaviour
     [System.NonSerialized]
     public List<Door.Position> lockedDoors = new List<Door.Position>();
 
+    [System.NonSerialized]
+    public string type = "normal";
+
+    public void EnableChest(bool state, bool key=false)
+    {
+        Chest.SetActive(state);
+        if (state)
+        {
+            if (key)
+            {
+                // idk do some key stuff here
+            }
+            else
+            {
+                // idk put some health in it or some shite
+            }
+        }
+    }
 
     public List<Door.Position> GetDoors()
     {

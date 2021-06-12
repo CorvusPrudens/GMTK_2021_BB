@@ -21,8 +21,11 @@ public class AnimateObjects : MonoBehaviour
         ROUND_SQUARE,
     }
 
-    [SerializeField]
+    [System.NonSerialized]
     public float globalSpeed = 1.0f;
+
+    [SerializeField]
+    public float localSpeed = 1.0f;
     public bool isAnimating = true;
     
     // [SerializeField, Tooltip("The GameObjects you want to animate.")]
@@ -165,7 +168,7 @@ public class AnimateObjects : MonoBehaviour
     {
         if (isAnimating && rotationAxis != null)
         {
-            animationProgress += Time.deltaTime * globalSpeed;
+            animationProgress += Time.deltaTime * localSpeed * globalSpeed;
             int index = (int) (((animationProgress + functionPhase) % 1) * TABLE_SIZE);
             float func1 = GetFunction(MovementFunction1, index);
             float func2 = GetFunction(MovementFunction2, index);
@@ -176,7 +179,7 @@ public class AnimateObjects : MonoBehaviour
         }
         if (isAnimating && spriteContainer != null)
         {
-            bounceProgress += Time.deltaTime * globalSpeed;
+            bounceProgress += Time.deltaTime * localSpeed * globalSpeed;
             int index = (int) (((bounceProgress + bounceFunctionPhase) % 1) * TABLE_SIZE);
             float func = Mathf.Abs(GetFunction(BounceFunction, index));
             float range = bounceFunctionRange;
