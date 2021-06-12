@@ -20,15 +20,15 @@ public class PlayerStats : MonoBehaviour, IDamageable, IUpdateStats
         maxStats.health += statsToApply.health;
 
         currentHealth += statsToApply.health;
-        print("health: " + maxStats.health + " strength: " + maxStats.strength + " speed: " + maxStats.speed);
-
         EventBroker.CallUpdateStatsUI();
+
+        print("health: " + maxStats.health + " strength: " + maxStats.strength + " speed: " + maxStats.speed);
     }
 
     public void TakeDamage(float damageTaken)
     {
         currentHealth -= damageTaken;
-        print("DAMAGE TO PLAYER: " + damageTaken);
+        EventBroker.CallUpdateStatsUI();
 
         AkSoundEngine.PostEvent("Player_TakeDamage", this.gameObject);
 
@@ -36,6 +36,9 @@ public class PlayerStats : MonoBehaviour, IDamageable, IUpdateStats
         {
             Kill();
         }
+
+        print("DAMAGE TO PLAYER: " + damageTaken);
+
     }
 
     public  void Kill()
