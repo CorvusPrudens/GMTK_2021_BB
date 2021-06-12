@@ -12,9 +12,9 @@ public class DamagePlayer : MonoBehaviour
         enemyStats = GetComponent<EnemyStats>();
     }
 
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    PlayerStats playerStats = collision.GetComponent<PlayerStats>();
-    //    playerStats.TakeDamage(enemyStats.maxStats.strength);
-    //}
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        PlayerStats playerStats = collision.gameObject.GetComponent<PlayerStats>();
+        playerStats.TakeDamage(enemyStats.maxStats.strength);
+    }
 }

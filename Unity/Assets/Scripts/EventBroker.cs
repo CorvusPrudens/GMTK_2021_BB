@@ -11,4 +11,11 @@ public static class EventBroker
     {
         applyPlayerStats?.Invoke(statsToApply);
     }
+
+    public static event Action updateStatsUI;
+
+    public static void CallUpdateStatsUI()
+    {
+    updateStatsUI?.Invoke();
+    }
 }

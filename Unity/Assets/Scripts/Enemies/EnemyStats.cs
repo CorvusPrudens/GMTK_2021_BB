@@ -27,6 +27,8 @@ public class EnemyStats : MonoBehaviour, IDamageable
     {
         currentHealth -= damageTaken;
 
+        print("DAMAGE TO " + gameObject.name + ": " + damageTaken);
+
         if (currentHealth <= 0)
         {
             Kill();
