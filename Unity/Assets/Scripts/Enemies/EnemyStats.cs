@@ -10,6 +10,10 @@ public class EnemyStats : MonoBehaviour, IDamageable
     private ChangePlayerStats changePlayerStatus;
     public EnemyType enemyType;
 
+    //Movement vectors
+    private Vector2 moveVector;
+    private Vector2 normalVector;
+
     // Start is called before the first frame update
     void Awake()
     {
