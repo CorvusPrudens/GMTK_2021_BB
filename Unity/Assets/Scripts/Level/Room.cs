@@ -10,6 +10,7 @@ public class Room : MonoBehaviour
     public GameObject Traps;
     public GameObject Chest;
     public GameObject Spawn;
+    public GameObject Transition;
 
     [System.NonSerialized]
     public RoomPosition position;
@@ -32,6 +33,13 @@ public class Room : MonoBehaviour
 
     [System.NonSerialized]
     public string type = "normal";
+
+    public bool visible = false;
+    bool prevvis = false;
+    public float transitionSpeed = 4f;
+    float transitionTick = 0;
+    bool transin = false;
+    bool transout = false;
 
     public void EnableChest(bool state, bool key=false)
     {
@@ -60,15 +68,74 @@ public class Room : MonoBehaviour
         return dirs;
     }
 
+    public void FadeIn(float speed=-1)
+    {
+        transin = true;
+        if (speed > 0)
+        {
+            transitionSpeed = speed;
+        }
+    }
+
+    public void FadeOut(float speed=-1)
+    {
+        transout = true;
+        if (speed > 0)
+        {
+            transitionSpeed = speed;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
+    void OnValidate()
+    {
+        if (prevvis != visible)
+        {
+            if (visible) FadeIn();
+            else FadeOut();
+            prevvis = visible;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
-        
+        if (transin)
+        {
+            Debug.Log(transitionTick);
+            if (transitionTick <= 0)
+            {
+                for (int i = 0; i < transform.childCount - 2; i++)
+                {
+                    transform.GetChild(i).gameObject.SetActive(true);
+                }
+            }
+            if (transitionTick < 1.0f) transitionTick += transitionSpeed * Time.deltaTime;
+            else
+            {
+                transin = false;
+            }
+            SpriteRenderer rend = Transition.GetComponent<SpriteRenderer>();
+            rend.color = new Color(rend.color.r, rend.color.g, rend.color.b, 1 - transitionTick);
+        }
+        else if (transout)
+        {
+            if (transitionTick > 0.0f) transitionTick -= transitionSpeed * Time.deltaTime;
+            else
+            {
+                transout = false;
+                for (int i = 0; i < transform.childCount - 2; i++)
+                {
+                    transform.GetChild(i).gameObject.SetActive(false);
+                }
+            }
+            SpriteRenderer rend =  Transition.GetComponent<SpriteRenderer>();
+            rend.color = new Color(rend.color.r, rend.color.g, rend.color.b, 1 - transitionTick);
+        }
     }
 }
