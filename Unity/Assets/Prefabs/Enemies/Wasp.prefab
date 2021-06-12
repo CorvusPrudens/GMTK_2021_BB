@@ -259,6 +259,7 @@ MonoBehaviour:
     health: 5
     speed: 1
     strength: 5
+  enemyType: 2
 --- !u!114 &2842357770252315002
 MonoBehaviour:
   m_ObjectHideFlags: 0

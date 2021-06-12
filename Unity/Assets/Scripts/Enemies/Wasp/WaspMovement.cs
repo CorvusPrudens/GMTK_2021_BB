@@ -14,7 +14,6 @@ public class WaspMovement : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         stats = GetComponent<EnemyStats>();
-
     }
 
     private void Start()
