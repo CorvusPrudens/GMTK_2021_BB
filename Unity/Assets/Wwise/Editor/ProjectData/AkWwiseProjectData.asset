@@ -393,7 +393,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: ff0b084ed1e3e44e95d214517df38595
     GuidInternal: 
-    m_lastTime: -8585780736655262543
+    m_lastTime: -8585780701950739807
     List:
     - name: Dragon_Attack
       guid: 07b00ab959dd7a44b6d6d69411ae9c06
@@ -1111,6 +1111,26 @@ MonoBehaviour:
         ObjectType: 3
         guid: 052129d371ff7d408dbd7bc4b5492081
       Path: Events\Default Work Unit\SFX\Enemy\Wasp\Wasp_TakeDamage
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Win_Stinger
+      guid: 36ef86fcf81bc744b45cea552cda425f
+      id: 1332089670
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ff0b084ed1e3e44e95d214517df38595
+      - ElementName: MX
+        ObjectType: 4
+        guid: c1c2ba883fd3f74084d7af16c191d99b
+      - ElementName: Win_Stinger
+        ObjectType: 3
+        guid: 36ef86fcf81bc744b45cea552cda425f
+      Path: Events\Default Work Unit\MX\Win_Stinger
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
