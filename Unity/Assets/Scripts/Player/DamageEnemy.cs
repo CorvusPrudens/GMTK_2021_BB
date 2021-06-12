@@ -11,9 +11,9 @@ public class DamageEnemy : MonoBehaviour
         playerStats = GetComponent<PlayerStats>();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        EnemyStats enemy = collision.GetComponent<EnemyStats>();
+        EnemyStats enemy = collision.gameObject.GetComponent<EnemyStats>();
         enemy.TakeDamage(playerStats.maxStats.strength);
     }
 }

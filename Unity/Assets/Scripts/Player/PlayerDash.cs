@@ -42,8 +42,6 @@ public class PlayerDash : MonoBehaviour
         isDashing = true;
         movement.canMove = false;
         dashDirection = movement.movementVector;
-
-        print("IS DASHING");
     }
 
     void ResetDash()

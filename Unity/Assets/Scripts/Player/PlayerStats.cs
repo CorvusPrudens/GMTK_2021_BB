@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour, IDamageable, IUpdateStats
 {
     public Stats maxStats;
-    private float currentHealth;
+    [HideInInspector] public float currentHealth;
 
     private void Awake()
     {
@@ -21,11 +21,14 @@ public class PlayerStats : MonoBehaviour, IDamageable, IUpdateStats
 
         currentHealth += statsToApply.health;
         print("health: " + maxStats.health + " strength: " + maxStats.strength + " speed: " + maxStats.speed);
+
+        EventBroker.CallUpdateStatsUI();
     }
 
     public void TakeDamage(float damageTaken)
     {
         currentHealth -= damageTaken;
+        print("DAMAGE TO PLAYER: " + damageTaken);
 
         if(currentHealth <= 0)
         {
