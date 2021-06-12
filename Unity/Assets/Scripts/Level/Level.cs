@@ -19,7 +19,7 @@ public class Level : MonoBehaviour
         bool inside = pos.x > -1 && pos.x < rooms.GetLength(0) && pos.y > -1 && pos.y < rooms.GetLength(1);
         if (!inside) return false;
         bool exclusion = excluded.Contains(pos);
-        bool visited = checkVisited ? rooms[pos.x, pos.y].visited : false;
+        bool visited = checkVisited ? rooms[pos.x, pos.y].visited : !rooms[pos.x, pos.y].visited;
         return !exclusion && !visited;
     }
 
@@ -46,8 +46,11 @@ public class Level : MonoBehaviour
         {
             for (int j = 0; j < rooms.GetLength(1); j++)
             {
+                // // Instantiate(rooms[i,j]);
+                // Room tempr;
+                // rooms[i,j] = tempr;
                 // Instantiate(rooms[i,j]);
-                rooms[i,j] = new Room();
+                rooms[i,j] = gameObject.AddComponent<Room>();
             }
         }
     }
@@ -268,9 +271,15 @@ public class Level : MonoBehaviour
 
             // locked door!
             (Door.Position bestPos, RoomPosition otherpos, int smallest) = BestKeyDoor(options, combined, fromr);
-            combined[fromr.x, fromr.y].lockedDoors.Add(Door.Lock(bestPos)); // this needs massive improvement
-            combined[otherpos.x, otherpos.y].lockedDoors.Add(Door.Lock(Door.Opposite(bestPos)));
-            Debug.Log(fromr);
+            combined[fromr.x, fromr.y].doorList.Add(Door.Lock(bestPos)); // this needs massive improvement
+            if (combined[fromr.x, fromr.y].doorList.Contains(bestPos)) {
+                combined[fromr.x, fromr.y].doorList.Remove(bestPos);
+            }
+            // combined[otherpos.x, otherpos.y].doorList.Add(Door.Lock(Door.Opposite(bestPos)));
+            // Debug.Log(fromr);
+
+            combined[mazeStart.x,mazeStart.y].type = "start";
+            combined[mazeEnd.x,mazeEnd.y].type = "end";
 
             int[] scoretable = {0, 10, 15, 20, 10, 5};
             int smscore = 0;
@@ -310,6 +319,26 @@ public class Level : MonoBehaviour
                 temproom.transform.position = new Vector3(x * 17, -y * 11, 0);
                 GameObject doorcontainer = temproom.GetComponent<Room>().Doors;
                 List<Door.Position> doorlist = generated[idx][x, y].doorList;
+
+                if (generated[idx][x, y].type == "start")
+                {
+                    temproom.transform.GetChild(temproom.transform.childCount - 1).GetComponent<SpriteRenderer>().color = Color.gray;
+                }
+
+                if (generated[idx][x, y].type == "end")
+                {
+                    temproom.transform.GetChild(temproom.transform.childCount - 1).GetComponent<SpriteRenderer>().color = Color.black;
+                }
+
+                if (generated[idx][x, y].dead_end)
+                {
+                    temproom.GetComponent<Room>().EnableChest(true);
+                }
+                else
+                {
+                    temproom.GetComponent<Room>().EnableChest(false);
+                }
+
                 foreach (Transform d in doorcontainer.transform)
                 {
                     Door.Position temppos = d.GetComponent<Door>().position;
@@ -324,7 +353,7 @@ public class Level : MonoBehaviour
                         d.gameObject.SetActive(false);
                     }
                 }
-                
+
             }
         }
     }
