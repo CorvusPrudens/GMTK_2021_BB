@@ -211,6 +211,7 @@ GameObject:
   - component: {fileID: 4395539471820393106}
   - component: {fileID: 4395539471820393110}
   - component: {fileID: 4395539471820393129}
+  - component: {fileID: 875012141}
   m_Layer: 0
   m_Name: Dragonfly
   m_TagString: Untagged
@@ -324,6 +325,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2b530eed46784e36a4184f0fca0c904, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &875012141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4395539471820393107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a25000e2cf91433caea1cf7142391c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minWaitTime: 3
+  maxWaitTime: 6
 --- !u!1 &4395539471829089224
 GameObject:
   m_ObjectHideFlags: 0
