@@ -6,10 +6,8 @@ public class ChangePlayerStats : MonoBehaviour
 {
     public Stats statsToApply;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void ApplyStatsToPlayer()
     {
-        PlayerStats playerStats = collision.GetComponent<PlayerStats>();
-        playerStats.UpdateMaxStats(statsToApply);
-        print("COLLISION");
+        EventBroker.CallApplyPLayerStats(statsToApply);
     }
 }
