@@ -1,0 +1,24 @@
+Event	ID	Name			Wwise Object Path	Notes
+	137430303	Player_GetHP			\Default Work Unit\SFX\Player\Player_GetHP	
+	513291760	Player_CollectSoul			\Default Work Unit\SFX\Player\Player_CollectSoul	
+	909071731	Player_BashDoor			\Default Work Unit\SFX\Player\Player_BashDoor	
+	1516819876	Player_OpenChest			\Default Work Unit\SFX\Player\Player_OpenChest	
+	1542330065	Player_Die			\Default Work Unit\SFX\Player\Player_Die	
+	1891408857	Player_UnlockDoor			\Default Work Unit\SFX\Player\Player_UnlockDoor	
+	2394582229	Player_Dash			\Default Work Unit\SFX\Player\Player_Dash	
+	2824512041	Player_Attack			\Default Work Unit\SFX\Player\Player_Attack	
+	3510314130	Player_CollectKey			\Default Work Unit\SFX\Player\Player_CollectKey	
+	3870290027	Player_TakeDamage			\Default Work Unit\SFX\Player\Player_TakeDamage	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	37139171	Collect_Key	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\Player_CollectKey_T_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Collect_Key		198280
+	75437915	Player_TakesDamage_T	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\Player_TakesDamage_T_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Takes_Damage\Player_TakesDamage_T		208264
+	176956555	Dash	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\Player_Dash_T_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Dash		155192
+	257110889	Bash_Door	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\Player_BashDoor_T_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Bash_Door		198284
+	486180910	Collect_Soul	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\Player_CollectSoul_T_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Collect_Soul		198284
+	552273355	GetHP	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\Player_GetHP_T_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\GetHP		238652
+	581694431	Dies	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\Player_Dies_T_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Dies		177872
+	724613463	Open_Chests	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\Player_OpenChest_T_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Open_Chests		238652
+	793636448	Player_Attack_T	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\Player_Attack_T_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Attack\Player_Attack_T		150848
+	967850174	Unlock_Door	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\Player_UnlockDoor_T_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Unlock_Door		238652
+

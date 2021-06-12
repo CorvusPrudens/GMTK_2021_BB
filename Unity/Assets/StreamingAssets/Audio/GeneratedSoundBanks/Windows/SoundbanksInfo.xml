@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_2021_BB\Unity\Assets\StreamingAssets\Audio\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX" Hash="4259330410">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="1661994096" Language="SFX" Hash="3487571633">
+			<ObjectPath>\SoundBanks\Default Work Unit\Soundbank</ObjectPath>
+			<ShortName>Soundbank</ShortName>
+			<Path>Soundbank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2824512041" Name="Player_Attack" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_Attack" DurationType="OneShot" DurationMin="0.785333" DurationMax="0.785333">
+					<IncludedMemoryFiles>
+						<File Id="793636448" Language="SFX">
+							<ShortName>Player_Attack_T.wav</ShortName>
+							<Path>SFX\Player_Attack_T_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="909071731" Name="Player_BashDoor" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_BashDoor" DurationType="OneShot" DurationMin="1.032396" DurationMax="1.032396">
+					<IncludedMemoryFiles>
+						<File Id="257110889" Language="SFX">
+							<ShortName>Player_BashDoor_T.wav</ShortName>
+							<Path>SFX\Player_BashDoor_T_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3510314130" Name="Player_CollectKey" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_CollectKey" DurationType="OneShot" DurationMin="1.032375" DurationMax="1.032375">
+					<IncludedMemoryFiles>
+						<File Id="37139171" Language="SFX">
+							<ShortName>Player_CollectKey_T.wav</ShortName>
+							<Path>SFX\Player_CollectKey_T_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="513291760" Name="Player_CollectSoul" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_CollectSoul" DurationType="OneShot" DurationMin="1.032396" DurationMax="1.032396">
+					<IncludedMemoryFiles>
+						<File Id="486180910" Language="SFX">
+							<ShortName>Player_CollectSoul_T.wav</ShortName>
+							<Path>SFX\Player_CollectSoul_T_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2394582229" Name="Player_Dash" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_Dash" DurationType="OneShot" DurationMin="0.807958" DurationMax="0.807958">
+					<IncludedMemoryFiles>
+						<File Id="176956555" Language="SFX">
+							<ShortName>Player_Dash_T.wav</ShortName>
+							<Path>SFX\Player_Dash_T_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1542330065" Name="Player_Die" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_Die" DurationType="OneShot" DurationMin="0.926083" DurationMax="0.926083">
+					<IncludedMemoryFiles>
+						<File Id="581694431" Language="SFX">
+							<ShortName>Player_Dies_T.wav</ShortName>
+							<Path>SFX\Player_Dies_T_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="137430303" Name="Player_GetHP" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_GetHP" DurationType="OneShot" DurationMin="1.242646" DurationMax="1.242646">
+					<IncludedMemoryFiles>
+						<File Id="552273355" Language="SFX">
+							<ShortName>Player_GetHP_T.wav</ShortName>
+							<Path>SFX\Player_GetHP_T_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1516819876" Name="Player_OpenChest" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_OpenChest" DurationType="OneShot" DurationMin="1.242646" DurationMax="1.242646">
+					<IncludedMemoryFiles>
+						<File Id="724613463" Language="SFX">
+							<ShortName>Player_OpenChest_T.wav</ShortName>
+							<Path>SFX\Player_OpenChest_T_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3870290027" Name="Player_TakeDamage" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_TakeDamage" DurationType="OneShot" DurationMin="1.084375" DurationMax="1.084375">
+					<IncludedMemoryFiles>
+						<File Id="75437915" Language="SFX">
+							<ShortName>Player_TakesDamage_T.wav</ShortName>
+							<Path>SFX\Player_TakesDamage_T_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1891408857" Name="Player_UnlockDoor" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_UnlockDoor" DurationType="OneShot" DurationMin="1.242646" DurationMax="1.242646">
+					<IncludedMemoryFiles>
+						<File Id="967850174" Language="SFX">
+							<ShortName>Player_UnlockDoor_T.wav</ShortName>
+							<Path>SFX\Player_UnlockDoor_T_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
