@@ -4,23 +4,25 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    //Stats Reference
-    private PlayerStats stats;
-    //Movement
+    //Basic Movement
+    [SerializeField] private float moveSpeed;
     private float inputVertical;
     private float inputHorizontal;
-    private Vector2 movementVector;
+    [HideInInspector] public Vector2 movementVector;
+    [HideInInspector] public bool canMove;
 
-    // Start is called before the first frame update
-    void Awake()
+    private void Awake()
     {
-        stats = GetComponent<PlayerStats>();
+        canMove = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        Movement();
+        if (canMove)
+        {
+            Movement();
+        }
+
     }
 
     private void Movement()
@@ -29,6 +31,6 @@ public class PlayerMovement : MonoBehaviour
         inputVertical = Input.GetAxis("Vertical");
         movementVector = new Vector2(inputHorizontal, inputVertical);
 
-        transform.Translate(movementVector * stats.maxStats.speed * Time.deltaTime);
+        transform.Translate(movementVector * moveSpeed * Time.deltaTime);
     }
 }

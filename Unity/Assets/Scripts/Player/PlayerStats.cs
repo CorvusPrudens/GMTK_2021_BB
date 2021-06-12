@@ -37,6 +37,4 @@ public class PlayerStats : MonoBehaviour, IDamageable, IUpdateStats
     {
         Destroy(gameObject);
     }
-
-
 }
