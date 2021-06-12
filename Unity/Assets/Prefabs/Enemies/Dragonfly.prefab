@@ -212,7 +212,6 @@ GameObject:
   - component: {fileID: 4395539471820393110}
   - component: {fileID: 4395539471820393129}
   - component: {fileID: 875012141}
-  - component: {fileID: 4105963371282283094}
   m_Layer: 6
   m_Name: Dragonfly
   m_TagString: Enemy
@@ -295,9 +294,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statsToApply:
-    health: -2
-    speed: 5
-    strength: -2
+    health: -1
+    speed: 15
+    strength: 1
 --- !u!114 &4395539471820393110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,8 +311,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxStats:
     health: 5
-    speed: 10
-    strength: 3
+    speed: 8
+    strength: 2
   enemyType: 0
 --- !u!114 &4395539471820393129
 MonoBehaviour:
@@ -328,20 +327,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &875012141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4395539471820393107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a25000e2cf91433caea1cf7142391c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minWaitTime: 3
-  maxWaitTime: 6
---- !u!114 &4105963371282283094
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

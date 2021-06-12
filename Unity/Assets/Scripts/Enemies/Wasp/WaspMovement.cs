@@ -6,6 +6,7 @@ public class WaspMovement : MonoBehaviour
 {
     private GameObject player;
     private EnemyStats stats;
+    private Rigidbody2D rb;
     public float aggroSpeedMultiplier;
     [HideInInspector] public float baseSpeed;
     [HideInInspector] public float speed;
@@ -14,6 +15,7 @@ public class WaspMovement : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         stats = GetComponent<EnemyStats>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void Start()
@@ -23,7 +25,7 @@ public class WaspMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void LateUpdate()
+    void FixedUpdate()
     {
         Move();
     }
