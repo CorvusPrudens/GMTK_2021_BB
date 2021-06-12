@@ -14,7 +14,10 @@ public class DamagePlayer : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        PlayerStats playerStats = collision.gameObject.GetComponent<PlayerStats>();
-        playerStats.TakeDamage(enemyStats.maxStats.strength);
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            PlayerStats playerStats = collision.gameObject.GetComponent<PlayerStats>();
+            playerStats.TakeDamage(enemyStats.maxStats.strength);
+        }
     }
 }

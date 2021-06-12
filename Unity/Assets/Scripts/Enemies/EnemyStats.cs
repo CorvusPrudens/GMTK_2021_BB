@@ -7,8 +7,8 @@ public class EnemyStats : MonoBehaviour, IDamageable
 {
     public Stats maxStats;
     private float currentHealth;
-
     private ChangePlayerStats changePlayerStatus;
+    public EnemyType enemyType;
 
     // Start is called before the first frame update
     void Awake()
