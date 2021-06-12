@@ -13,6 +13,11 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID DRAGON_ATTACK = 482261039U;
+        static const AkUniqueID DRAGON_DASH = 820321623U;
+        static const AkUniqueID DRAGON_DIE = 1541504395U;
+        static const AkUniqueID DRAGON_TAKEDAMAGE = 3037277281U;
+        static const AkUniqueID HOVER = 3753593413U;
         static const AkUniqueID LEVEL_PLAY = 70953078U;
         static const AkUniqueID PLAYER_ATTACK = 2824512041U;
         static const AkUniqueID PLAYER_BASHDOOR = 909071731U;
@@ -24,6 +29,14 @@ namespace AK
         static const AkUniqueID PLAYER_OPENCHEST = 1516819876U;
         static const AkUniqueID PLAYER_TAKEDAMAGE = 3870290027U;
         static const AkUniqueID PLAYER_UNLOCKDOOR = 1891408857U;
+        static const AkUniqueID PRESS = 1086439346U;
+        static const AkUniqueID ROLLY_ATTACK = 736689176U;
+        static const AkUniqueID ROLLY_DIE = 4270670118U;
+        static const AkUniqueID ROLLY_TAKEDAMAGE = 1889715514U;
+        static const AkUniqueID WASP_ATTACK = 3932795119U;
+        static const AkUniqueID WASP_DIE = 994571083U;
+        static const AkUniqueID WASP_TAKEDAMAGE = 2772886561U;
+        static const AkUniqueID WIN_STINGER = 1332089670U;
     } // namespace EVENTS
 
     namespace STATES

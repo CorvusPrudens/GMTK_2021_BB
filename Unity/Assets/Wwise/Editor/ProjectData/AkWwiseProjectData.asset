@@ -365,7 +365,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: ef860cb255a4fa4683dc80f67272beed
     GuidInternal: 
-    m_lastTime: -8585780734084315546
+    m_lastTime: -8585780665696089472
     List:
     - name: Soundbank
       guid: a51ec8a1ebce284aa68ba10d11d5ba78
@@ -393,7 +393,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: ff0b084ed1e3e44e95d214517df38595
     GuidInternal: 
-    m_lastTime: -8585780701950739807
+    m_lastTime: -8585780663437506018
     List:
     - name: Dragon_Attack
       guid: 07b00ab959dd7a44b6d6d69411ae9c06
@@ -419,8 +419,8 @@ MonoBehaviour:
         guid: 07b00ab959dd7a44b6d6d69411ae9c06
       Path: Events\Default Work Unit\SFX\Enemy\DragonFly\Dragon_Attack
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Dragon_Dash
       guid: 78628316c8f5b643b7ba34875991d341
       id: 820321623
@@ -445,8 +445,8 @@ MonoBehaviour:
         guid: 78628316c8f5b643b7ba34875991d341
       Path: Events\Default Work Unit\SFX\Enemy\DragonFly\Dragon_Dash
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Dragon_Die
       guid: 8299522c07a94a41bf295fce03e0e310
       id: 1541504395
@@ -471,8 +471,8 @@ MonoBehaviour:
         guid: 8299522c07a94a41bf295fce03e0e310
       Path: Events\Default Work Unit\SFX\Enemy\DragonFly\Dragon_Die
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Dragon_TakeDamage
       guid: 8b712fc27b4d3c4b87d3ea1726c8bbfa
       id: 3037277281
@@ -497,8 +497,8 @@ MonoBehaviour:
         guid: 8b712fc27b4d3c4b87d3ea1726c8bbfa
       Path: Events\Default Work Unit\SFX\Enemy\DragonFly\Dragon_TakeDamage
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: DragonFly
       guid: 5adbd1b68de9fa4ca1d60983c3c68310
       id: 3028993147
@@ -563,8 +563,8 @@ MonoBehaviour:
         guid: 99e67631ed2369499577d1a1d94d5e03
       Path: Events\Default Work Unit\SFX\UI\Hover
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.02
+      minDuration: 0.02
     - name: Level_Play
       guid: cc09703e88af2844a813d11bcc519fc1
       id: 70953078
@@ -873,8 +873,8 @@ MonoBehaviour:
         guid: c13b75741601234da71c4a26c8f385a8
       Path: Events\Default Work Unit\SFX\UI\Press
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.05
+      minDuration: 0.05
     - name: Rolly_Attack
       guid: b2b962ac8937724cb03f12c348e25ca9
       id: 736689176
@@ -899,8 +899,8 @@ MonoBehaviour:
         guid: b2b962ac8937724cb03f12c348e25ca9
       Path: Events\Default Work Unit\SFX\Enemy\RollyPolly\Rolly_Attack
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Rolly_Die
       guid: 35264716bbf4b543bbe2f275f5e71bf3
       id: 4270670118
@@ -925,8 +925,8 @@ MonoBehaviour:
         guid: 35264716bbf4b543bbe2f275f5e71bf3
       Path: Events\Default Work Unit\SFX\Enemy\RollyPolly\Rolly_Die
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Rolly_TakeDamage
       guid: 7c39dc4562d4d643872c18020d20588a
       id: 1889715514
@@ -951,8 +951,8 @@ MonoBehaviour:
         guid: 7c39dc4562d4d643872c18020d20588a
       Path: Events\Default Work Unit\SFX\Enemy\RollyPolly\Rolly_TakeDamage
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: RollyPolly
       guid: eaa298879062e6489f9ee451d0083d67
       id: 3072444211
@@ -1060,8 +1060,8 @@ MonoBehaviour:
         guid: 061b81db4ac2bd4e9a7817162858cf8a
       Path: Events\Default Work Unit\SFX\Enemy\Wasp\Wasp_Attack
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Wasp_Die
       guid: 148c9574aa1a5046bbfefd2bc5b43e35
       id: 994571083
@@ -1086,8 +1086,8 @@ MonoBehaviour:
         guid: 148c9574aa1a5046bbfefd2bc5b43e35
       Path: Events\Default Work Unit\SFX\Enemy\Wasp\Wasp_Die
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Wasp_TakeDamage
       guid: 052129d371ff7d408dbd7bc4b5492081
       id: 2772886561
@@ -1112,8 +1112,8 @@ MonoBehaviour:
         guid: 052129d371ff7d408dbd7bc4b5492081
       Path: Events\Default Work Unit\SFX\Enemy\Wasp\Wasp_TakeDamage
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Win_Stinger
       guid: 36ef86fcf81bc744b45cea552cda425f
       id: 1332089670
@@ -1132,8 +1132,8 @@ MonoBehaviour:
         guid: 36ef86fcf81bc744b45cea552cda425f
       Path: Events\Default Work Unit\MX\Win_Stinger
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 11
+      minDuration: 11
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -1288,8 +1288,8 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8585780900148662041
     List: []
-  ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 05000000060000001b000000dd000000de000000df00000007010000080100007d0100007e01000081060000
+  ExpandedFileSystemItemIds: 01000000050000000600000007000000080000000c0000000d0000000e0000001b0000002800000033000000dd000000de000000df00000007010000080100007d0100007e01000081060000
+  ExpandedWaapiItemIds: 0100000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000001b0000001c0000001d0000001f00000020000000210000002800000033000000dd000000de000000df00000007010000080100007d0100007e01000081060000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

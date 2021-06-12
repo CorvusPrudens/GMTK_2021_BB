@@ -11,16 +11,21 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="857022299">
+		<SoundBank Id="1355168291" Language="SFX" Hash="2826927772">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="1661994096" Language="SFX" Hash="1303171850">
+		<SoundBank Id="1661994096" Language="SFX" Hash="4143179163">
 			<ObjectPath>\SoundBanks\Default Work Unit\Soundbank</ObjectPath>
 			<ShortName>Soundbank</ShortName>
 			<Path>Soundbank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="482261039" Name="Dragon_Attack" ObjectPath="\Events\Default Work Unit\SFX\Enemy\DragonFly\Dragon_Attack" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="820321623" Name="Dragon_Dash" ObjectPath="\Events\Default Work Unit\SFX\Enemy\DragonFly\Dragon_Dash" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1541504395" Name="Dragon_Die" ObjectPath="\Events\Default Work Unit\SFX\Enemy\DragonFly\Dragon_Die" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3037277281" Name="Dragon_TakeDamage" ObjectPath="\Events\Default Work Unit\SFX\Enemy\DragonFly\Dragon_TakeDamage" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3753593413" Name="Hover" ObjectPath="\Events\Default Work Unit\SFX\UI\Hover" DurationType="OneShot" DurationMin="0.020000" DurationMax="0.020000"/>
 				<Event Id="70953078" Name="Level_Play" ObjectPath="\Events\Default Work Unit\MX\Level_Play" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="298740606" Language="SFX">
@@ -44,6 +49,9 @@
 							<Path>SFX\5.4_136_level_main_36_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<ActionSetState>
+						<ActionSetStateEntry Id="1668749442" Name="NA" ObjectPath="\States\Default Work Unit\Music_State\NA"/>
+					</ActionSetState>
 				</Event>
 				<Event Id="2824512041" Name="Player_Attack" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_Attack" DurationType="OneShot" DurationMin="0.424000" DurationMax="0.427417">
 					<IncludedMemoryFiles>
@@ -141,7 +149,27 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="1086439346" Name="Press" ObjectPath="\Events\Default Work Unit\SFX\UI\Press" DurationType="OneShot" DurationMin="0.050000" DurationMax="0.050000"/>
+				<Event Id="736689176" Name="Rolly_Attack" ObjectPath="\Events\Default Work Unit\SFX\Enemy\RollyPolly\Rolly_Attack" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4270670118" Name="Rolly_Die" ObjectPath="\Events\Default Work Unit\SFX\Enemy\RollyPolly\Rolly_Die" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1889715514" Name="Rolly_TakeDamage" ObjectPath="\Events\Default Work Unit\SFX\Enemy\RollyPolly\Rolly_TakeDamage" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3932795119" Name="Wasp_Attack" ObjectPath="\Events\Default Work Unit\SFX\Enemy\Wasp\Wasp_Attack" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="994571083" Name="Wasp_Die" ObjectPath="\Events\Default Work Unit\SFX\Enemy\Wasp\Wasp_Die" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2772886561" Name="Wasp_TakeDamage" ObjectPath="\Events\Default Work Unit\SFX\Enemy\Wasp\Wasp_TakeDamage" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1332089670" Name="Win_Stinger" ObjectPath="\Events\Default Work Unit\MX\Win_Stinger" DurationType="OneShot" DurationMin="11.000000" DurationMax="11.000000">
+					<IncludedMemoryFiles>
+						<File Id="533375175" Language="SFX">
+							<ShortName>outro_stinger_REAL.wav</ShortName>
+							<Path>SFX\outro_stinger_REAL_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 			</IncludedEvents>
+			<StateGroups>
+				<StateGroup Id="1668749442" Name="NA" ObjectPath="\States\Default Work Unit\Music_State\NA">
+					<States/>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>
