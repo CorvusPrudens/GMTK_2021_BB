@@ -16,16 +16,24 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="1661994096" Language="SFX" Hash="3487571633">
+		<SoundBank Id="1661994096" Language="SFX" Hash="426013775">
 			<ObjectPath>\SoundBanks\Default Work Unit\Soundbank</ObjectPath>
 			<ShortName>Soundbank</ShortName>
 			<Path>Soundbank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2824512041" Name="Player_Attack" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_Attack" DurationType="OneShot" DurationMin="0.785333" DurationMax="0.785333">
+				<Event Id="2824512041" Name="Player_Attack" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_Attack" DurationType="OneShot" DurationMin="0.424000" DurationMax="0.427417">
 					<IncludedMemoryFiles>
-						<File Id="793636448" Language="SFX">
-							<ShortName>Player_Attack_T.wav</ShortName>
-							<Path>SFX\Player_Attack_T_10C4C929.wem</Path>
+						<File Id="62168100" Language="SFX">
+							<ShortName>sfx_player_attack_03.wav</ShortName>
+							<Path>SFX\sfx_player_attack_03_10C4C929.wem</Path>
+						</File>
+						<File Id="676935544" Language="SFX">
+							<ShortName>sfx_player_attack_01.wav</ShortName>
+							<Path>SFX\sfx_player_attack_01_10C4C929.wem</Path>
+						</File>
+						<File Id="880281348" Language="SFX">
+							<ShortName>sfx_player_attack_02.wav</ShortName>
+							<Path>SFX\sfx_player_attack_02_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -45,27 +53,27 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="513291760" Name="Player_CollectSoul" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_CollectSoul" DurationType="OneShot" DurationMin="1.032396" DurationMax="1.032396">
+				<Event Id="513291760" Name="Player_CollectSoul" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_CollectSoul" DurationType="OneShot" DurationMin="1.595750" DurationMax="1.595750">
 					<IncludedMemoryFiles>
-						<File Id="486180910" Language="SFX">
-							<ShortName>Player_CollectSoul_T.wav</ShortName>
-							<Path>SFX\Player_CollectSoul_T_10C4C929.wem</Path>
+						<File Id="376026972" Language="SFX">
+							<ShortName>sfx_player_collectsoul.wav</ShortName>
+							<Path>SFX\sfx_player_collectsoul_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2394582229" Name="Player_Dash" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_Dash" DurationType="OneShot" DurationMin="0.807958" DurationMax="0.807958">
+				<Event Id="2394582229" Name="Player_Dash" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_Dash" DurationType="OneShot" DurationMin="0.250146" DurationMax="0.250146">
 					<IncludedMemoryFiles>
-						<File Id="176956555" Language="SFX">
-							<ShortName>Player_Dash_T.wav</ShortName>
-							<Path>SFX\Player_Dash_T_10C4C929.wem</Path>
+						<File Id="821661056" Language="SFX">
+							<ShortName>sfx_player_dash.wav</ShortName>
+							<Path>SFX\sfx_player_dash_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1542330065" Name="Player_Die" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_Die" DurationType="OneShot" DurationMin="0.926083" DurationMax="0.926083">
+				<Event Id="1542330065" Name="Player_Die" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_Die" DurationType="OneShot" DurationMin="0.687229" DurationMax="0.687229">
 					<IncludedMemoryFiles>
-						<File Id="581694431" Language="SFX">
-							<ShortName>Player_Dies_T.wav</ShortName>
-							<Path>SFX\Player_Dies_T_10C4C929.wem</Path>
+						<File Id="752384942" Language="SFX">
+							<ShortName>sfx_player_die.wav</ShortName>
+							<Path>SFX\sfx_player_die_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -85,11 +93,19 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3870290027" Name="Player_TakeDamage" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_TakeDamage" DurationType="OneShot" DurationMin="1.084375" DurationMax="1.084375">
+				<Event Id="3870290027" Name="Player_TakeDamage" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_TakeDamage" DurationType="OneShot" DurationMin="0.230062" DurationMax="0.268813">
 					<IncludedMemoryFiles>
-						<File Id="75437915" Language="SFX">
-							<ShortName>Player_TakesDamage_T.wav</ShortName>
-							<Path>SFX\Player_TakesDamage_T_10C4C929.wem</Path>
+						<File Id="535089721" Language="SFX">
+							<ShortName>sfx_player_takedamage_03.wav</ShortName>
+							<Path>SFX\sfx_player_takedamage_03_10C4C929.wem</Path>
+						</File>
+						<File Id="620583625" Language="SFX">
+							<ShortName>sfx_player_takedamage_02.wav</ShortName>
+							<Path>SFX\sfx_player_takedamage_02_10C4C929.wem</Path>
+						</File>
+						<File Id="824147832" Language="SFX">
+							<ShortName>sfx_player_takedamage_01.wav</ShortName>
+							<Path>SFX\sfx_player_takedamage_01_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

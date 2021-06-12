@@ -365,7 +365,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: ef860cb255a4fa4683dc80f67272beed
     GuidInternal: 
-    m_lastTime: -8585780900148251949
+    m_lastTime: -8585780869961283660
     List:
     - name: Soundbank
       guid: a51ec8a1ebce284aa68ba10d11d5ba78
@@ -606,8 +606,8 @@ MonoBehaviour:
         guid: ea6f986ba8ecea429eea92a8308db1b8
       Path: Events\Default Work Unit\SFX\Player\Player_Attack
       maxAttenuation: 0
-      maxDuration: 0.785333
-      minDuration: 0.785333
+      maxDuration: 0.427417
+      minDuration: 0.424
     - name: Player_BashDoor
       guid: 8f77842778e6f349b7bb7bb0a21c457b
       id: 909071731
@@ -675,8 +675,8 @@ MonoBehaviour:
         guid: c7de4addd7b70a4ca91ee82215c42011
       Path: Events\Default Work Unit\SFX\Player\Player_CollectSoul
       maxAttenuation: 0
-      maxDuration: 1.032396
-      minDuration: 1.032396
+      maxDuration: 1.59575
+      minDuration: 1.59575
     - name: Player_Dash
       guid: 7ef9fd6989a5db46876be667c71c9b05
       id: 2394582229
@@ -698,8 +698,8 @@ MonoBehaviour:
         guid: 7ef9fd6989a5db46876be667c71c9b05
       Path: Events\Default Work Unit\SFX\Player\Player_Dash
       maxAttenuation: 0
-      maxDuration: 0.807958
-      minDuration: 0.807958
+      maxDuration: 0.250146
+      minDuration: 0.250146
     - name: Player_Die
       guid: 0d3e166b284a64408f8e782965dfb1fd
       id: 1542330065
@@ -721,8 +721,8 @@ MonoBehaviour:
         guid: 0d3e166b284a64408f8e782965dfb1fd
       Path: Events\Default Work Unit\SFX\Player\Player_Die
       maxAttenuation: 0
-      maxDuration: 0.926083
-      minDuration: 0.926083
+      maxDuration: 0.687229
+      minDuration: 0.687229
     - name: Player_GetHP
       guid: 8d90192d252ce540bb37dae346902889
       id: 137430303
@@ -790,8 +790,8 @@ MonoBehaviour:
         guid: ebb7920cc1ae9f408b74329d56724a59
       Path: Events\Default Work Unit\SFX\Player\Player_TakeDamage
       maxAttenuation: 0
-      maxDuration: 1.084375
-      minDuration: 1.084375
+      maxDuration: 0.268813
+      minDuration: 0.230062
     - name: Player_UnlockDoor
       guid: eed4b956cbc94a4592f4c6d4830b8692
       id: 1891408857
