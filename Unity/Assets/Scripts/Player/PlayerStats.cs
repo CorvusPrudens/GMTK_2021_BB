@@ -27,6 +27,8 @@ public class PlayerStats : MonoBehaviour, IDamageable, IUpdateStats
     {
         currentHealth -= damageTaken;
 
+        AkSoundEngine.PostEvent("Player_TakeDamage", this.gameObject);
+
         if(currentHealth <= 0)
         {
             Kill();
@@ -35,6 +37,7 @@ public class PlayerStats : MonoBehaviour, IDamageable, IUpdateStats
 
     public  void Kill()
     {
+        AkSoundEngine.PostEvent("Player_Die", this.gameObject);
         Destroy(gameObject);
     }
 }
