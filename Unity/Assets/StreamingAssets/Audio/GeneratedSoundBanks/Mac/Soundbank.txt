@@ -1,4 +1,5 @@
 Event	ID	Name			Wwise Object Path	Notes
+	70953078	Level_Play			\Default Work Unit\MX\Level_Play	
 	137430303	Player_GetHP			\Default Work Unit\SFX\Player\Player_GetHP	
 	513291760	Player_CollectSoul			\Default Work Unit\SFX\Player\Player_CollectSoul	
 	909071731	Player_BashDoor			\Default Work Unit\SFX\Player\Player_BashDoor	
@@ -10,19 +11,45 @@ Event	ID	Name			Wwise Object Path	Notes
 	3510314130	Player_CollectKey			\Default Work Unit\SFX\Player\Player_CollectKey	
 	3870290027	Player_TakeDamage			\Default Work Unit\SFX\Player\Player_TakeDamage	
 
+State Group	ID	Name			Wwise Object Path	Notes
+	3826569560	Music_State			\Default Work Unit\Music_State	
+
+State	ID	Name	State Group			Notes
+	180661997	Attack	Music_State			
+	640949982	Speed	Music_State			
+	748895195	None	Music_State			
+	1668749442	NA	Music_State			
+	1769415205	HP	Music_State			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	209745283	HP	Music_State	\Interactive Music Hierarchy\Default Work Unit\Music_Switch\Level_Music_1\Level_1\5_4_136_level_layer_SPD_36		
+	266689757	NA	Music_State	\Interactive Music Hierarchy\Default Work Unit\Music_Switch\Level_Music_1\Level_1\5_4_136_level_layer_HP_36		
+	302010629	Attack	Music_State	\Interactive Music Hierarchy\Default Work Unit\Music_Switch\Level_Music_1\Level_1\5_4_136_level_layer_HP_36		
+	480959060	NA	Music_State	\Interactive Music Hierarchy\Default Work Unit\Music_Switch\Level_Music_1\Level_1\5_4_136_level_layer_ATK_36		
+	640066446	Attack	Music_State	\Interactive Music Hierarchy\Default Work Unit\Music_Switch\Level_Music_1\Level_1\5_4_136_level_layer_SPD_36		
+	740392521	HP	Music_State	\Interactive Music Hierarchy\Default Work Unit\Music_Switch\Level_Music_1\Level_1\5_4_136_level_layer_ATK_36		
+	744307832	NA	Music_State	\Interactive Music Hierarchy\Default Work Unit\Music_Switch\Level_Music_1\Level_1\5_4_136_level_layer_SPD_36		
+	780789542	Speed	Music_State	\Interactive Music Hierarchy\Default Work Unit\Music_Switch\Level_Music_1\Level_1\5_4_136_level_layer_ATK_36		
+	932251673	Speed	Music_State	\Interactive Music Hierarchy\Default Work Unit\Music_Switch\Level_Music_1\Level_1\5_4_136_level_layer_HP_36		
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	37139171	Collect_Key	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\Player_CollectKey_T_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Collect_Key		198280
 	62168100	sfx_player_attack_03	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\sfx_player_attack_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Attack\sfx_player_attack_03		81472
 	257110889	Bash_Door	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\Player_BashDoor_T_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Bash_Door		198284
+	298740606	5_4_136_level_layer_HP_36	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\5.4_136_level_layer_HP_36_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Switch\Level_Music_1\Level_1\5_4_136_level_layer_HP_36		15568044
 	376026972	Collect_Soul	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\sfx_player_collectsoul_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Collect_Soul		306448
 	535089721	sfx_player_takedamage_03	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\sfx_player_takedamage_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Takes_Damage\sfx_player_takedamage_03		49020
 	552273355	GetHP	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\Player_GetHP_T_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\GetHP		238652
 	620583625	sfx_player_takedamage_02	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\sfx_player_takedamage_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Takes_Damage\sfx_player_takedamage_02		51676
+	659400364	5_4_136_level_layer_SPD_36	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\5.4_136_level_layer_SPD_36_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Switch\Level_Music_1\Level_1\5_4_136_level_layer_SPD_36		15568044
 	676935544	sfx_player_attack_01	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\sfx_player_attack_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Attack\sfx_player_attack_01		82128
-	724613463	Open_Chests	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\Player_OpenChest_T_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Open_Chests		238652
 	752384942	Dies	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\sfx_player_die_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Dies		132012
+	792668813	5_4_136_level_intro_1	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\5.4_136_level_intro_1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Switch\Level_Music_1\Intro\5_4_136_level_intro_1		2490420
 	821661056	Dash	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\sfx_player_dash_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Dash		48092
 	824147832	sfx_player_takedamage_01	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\sfx_player_takedamage_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Takes_Damage\sfx_player_takedamage_01		44236
+	852303882	5_4_136_level_layer_ATK_36	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\5.4_136_level_layer_ATK_36_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Switch\Level_Music_1\Level_1\5_4_136_level_layer_ATK_36		15568044
 	880281348	sfx_player_attack_02	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\sfx_player_attack_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Attack\sfx_player_attack_02		81712
 	967850174	Unlock_Door	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\Player_UnlockDoor_T_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Unlock_Door		238652
+	997469406	Open_Chests	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\sfx_open_chest_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Open_Chests		176464
+	1019927396	5_4_136_level_main_36	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\5.4_136_level_main_36_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Switch\Level_Music_1\Level_1\5_4_136_level_main_36		15568044
 

@@ -11,16 +11,40 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="4252176608">
+		<SoundBank Id="1355168291" Language="SFX" Hash="857022299">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="1661994096" Language="SFX" Hash="426013775">
+		<SoundBank Id="1661994096" Language="SFX" Hash="1303171850">
 			<ObjectPath>\SoundBanks\Default Work Unit\Soundbank</ObjectPath>
 			<ShortName>Soundbank</ShortName>
 			<Path>Soundbank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="70953078" Name="Level_Play" ObjectPath="\Events\Default Work Unit\MX\Level_Play" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="298740606" Language="SFX">
+							<ShortName>5.4_136_level_layer_HP_36.wav</ShortName>
+							<Path>SFX\5.4_136_level_layer_HP_36_D79FB2B7.wem</Path>
+						</File>
+						<File Id="659400364" Language="SFX">
+							<ShortName>5.4_136_level_layer_SPD_36.wav</ShortName>
+							<Path>SFX\5.4_136_level_layer_SPD_36_D79FB2B7.wem</Path>
+						</File>
+						<File Id="792668813" Language="SFX">
+							<ShortName>5.4_136_level_intro_1.wav</ShortName>
+							<Path>SFX\5.4_136_level_intro_1_D79FB2B7.wem</Path>
+						</File>
+						<File Id="852303882" Language="SFX">
+							<ShortName>5.4_136_level_layer_ATK_36.wav</ShortName>
+							<Path>SFX\5.4_136_level_layer_ATK_36_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1019927396" Language="SFX">
+							<ShortName>5.4_136_level_main_36.wav</ShortName>
+							<Path>SFX\5.4_136_level_main_36_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2824512041" Name="Player_Attack" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_Attack" DurationType="OneShot" DurationMin="0.424000" DurationMax="0.427417">
 					<IncludedMemoryFiles>
 						<File Id="62168100" Language="SFX">
@@ -53,7 +77,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="513291760" Name="Player_CollectSoul" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_CollectSoul" DurationType="OneShot" DurationMin="1.595750" DurationMax="1.595750">
+				<Event Id="513291760" Name="Player_CollectSoul" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_CollectSoul" DurationType="OneShot" DurationMin="1.795750" DurationMax="1.795750">
 					<IncludedMemoryFiles>
 						<File Id="376026972" Language="SFX">
 							<ShortName>sfx_player_collectsoul.wav</ShortName>
@@ -85,11 +109,11 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1516819876" Name="Player_OpenChest" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_OpenChest" DurationType="OneShot" DurationMin="1.242646" DurationMax="1.242646">
+				<Event Id="1516819876" Name="Player_OpenChest" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_OpenChest" DurationType="OneShot" DurationMin="1.000000" DurationMax="1.000000">
 					<IncludedMemoryFiles>
-						<File Id="724613463" Language="SFX">
-							<ShortName>Player_OpenChest_T.wav</ShortName>
-							<Path>SFX\Player_OpenChest_T_10C4C929.wem</Path>
+						<File Id="997469406" Language="SFX">
+							<ShortName>sfx_open_chest.wav</ShortName>
+							<Path>SFX\sfx_open_chest_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID LEVEL_PLAY = 70953078U;
         static const AkUniqueID PLAYER_ATTACK = 2824512041U;
         static const AkUniqueID PLAYER_BASHDOOR = 909071731U;
         static const AkUniqueID PLAYER_COLLECTKEY = 3510314130U;
@@ -24,6 +25,24 @@ namespace AK
         static const AkUniqueID PLAYER_TAKEDAMAGE = 3870290027U;
         static const AkUniqueID PLAYER_UNLOCKDOOR = 1891408857U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace MUSIC_STATE
+        {
+            static const AkUniqueID GROUP = 3826569560U;
+
+            namespace STATE
+            {
+                static const AkUniqueID ATTACK = 180661997U;
+                static const AkUniqueID HP = 1769415205U;
+                static const AkUniqueID NA = 1668749442U;
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID SPEED = 640949982U;
+            } // namespace STATE
+        } // namespace MUSIC_STATE
+
+    } // namespace STATES
 
     namespace BANKS
     {

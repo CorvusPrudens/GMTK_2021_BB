@@ -303,7 +303,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 77a7fbbf8a390040a166d7fa9a914093
     GuidInternal: 
-    m_lastTime: -8585780900148632033
+    m_lastTime: -8585780734761523073
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -365,7 +365,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: ef860cb255a4fa4683dc80f67272beed
     GuidInternal: 
-    m_lastTime: -8585780869961283660
+    m_lastTime: -8585780734084315546
     List:
     - name: Soundbank
       guid: a51ec8a1ebce284aa68ba10d11d5ba78
@@ -393,7 +393,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: ff0b084ed1e3e44e95d214517df38595
     GuidInternal: 
-    m_lastTime: -8585780900147671809
+    m_lastTime: -8585780736655262543
     List:
     - name: Dragon_Attack
       guid: 07b00ab959dd7a44b6d6d69411ae9c06
@@ -419,8 +419,8 @@ MonoBehaviour:
         guid: 07b00ab959dd7a44b6d6d69411ae9c06
       Path: Events\Default Work Unit\SFX\Enemy\DragonFly\Dragon_Attack
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Dragon_Dash
       guid: 78628316c8f5b643b7ba34875991d341
       id: 820321623
@@ -445,8 +445,8 @@ MonoBehaviour:
         guid: 78628316c8f5b643b7ba34875991d341
       Path: Events\Default Work Unit\SFX\Enemy\DragonFly\Dragon_Dash
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Dragon_Die
       guid: 8299522c07a94a41bf295fce03e0e310
       id: 1541504395
@@ -471,8 +471,8 @@ MonoBehaviour:
         guid: 8299522c07a94a41bf295fce03e0e310
       Path: Events\Default Work Unit\SFX\Enemy\DragonFly\Dragon_Die
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Dragon_TakeDamage
       guid: 8b712fc27b4d3c4b87d3ea1726c8bbfa
       id: 3037277281
@@ -497,8 +497,8 @@ MonoBehaviour:
         guid: 8b712fc27b4d3c4b87d3ea1726c8bbfa
       Path: Events\Default Work Unit\SFX\Enemy\DragonFly\Dragon_TakeDamage
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: DragonFly
       guid: 5adbd1b68de9fa4ca1d60983c3c68310
       id: 3028993147
@@ -563,8 +563,45 @@ MonoBehaviour:
         guid: 99e67631ed2369499577d1a1d94d5e03
       Path: Events\Default Work Unit\SFX\UI\Hover
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Level_Play
+      guid: cc09703e88af2844a813d11bcc519fc1
+      id: 70953078
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ff0b084ed1e3e44e95d214517df38595
+      - ElementName: MX
+        ObjectType: 4
+        guid: c1c2ba883fd3f74084d7af16c191d99b
+      - ElementName: Level_Play
+        ObjectType: 3
+        guid: cc09703e88af2844a813d11bcc519fc1
+      Path: Events\Default Work Unit\MX\Level_Play
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: MX
+      guid: c1c2ba883fd3f74084d7af16c191d99b
+      id: 1685527054
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ff0b084ed1e3e44e95d214517df38595
+      - ElementName: MX
+        ObjectType: 4
+        guid: c1c2ba883fd3f74084d7af16c191d99b
+      Path: Events\Default Work Unit\MX
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Player
       guid: 3bfe3732dbbcc145b713765fd56ddfb1
       id: 1069431850
@@ -675,8 +712,8 @@ MonoBehaviour:
         guid: c7de4addd7b70a4ca91ee82215c42011
       Path: Events\Default Work Unit\SFX\Player\Player_CollectSoul
       maxAttenuation: 0
-      maxDuration: 1.59575
-      minDuration: 1.59575
+      maxDuration: 1.79575
+      minDuration: 1.79575
     - name: Player_Dash
       guid: 7ef9fd6989a5db46876be667c71c9b05
       id: 2394582229
@@ -767,8 +804,8 @@ MonoBehaviour:
         guid: b6dfe572e7ca164e9d0a62e386e8ad6b
       Path: Events\Default Work Unit\SFX\Player\Player_OpenChest
       maxAttenuation: 0
-      maxDuration: 1.242646
-      minDuration: 1.242646
+      maxDuration: 1
+      minDuration: 1
     - name: Player_TakeDamage
       guid: ebb7920cc1ae9f408b74329d56724a59
       id: 3870290027
@@ -836,8 +873,8 @@ MonoBehaviour:
         guid: c13b75741601234da71c4a26c8f385a8
       Path: Events\Default Work Unit\SFX\UI\Press
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Rolly_Attack
       guid: b2b962ac8937724cb03f12c348e25ca9
       id: 736689176
@@ -862,8 +899,8 @@ MonoBehaviour:
         guid: b2b962ac8937724cb03f12c348e25ca9
       Path: Events\Default Work Unit\SFX\Enemy\RollyPolly\Rolly_Attack
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Rolly_Die
       guid: 35264716bbf4b543bbe2f275f5e71bf3
       id: 4270670118
@@ -888,8 +925,8 @@ MonoBehaviour:
         guid: 35264716bbf4b543bbe2f275f5e71bf3
       Path: Events\Default Work Unit\SFX\Enemy\RollyPolly\Rolly_Die
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Rolly_TakeDamage
       guid: 7c39dc4562d4d643872c18020d20588a
       id: 1889715514
@@ -914,8 +951,8 @@ MonoBehaviour:
         guid: 7c39dc4562d4d643872c18020d20588a
       Path: Events\Default Work Unit\SFX\Enemy\RollyPolly\Rolly_TakeDamage
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: RollyPolly
       guid: eaa298879062e6489f9ee451d0083d67
       id: 3072444211
@@ -1023,8 +1060,8 @@ MonoBehaviour:
         guid: 061b81db4ac2bd4e9a7817162858cf8a
       Path: Events\Default Work Unit\SFX\Enemy\Wasp\Wasp_Attack
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Wasp_Die
       guid: 148c9574aa1a5046bbfefd2bc5b43e35
       id: 994571083
@@ -1049,8 +1086,8 @@ MonoBehaviour:
         guid: 148c9574aa1a5046bbfefd2bc5b43e35
       Path: Events\Default Work Unit\SFX\Enemy\Wasp\Wasp_Die
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Wasp_TakeDamage
       guid: 052129d371ff7d408dbd7bc4b5492081
       id: 2772886561
@@ -1075,8 +1112,8 @@ MonoBehaviour:
         guid: 052129d371ff7d408dbd7bc4b5492081
       Path: Events\Default Work Unit\SFX\Enemy\Wasp\Wasp_TakeDamage
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -1103,8 +1140,106 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 1d23add6dbc81041b0a498c7cfd2bc14
     GuidInternal: 
-    m_lastTime: -8585780900148501997
-    List: []
+    m_lastTime: -8585780738508852918
+    List:
+    - name: Music_State
+      guid: 87b54c064986654ab82f3044007f2d36
+      id: 3826569560
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1d23add6dbc81041b0a498c7cfd2bc14
+      - ElementName: Music_State
+        ObjectType: 9
+        guid: 87b54c064986654ab82f3044007f2d36
+      Path: States\Default Work Unit\Music_State
+      values:
+      - name: Attack
+        guid: c6ed0fa201bec14da8c108ae606ef7b9
+        id: 180661997
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 1d23add6dbc81041b0a498c7cfd2bc14
+        - ElementName: Music_State
+          ObjectType: 9
+          guid: 87b54c064986654ab82f3044007f2d36
+        - ElementName: Attack
+          ObjectType: 8
+          guid: c6ed0fa201bec14da8c108ae606ef7b9
+      - name: HP
+        guid: 603d81e47c8d7148a3a4cc340b2b0b69
+        id: 1769415205
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 1d23add6dbc81041b0a498c7cfd2bc14
+        - ElementName: Music_State
+          ObjectType: 9
+          guid: 87b54c064986654ab82f3044007f2d36
+        - ElementName: HP
+          ObjectType: 8
+          guid: 603d81e47c8d7148a3a4cc340b2b0b69
+      - name: NA
+        guid: eb9cfbfaf6c04b41b7c7f7fd8caf1aa3
+        id: 1668749442
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 1d23add6dbc81041b0a498c7cfd2bc14
+        - ElementName: Music_State
+          ObjectType: 9
+          guid: 87b54c064986654ab82f3044007f2d36
+        - ElementName: NA
+          ObjectType: 8
+          guid: eb9cfbfaf6c04b41b7c7f7fd8caf1aa3
+      - name: None
+        guid: ac101d5c7b0673479c9b12f42801e87c
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 1d23add6dbc81041b0a498c7cfd2bc14
+        - ElementName: Music_State
+          ObjectType: 9
+          guid: 87b54c064986654ab82f3044007f2d36
+        - ElementName: None
+          ObjectType: 8
+          guid: ac101d5c7b0673479c9b12f42801e87c
+      - name: Speed
+        guid: 2370814699d16e4483125e47fa1007fe
+        id: 640949982
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 1d23add6dbc81041b0a498c7cfd2bc14
+        - ElementName: Music_State
+          ObjectType: 9
+          guid: 87b54c064986654ab82f3044007f2d36
+        - ElementName: Speed
+          ObjectType: 8
+          guid: 2370814699d16e4483125e47fa1007fe
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -1117,7 +1252,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 57a4323b65effb4b9560843ea842fb18
     GuidInternal: 
-    m_lastTime: -8585780900148602027
+    m_lastTime: -8585780738508772901
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -1134,7 +1269,7 @@ MonoBehaviour:
     m_lastTime: -8585780900148662041
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 05000000dd000000de000000df00000007010000080100007d0100007e01000081060000
+  ExpandedWaapiItemIds: 05000000060000001b000000dd000000de000000df00000007010000080100007d0100007e01000081060000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
