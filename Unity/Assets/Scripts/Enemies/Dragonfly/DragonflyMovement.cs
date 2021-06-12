@@ -7,6 +7,7 @@ public class DragonflyMovement : MonoBehaviour
     [SerializeField] [Range(1f, 10f)] private float minWaitTime, maxWaitTime;
     private Vector2 screenBounds;
     private Vector2 targetPosition;
+    private float offsetX = 0, offsetY = 0;
     private EnemyStats stats;
     private bool canMove;
 
@@ -44,8 +45,8 @@ public class DragonflyMovement : MonoBehaviour
 
     private void GenerateRandomPosition()
     {
-        float randomPosX = Random.Range(-screenBounds.x, screenBounds.x);
-        float randomPosY = Random.Range(-screenBounds.y, screenBounds.y);
+        float randomPosX = Random.Range(-screenBounds.x + offsetX, screenBounds.x - offsetX);
+        float randomPosY = Random.Range(-screenBounds.y + offsetY, screenBounds.y - offsetY);
 
         targetPosition = new Vector2(randomPosX, randomPosY);   
     }

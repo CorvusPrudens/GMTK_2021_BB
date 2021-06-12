@@ -25,11 +25,11 @@ public class WaspMovement : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        Move(player.transform.position);
+        Move();
     }
 
-    void Move(Vector3 target)
+    void Move()
     {
-        transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
     }   
 }
