@@ -16,8 +16,7 @@ public class WaspAggroTrigger : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            movement.aggro = true;
-            print("aggro true");
+            movement.speed = movement.baseSpeed * movement.aggroSpeedMultiplier;
         }
     }
 
@@ -25,9 +24,7 @@ public class WaspAggroTrigger : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            movement.aggro = false;
-            print("aggro false");
-
+            movement.speed = movement.baseSpeed;
         }
     }
 }
