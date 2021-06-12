@@ -47,7 +47,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 4.71
+  m_Radius: 5
 --- !u!114 &1614056349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,7 +257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxStats:
     health: 5
-    speed: 5
+    speed: 1
     strength: 5
 --- !u!114 &2842357770252315002
 MonoBehaviour:
@@ -283,4 +283,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfcb0c9fac0674255bf5d42785e295a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aggro: 0
+  aggroSpeedMultiplier: 2.5
+  baseSpeed: 0
+  speed: 0
