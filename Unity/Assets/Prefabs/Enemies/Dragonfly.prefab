@@ -213,13 +213,13 @@ GameObject:
   - component: {fileID: 4395539471820393129}
   - component: {fileID: 875012141}
   - component: {fileID: 4105963371282283094}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Dragonfly
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4395539471820393111
 Transform:
   m_ObjectHideFlags: 0

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8581120017940343689}
   - component: {fileID: 4535154915568050415}
   - component: {fileID: 101814255}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Roly Poly
   m_TagString: Enemy
   m_Icon: {fileID: 0}

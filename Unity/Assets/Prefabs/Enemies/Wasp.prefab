@@ -157,13 +157,13 @@ GameObject:
   - component: {fileID: 3726698384394317789}
   - component: {fileID: 2842357770252315002}
   - component: {fileID: 957561479}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wasp
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7858154867693466947
 Transform:
   m_ObjectHideFlags: 0
