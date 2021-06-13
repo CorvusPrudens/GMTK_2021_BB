@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="1661994096" Language="SFX" Hash="3860681407">
+		<SoundBank Id="1661994096" Language="SFX" Hash="1070922984">
 			<ObjectPath>\SoundBanks\Default Work Unit\Soundbank</ObjectPath>
 			<ShortName>Soundbank</ShortName>
 			<Path>Soundbank.bnk</Path>
@@ -30,7 +30,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3496330497" Name="Dragon_Idle" ObjectPath="\Events\Default Work Unit\SFX\Enemy\DragonFly\Dragon_Idle" MaxAttenuation="5.000000" DurationType="Infinite">
+				<Event Id="3496330497" Name="Dragon_Idle" ObjectPath="\Events\Default Work Unit\SFX\Enemy\DragonFly\Dragon_Idle" MaxAttenuation="20.000000" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="930530947" Language="SFX">
 							<ShortName>sfx_dragon_idle.wav</ShortName>
@@ -54,7 +54,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3753593413" Name="Hover" ObjectPath="\Events\Default Work Unit\SFX\UI\Hover" DurationType="OneShot" DurationMin="0.020000" DurationMax="0.020000"/>
+				<Event Id="3753593413" Name="Hover" ObjectPath="\Events\Default Work Unit\SFX\UI\Hover" DurationType="OneShot" DurationMin="1.433832" DurationMax="1.433832">
+					<IncludedMemoryFiles>
+						<File Id="507942075" Language="SFX">
+							<ShortName>sfx_ui_hover.wav</ShortName>
+							<Path>SFX\sfx_ui_hover_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="70953078" Name="Level_Play" ObjectPath="\Events\Default Work Unit\MX\Level_Play" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="298740606" Language="SFX">
@@ -106,11 +113,11 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3510314130" Name="Player_CollectKey" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_CollectKey" DurationType="OneShot" DurationMin="1.032375" DurationMax="1.032375">
+				<Event Id="3510314130" Name="Player_CollectKey" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_CollectKey" DurationType="OneShot" DurationMin="0.110295" DurationMax="0.110295">
 					<IncludedMemoryFiles>
-						<File Id="37139171" Language="SFX">
-							<ShortName>Player_CollectKey_T.wav</ShortName>
-							<Path>SFX\Player_CollectKey_T_10C4C929.wem</Path>
+						<File Id="392674267" Language="SFX">
+							<ShortName>sfx_collect_key.wav</ShortName>
+							<Path>SFX\sfx_collect_key_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -170,15 +177,22 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1891408857" Name="Player_UnlockDoor" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_UnlockDoor" DurationType="OneShot" DurationMin="1.242646" DurationMax="1.242646">
+				<Event Id="1891408857" Name="Player_UnlockDoor" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_UnlockDoor" DurationType="OneShot" DurationMin="1.433832" DurationMax="1.433832">
 					<IncludedMemoryFiles>
-						<File Id="967850174" Language="SFX">
-							<ShortName>Player_UnlockDoor_T.wav</ShortName>
-							<Path>SFX\Player_UnlockDoor_T_10C4C929.wem</Path>
+						<File Id="341342922" Language="SFX">
+							<ShortName>sfx_unlock_door.wav</ShortName>
+							<Path>SFX\sfx_unlock_door_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1086439346" Name="Press" ObjectPath="\Events\Default Work Unit\SFX\UI\Press" DurationType="OneShot" DurationMin="0.050000" DurationMax="0.050000"/>
+				<Event Id="1086439346" Name="Press" ObjectPath="\Events\Default Work Unit\SFX\UI\Press" DurationType="OneShot" DurationMin="1.433832" DurationMax="1.433832">
+					<IncludedMemoryFiles>
+						<File Id="385953715" Language="SFX">
+							<ShortName>sfx_ui_click.wav</ShortName>
+							<Path>SFX\sfx_ui_click_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="4270670118" Name="Rolly_Die" ObjectPath="\Events\Default Work Unit\SFX\Enemy\RollyPolly\Rolly_Die" DurationType="OneShot" DurationMin="0.440271" DurationMax="0.440271">
 					<IncludedMemoryFiles>
 						<File Id="39189074" Language="SFX">
@@ -188,19 +202,20 @@
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="3853498466" Name="STOPALL_local" ObjectPath="\Events\Default Work Unit\STOPALL_local" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3157003241" Name="TEST" ObjectPath="\Events\Default Work Unit\SFX\TEST" DurationType="OneShot" DurationMin="1.000000" DurationMax="1.000000"/>
+				<Event Id="733302340" Name="Wasp_Buzz" ObjectPath="\Events\Default Work Unit\SFX\Enemy\Wasp\Wasp_Buzz" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="14.705646" DurationMax="14.705646">
+					<IncludedMemoryFiles>
+						<File Id="130267092" Language="SFX">
+							<ShortName>sfx_wasp_idle.wav</ShortName>
+							<Path>SFX\sfx_wasp_idle_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="994571083" Name="Wasp_Die" ObjectPath="\Events\Default Work Unit\SFX\Enemy\Wasp\Wasp_Die" DurationType="OneShot" DurationMin="0.688250" DurationMax="0.688250">
 					<IncludedMemoryFiles>
 						<File Id="130596390" Language="SFX">
 							<ShortName>sfx_wasp_die.wav</ShortName>
 							<Path>SFX\sfx_wasp_die_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
-				<Event Id="1051796161" Name="Wasp_Idle" ObjectPath="\Events\Default Work Unit\SFX\Enemy\Wasp\Wasp_Idle" DurationType="Infinite">
-					<IncludedMemoryFiles>
-						<File Id="127039882" Language="SFX">
-							<ShortName>sfx_wasp_idle.wav</ShortName>
-							<Path>SFX\sfx_wasp_idle_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -213,6 +228,12 @@
 					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="930530947" Language="SFX">
+					<ShortName>sfx_dragon_idle.wav</ShortName>
+					<Path>SFX\sfx_dragon_idle_D79FB2B7.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
 			<StateGroups>
 				<StateGroup Id="1668749442" Name="NA" ObjectPath="\States\Default Work Unit\Music_State\NA">
 					<States/>
