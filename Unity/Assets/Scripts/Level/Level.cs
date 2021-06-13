@@ -12,7 +12,29 @@ public class Level : MonoBehaviour
     [SerializeField, Range(3, 10)]
     public int height = 5;
 
+    public bool fadeAll = false;
+    bool prevFadeAll = false;
+
+    // TODO -- remove debug elements
+    public GameObject S;
+    public GameObject E;
+
+    public GameObject cam;
+
     Room[,] RoomList;
+
+    public GameObject PlayerTemplate;
+    GameObject player;
+
+    Vector2 playerPos = new Vector2(0, 0);
+    Vector2 prevPos = new Vector2(-1, -1);
+
+    GameObject[,] GennedRooms;
+
+    public GameObject[] RoomPrefabs;
+
+    static float XFAC = 18;
+    static float YFAC = 13;
 
     bool ValidOption(Room[,] rooms, RoomPosition pos, List<RoomPosition> excluded, bool checkVisited=true)
     {
@@ -51,7 +73,28 @@ public class Level : MonoBehaviour
                 // rooms[i,j] = tempr;
                 // Instantiate(rooms[i,j]);
                 rooms[i,j] = gameObject.AddComponent<Room>();
+                rooms[i,j].player = player;
+                rooms[i,j].cam = cam;
             }
+        }
+    }
+
+    // void CleanRooms(Room[,] rooms)
+    // {
+    //     for (int i = 0; i < rooms.GetLength(0); i++)
+    //     {
+    //         for (int j = 0; j < rooms.GetLength(1); j++)
+    //         {
+    //             Destroy(rooms[i,j]);
+    //         }
+    //     }
+    // }
+    void CleanRooms()
+    {
+        Component[] r = GetComponents(typeof(Room));
+        foreach (Component room in r)
+        {
+            Destroy(room);
         }
     }
     
@@ -192,8 +235,39 @@ public class Level : MonoBehaviour
         return (direction, pos, smallest);
     }
 
+    int FindMatch(List<Door.Position> doorlist)
+    {
+        List<Door.Position> cleanlist = new List<Door.Position>();
+        foreach (Door.Position p in doorlist)
+        {
+            if ((int) p > 3)
+                cleanlist.Add((Door.Position) ((int) p - 4));
+            else 
+                cleanlist.Add(p);
+        }
+        for (int i = 0; i < RoomPrefabs.Length; i++)
+        {
+            List<Door.Position> templist = RoomPrefabs[i].GetComponent<Room>().GetDoors();
+            if (templist.Count == cleanlist.Count)
+            {
+                
+                for (int j = 0; j < cleanlist.Count; j++)
+                {
+                    if (!templist.Contains(cleanlist[j]))
+                    {
+                        return -1;
+                    }
+                }
+                Debug.Log("GOT HERE");
+                return i;
+            }
+        }
+        return -1;
+    }
+
     void GenerateLevel(int maxAttempts=10)
     {
+
         int attempts = 1;
         float[] scores = new float[maxAttempts];
         List<Room[,]> generated = new List<Room[,]>();
@@ -306,6 +380,7 @@ public class Level : MonoBehaviour
             }
         }
 
+        GennedRooms = new GameObject[width, height];
         // RoomList = generated[idx];
         Transform parent = transform.GetChild(0);
         for (int x = 0; x < width; x++)
@@ -314,20 +389,32 @@ public class Level : MonoBehaviour
             {
                 // NOTE -- temporary for testing, needs to be replaced by real
                 // room selection code
-                GameObject temproom = Instantiate(RoomTemplate);
+                int INDEX = FindMatch(generated[idx][x, y].doorList);
+
+                GameObject temproom = new GameObject();
+                if (INDEX == -1)
+                   temproom = Instantiate(RoomTemplate);
+                else
+                    temproom = Instantiate(RoomPrefabs[INDEX]);
+
                 temproom.transform.SetParent(parent);
-                temproom.transform.position = new Vector3(x * 17, -y * 11, 0);
+                temproom.transform.position = new Vector3(x * XFAC, -y * YFAC, 0);
+                temproom.GetComponent<Room>().cam = cam;
+                temproom.GetComponent<Room>().player = player;
                 GameObject doorcontainer = temproom.GetComponent<Room>().Doors;
                 List<Door.Position> doorlist = generated[idx][x, y].doorList;
 
                 if (generated[idx][x, y].type == "start")
                 {
-                    temproom.transform.GetChild(temproom.transform.childCount - 1).GetComponent<SpriteRenderer>().color = Color.gray;
+                    // temproom.transform.GetChild(temproom.transform.childCount - 1).GetComponent<SpriteRenderer>().color = Color.gray;
+                    S.transform.position = temproom.transform.position;
+                    player.transform.position = temproom.transform.position;
                 }
 
                 if (generated[idx][x, y].type == "end")
                 {
-                    temproom.transform.GetChild(temproom.transform.childCount - 1).GetComponent<SpriteRenderer>().color = Color.black;
+                    // temproom.transform.GetChild(temproom.transform.childCount - 1).GetComponent<SpriteRenderer>().color = Color.black;
+                    E.transform.position = temproom.transform.position;
                 }
 
                 if (generated[idx][x, y].dead_end)
@@ -344,30 +431,78 @@ public class Level : MonoBehaviour
                     Door.Position temppos = d.GetComponent<Door>().position;
                     if (doorlist.Contains(Door.Lock(temppos)))
                     {
-                        d.GetChild(0).GetComponent<SpriteRenderer>().color = Color.red;
-                        Debug.Log("GOT HERE");
+                        // d.GetChild(0).GetComponent<SpriteRenderer>().color = Color.red;
+                        d.GetComponent<Door>().position = Door.Lock(d.GetComponent<Door>().position);
                         continue;
                     }
-                    if (!doorlist.Contains(temppos))
-                    {
-                        d.gameObject.SetActive(false);
-                    }
+                    // if (!doorlist.Contains(temppos))
+                    // {
+                    //     d.gameObject.SetActive(false);
+                    // }
                 }
 
-                temproom.GetComponent<Room>().FadeIn();
-
+                // temproom.GetComponent<Room>().FadeIn();
+                GennedRooms[x,y] = temproom;
             }
         }
+        // foreach (Room[,] r in generated)
+        // {
+        //     CleanRooms(r);
+        // }
+
     }
 
     void Start()
     {
+        player = Instantiate(PlayerTemplate);
         GenerateLevel();
+        CleanRooms();
     }
 
     
     void Update()
     {
+        if (fadeAll != prevFadeAll)
+        {
+            prevFadeAll = fadeAll;
+            foreach (Transform t in transform.GetChild(0))
+            {
+                if (fadeAll)
+                    t.gameObject.GetComponent<Room>().FadeIn();
+                else
+                    t.gameObject.GetComponent<Room>().FadeOut();
+            }
+        }
+        playerPos = (Vector2) player.transform.position - (Vector2) transform.position;
+        playerPos.x /= XFAC;
+        playerPos.y /= YFAC;
+
+        Vector2 indexPos = new Vector2(Mathf.Round(playerPos.x), -Mathf.Round(playerPos.y));
+
         
+
+        if (prevPos.x == -1)
+        {
+            prevPos = indexPos;
+            Room r2 = GennedRooms[(int) indexPos.x, (int) indexPos.y].GetComponent<Room>();
+            r2.FadeIn();
+            Vector3 newcampos = GennedRooms[(int) indexPos.x, (int) indexPos.y].transform.position;
+            newcampos.z = -10;
+            cam.transform.position = newcampos;
+        }
+        
+        if (prevPos != indexPos && (int) indexPos.x > -1 && (int) indexPos.x < width && (int) indexPos.y > -1 && (int) indexPos.y < height)
+        {
+            Room r1 = GennedRooms[(int) prevPos.x, (int) prevPos.y].GetComponent<Room>();
+            Room r2 = GennedRooms[(int) indexPos.x, (int) indexPos.y].GetComponent<Room>();
+
+            r1.FadeOut();
+            r2.FadeIn();
+
+            Vector3 newcampos = GennedRooms[(int) indexPos.x, (int) indexPos.y].transform.position;
+            newcampos.z = -10;
+            cam.transform.position = newcampos;
+            prevPos = indexPos;
+        }
     }
 }

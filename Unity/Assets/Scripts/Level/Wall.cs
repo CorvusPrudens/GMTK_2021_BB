@@ -11,4 +11,10 @@ public class Wall : MonoBehaviour
         SpriteRenderer rend = transform.GetChild(0).GetComponent<SpriteRenderer>();
         rend.sprite = variations[(int) Random.Range(0, variations.Length)];
     }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 }

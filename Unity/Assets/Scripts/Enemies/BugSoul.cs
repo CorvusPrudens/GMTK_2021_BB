@@ -24,6 +24,6 @@ public class BugSoul : MonoBehaviour
         Vector2 currentPos = (Vector2) transform.position;
         Vector2 targ = player.GetComponent<PlayerMovement>().GetTrail() + offset;
         Vector2 move = (targ - currentPos) * Time.deltaTime * 2;
-        transform.position = new Vector3(currentPos.x + move.x, currentPos.y + move.y, transform.position.y);
+        transform.position = new Vector3(currentPos.x + move.x, currentPos.y + move.y, 0);
     }
 }
