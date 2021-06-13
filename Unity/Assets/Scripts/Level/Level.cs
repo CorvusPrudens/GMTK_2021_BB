@@ -26,6 +26,14 @@ public class Level : MonoBehaviour
     public GameObject PlayerTemplate;
     GameObject player;
 
+    Vector2 playerPos = new Vector2(0, 0);
+    Vector2 prevPos = new Vector2(-1, -1);
+
+    GameObject[,] GennedRooms;
+
+    static float XFAC = 18;
+    static float YFAC = 13;
+
     bool ValidOption(Room[,] rooms, RoomPosition pos, List<RoomPosition> excluded, bool checkVisited=true)
     {
         bool inside = pos.x > -1 && pos.x < rooms.GetLength(0) && pos.y > -1 && pos.y < rooms.GetLength(1);
@@ -339,6 +347,7 @@ public class Level : MonoBehaviour
             }
         }
 
+        GennedRooms = new GameObject[width, height];
         // RoomList = generated[idx];
         Transform parent = transform.GetChild(0);
         for (int x = 0; x < width; x++)
@@ -348,8 +357,9 @@ public class Level : MonoBehaviour
                 // NOTE -- temporary for testing, needs to be replaced by real
                 // room selection code
                 GameObject temproom = Instantiate(RoomTemplate);
+                
                 temproom.transform.SetParent(parent);
-                temproom.transform.position = new Vector3(x * 17, -y * 11, 0);
+                temproom.transform.position = new Vector3(x * XFAC, -y * YFAC, 0);
                 temproom.GetComponent<Room>().cam = cam;
                 temproom.GetComponent<Room>().player = player;
                 GameObject doorcontainer = temproom.GetComponent<Room>().Doors;
@@ -393,7 +403,7 @@ public class Level : MonoBehaviour
                 }
 
                 // temproom.GetComponent<Room>().FadeIn();
-
+                GennedRooms[x,y] = temproom;
             }
         }
 
@@ -424,6 +434,37 @@ public class Level : MonoBehaviour
                 else
                     t.gameObject.GetComponent<Room>().FadeOut();
             }
+        }
+        playerPos = (Vector2) player.transform.position - (Vector2) transform.position;
+        playerPos.x /= XFAC;
+        playerPos.y /= YFAC;
+
+        Vector2 indexPos = new Vector2(Mathf.Round(playerPos.x), -Mathf.Round(playerPos.y));
+
+        
+
+        if (prevPos.x == -1)
+        {
+            prevPos = indexPos;
+            Room r2 = GennedRooms[(int) indexPos.x, (int) indexPos.y].GetComponent<Room>();
+            r2.FadeIn();
+            Vector3 newcampos = GennedRooms[(int) indexPos.x, (int) indexPos.y].transform.position;
+            newcampos.z = -10;
+            cam.transform.position = newcampos;
+        }
+        
+        if (prevPos != indexPos && (int) indexPos.x > -1 && (int) indexPos.x < width && (int) indexPos.y > -1 && (int) indexPos.y < height)
+        {
+            Room r1 = GennedRooms[(int) prevPos.x, (int) prevPos.y].GetComponent<Room>();
+            Room r2 = GennedRooms[(int) indexPos.x, (int) indexPos.y].GetComponent<Room>();
+
+            r1.FadeOut();
+            r2.FadeIn();
+
+            Vector3 newcampos = GennedRooms[(int) indexPos.x, (int) indexPos.y].transform.position;
+            newcampos.z = -10;
+            cam.transform.position = newcampos;
+            prevPos = indexPos;
         }
     }
 }

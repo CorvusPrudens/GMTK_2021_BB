@@ -43,7 +43,7 @@ public class Room : MonoBehaviour
     bool transin = false;
     bool transout = false;
 
-    bool active = false;
+    public bool active = false;
     bool inactive = true;
 
     public GameObject cam;
@@ -95,10 +95,18 @@ public class Room : MonoBehaviour
 
     void Awake()
     {
-        for (int i = 0; i < transform.childCount - 2; i++)
+        // for (int i = 0; i < transform.childCount - 2; i++)
+        // {
+        //     transform.GetChild(i).gameObject.SetActive(false);
+        // }
+        if (Doors != null)
         {
-            transform.GetChild(i).gameObject.SetActive(false);
+            Doors.SetActive(false);
+            Traps.SetActive(false);
+            Enemies.SetActive(false);
+            Chest.SetActive(false);
         }
+        
     }
 
     void OnValidate()
@@ -116,13 +124,18 @@ public class Room : MonoBehaviour
     {
         if (transin)
         {
-            Debug.Log(transitionTick);
             if (transitionTick <= 0)
             {
-                for (int i = 0; i < transform.childCount - 2; i++)
-                {
-                    transform.GetChild(i).gameObject.SetActive(true);
-                }
+                // for (int i = 0; i < 4; i++)
+                // {
+                //     transform.GetChild(i).gameObject.SetActive(true);
+                // }
+                Doors.SetActive(true);
+                Traps.SetActive(true);
+                Enemies.SetActive(true);
+                Chest.SetActive(true);
+                active = true;
+                // Spawn.SetActive(true);
             }
             if (transitionTick < 1.0f) transitionTick += transitionSpeed * Time.deltaTime;
             else
@@ -138,39 +151,44 @@ public class Room : MonoBehaviour
             else
             {
                 transout = false;
-                for (int i = 0; i < transform.childCount - 2; i++)
-                {
-                    transform.GetChild(i).gameObject.SetActive(false);
-                }
+                // for (int i = 0; i < 4; i++)
+                // {
+                //     transform.GetChild(i).gameObject.SetActive(false);
+                // }
+                Doors.SetActive(false);
+                Traps.SetActive(false);
+                Enemies.SetActive(false);
+                Chest.SetActive(false);
+                active = false;
             }
             SpriteRenderer rend =  Transition.GetComponent<SpriteRenderer>();
             rend.color = new Color(rend.color.r, rend.color.g, rend.color.b, 1 - transitionTick);
         }
-        if (player != null)
-        {
-            Vector3 difference = player.transform.position - transform.position;
-            if (difference.x < 7.5 && difference.x > -7.5 && difference.y < 7.5 && difference.y > -7.5)
-            {
-                if (inactive)
-                {
-                    inactive = false;
-                    FadeIn();
-                    active = true;
-                    Vector3 newpos = transform.position;
-                    newpos.z = -10;
-                    cam.transform.position = newpos;
-                }
-            }
-            else if (difference.x > 8 || difference.x < -8 || difference.y > 8 || difference.y < -8)
-            {
-                if (active)
-                {
-                    active = false;
-                    FadeOut();
-                    inactive = true;
-                }
-            }
-        }
+        // if (player != null)
+        // {
+        //     Vector3 difference = player.transform.position - transform.position;
+        //     if (difference.x < 7.5 && difference.x > -7.5 && difference.y < 7.5 && difference.y > -7.5)
+        //     {
+        //         if (inactive)
+        //         {
+        //             inactive = false;
+        //             FadeIn();
+        //             active = true;
+        //             Vector3 newpos = transform.position;
+        //             newpos.z = -10;
+        //             cam.transform.position = newpos;
+        //         }
+        //     }
+        //     else if (difference.x > 8 || difference.x < -8 || difference.y > 8 || difference.y < -8)
+        //     {
+        //         if (active)
+        //         {
+        //             active = false;
+        //             FadeOut();
+        //             inactive = true;
+        //         }
+        //     }
+        // }
         
 
     }
