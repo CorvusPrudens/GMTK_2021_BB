@@ -8,6 +8,8 @@ public class ChangePlayerStats : MonoBehaviour
 
     public void ApplyStatsToPlayer()
     {
+        AkSoundEngine.PostEvent("Player_CollectSoul", this.gameObject);
+
         EventBroker.CallApplyPLayerStats(statsToApply);
     }
 }

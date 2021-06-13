@@ -14,6 +14,7 @@ public class PlayerDash : MonoBehaviour
     private bool isDashing;
     private Vector2 dashDirection;
 
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -42,6 +43,10 @@ public class PlayerDash : MonoBehaviour
         isDashing = true;
         movement.canMove = false;
         dashDirection = movement.movementVector;
+
+        AkSoundEngine.PostEvent("Player_Dash", this.gameObject);
+
+        print("IS DASHING");
     }
 
     void ResetDash()
