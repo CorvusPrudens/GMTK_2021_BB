@@ -13,6 +13,10 @@ public class Chest : MonoBehaviour
     [SerializeField] private Sprite openSprite;
     private SpriteRenderer renderer;
 
+    [SerializeField] private Sprite key;
+    [SerializeField] private Sprite heart;
+    [SerializeField] private SpriteRenderer collectibleRenderer;
+
     private PlayerStats stats;
 
     private void Awake()
@@ -40,12 +44,16 @@ public class Chest : MonoBehaviour
 
         if (chestType == ChestType.HP)
         {
+            AkSoundEngine.PostEvent("Player_CollectSoul", this.gameObject);
             stats.maxStats.health += healthAwarded;
             stats.currentHealth += healthAwarded;
+            DisplaySprite(heart);
         }
         else if(chestType == ChestType.Key)
         {
+            AkSoundEngine.PostEvent("Player_CollectKey", this.gameObject);
             stats.keys++;
+            DisplaySprite(key);
         }
 
         EventBroker.CallUpdateStatsUI();
@@ -65,6 +73,29 @@ public class Chest : MonoBehaviour
         {
             canOpen = false;
         }
+    }
+
+    private void DisplaySprite(Sprite sprite)
+    {
+        collectibleRenderer.sprite = sprite;
+        StartCoroutine(FadeOut());
+    }
+
+    private IEnumerator FadeOut()
+    {
+        yield return new WaitForSeconds(1f);
+
+        float currentTime = 0f;
+        float fadeDuration = 2f;
+        while (currentTime < fadeDuration)
+        {
+            currentTime += Time.deltaTime;
+            float newAlpha = Mathf.Lerp(1, 0, currentTime / fadeDuration);
+            collectibleRenderer.color =
+                new Color(collectibleRenderer.color.r, collectibleRenderer.color.g, collectibleRenderer.color.b, newAlpha);
+            yield return null;
+        }
+        yield break;
     }
 
 }
