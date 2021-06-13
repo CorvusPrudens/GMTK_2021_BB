@@ -23,6 +23,19 @@ public class EnemyStats : MonoBehaviour, IDamageable
 
     public void Kill()
     {
+        if (enemyType == EnemyType.Wasp)
+        {
+            AkSoundEngine.PostEvent("Wasp_Die", this.gameObject);
+        }
+        else if (enemyType == EnemyType.Dragonfly)
+        {
+            AkSoundEngine.PostEvent("Dragon_Die", this.gameObject);
+        }
+        else if (enemyType == EnemyType.RolyPoly)
+        {
+            AkSoundEngine.PostEvent("Rolly_Die", this.gameObject);
+        }
+
         changePlayerStatus.ApplyStatsToPlayer();
         Destroy(gameObject);
     }
@@ -30,6 +43,19 @@ public class EnemyStats : MonoBehaviour, IDamageable
     public void TakeDamage(float damageTaken)
     {
         currentHealth -= damageTaken;
+
+        if (enemyType == EnemyType.Wasp)
+        {
+            AkSoundEngine.PostEvent("Wasp_TakeDamage", this.gameObject);
+        }
+        else if (enemyType == EnemyType.Dragonfly)
+        {
+            AkSoundEngine.PostEvent("Dragon_TakeDamage", this.gameObject);
+        }
+        else if (enemyType == EnemyType.RolyPoly)
+        {
+            AkSoundEngine.PostEvent("Rolly_TakeDamage", this.gameObject);
+        }
 
         print("DAMAGE TO " + gameObject.name + ": " + damageTaken);
 
