@@ -163,7 +163,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7858154867693466947
 Transform:
   m_ObjectHideFlags: 0
@@ -200,7 +200,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!61 &1559102481573930560
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -240,9 +240,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statsToApply:
-    health: -1
-    speed: -5
-    strength: 3
+    health: 0.8
+    speed: -1.5
+    strength: 6
 --- !u!114 &3726698384394317789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,9 +256,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxStats:
-    health: 15
+    health: 7.5
     speed: 1
-    strength: 5
+    strength: 3
   enemyType: 2
 --- !u!114 &2842357770252315002
 MonoBehaviour:

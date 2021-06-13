@@ -4225,11 +4225,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxStats:
-    health: 20
-    speed: 15
-    strength: 5
+    health: 10
+    speed: 10
+    strength: 10
   currentHealth: 0
-  speedAdjustment: 41.26
   speedState:
     idInternal: 0
     valueGuidInternal: 
