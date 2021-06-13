@@ -65,9 +65,9 @@ Material:
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
-    - _MorphDistance: 0.0087
-    - _MorphSpeedX: 1.99
-    - _MorphSpeedY: 2.99
+    - _MorphDistance: 0.0197
+    - _MorphSpeedX: 3.69
+    - _MorphSpeedY: 4.74
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0

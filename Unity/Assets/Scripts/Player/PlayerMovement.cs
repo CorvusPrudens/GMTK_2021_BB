@@ -24,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
     }
     Direction lastDirection = Direction.RIGHT;
 
+    List<Vector2> trail = new List<Vector2>();
+
     void ActivateDirection(Direction d)
     {
         switch (d)
@@ -121,9 +123,27 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public Vector2 GetTrail()
+    {
+        return trail[0];
+    }
+
+    void ManageTrail()
+    {
+        Vector2 lastPosition = trail[trail.Count - 1];
+        float dist = Vector2.Distance((Vector2) transform.position, lastPosition);
+        if (dist > 0.25f)
+        {
+            trail.Add((Vector2) transform.position);
+            if (trail.Count > 9)
+                trail.RemoveAt(0);
+        }
+    }
+
     private void Awake()
     {
         canMove = true;
+        trail.Add((Vector2)  transform.position);
     }
 
     void Update()
@@ -141,7 +161,18 @@ public class PlayerMovement : MonoBehaviour
         movementVector = new Vector2(inputHorizontal, inputVertical);
 
         ManageSprites(movementVector);
+        ManageTrail();
 
         transform.Translate(movementVector * moveSpeed * Time.deltaTime);
+    }
+
+    // Debug
+    void OnDrawGizmos()
+    {
+        foreach (Vector2 v in trail)
+        {
+            Gizmos.color = Color.white;
+            Gizmos.DrawWireSphere(new Vector3(v.x, v.y, 0), 0.2f);
+        }
     }
 }
