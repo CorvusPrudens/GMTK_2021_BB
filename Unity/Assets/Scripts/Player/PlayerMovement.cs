@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float moveSpeed;
     private float inputVertical;
     private float inputHorizontal;
-    private Rigidbody2D rb;
+    [HideInInspector] public Rigidbody2D rb;
     [HideInInspector] public Vector2 movementVector;
     [HideInInspector] public bool canMove;
 
@@ -193,5 +193,11 @@ public class PlayerMovement : MonoBehaviour
             Gizmos.color = Color.white;
             Gizmos.DrawWireSphere(new Vector3(v.x, v.y, 0), 0.2f);
         }
+    }
+
+    public void ResetToSpawn()
+    {
+        //do something
+        print("RESET");
     }
 }
