@@ -8,7 +8,7 @@ public class PlayerDash : MonoBehaviour
     private PlayerStats stats;
     private BoxCollider2D playerCollider;
     private PlayerMovement movement;
-    private Rigidbody2D rb;
+    [HideInInspector] public Rigidbody2D rb;
     //Dash parameters
     private float startDashTime = 0.2f;
     private float dashTime;
