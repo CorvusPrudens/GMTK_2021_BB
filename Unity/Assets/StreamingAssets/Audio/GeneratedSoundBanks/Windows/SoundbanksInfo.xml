@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="1661994096" Language="SFX" Hash="1671075337">
+		<SoundBank Id="1661994096" Language="SFX" Hash="288388019">
 			<ObjectPath>\SoundBanks\Default Work Unit\Soundbank</ObjectPath>
 			<ShortName>Soundbank</ShortName>
 			<Path>Soundbank.bnk</Path>
@@ -121,7 +121,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3510314130" Name="Player_CollectKey" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_CollectKey" DurationType="OneShot" DurationMin="0.110295" DurationMax="0.110295">
+				<Event Id="3510314130" Name="Player_CollectKey" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_CollectKey" DurationType="OneShot" DurationMin="0.310295" DurationMax="0.310295">
 					<IncludedMemoryFiles>
 						<File Id="392674267" Language="SFX">
 							<ShortName>sfx_collect_key.wav</ShortName>
