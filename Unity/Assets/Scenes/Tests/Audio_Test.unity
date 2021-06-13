@@ -206,7 +206,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7960786072639886795, guid: 071b2e5488a364504b9d7607dd195c8c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 071b2e5488a364504b9d7607dd195c8c, type: 3}
 --- !u!1 &452921008
 GameObject:
@@ -477,7 +478,7 @@ PrefabInstance:
     - target: {fileID: 2329095092443273317, guid: 66b5ef8f8d95ad54798f01c610229577, type: 3}
       propertyPath: data.WwiseObjectReference
       value: 
-      objectReference: {fileID: 11400000, guid: e6600db2696f47947b2d0f7520f274ed, type: 2}
+      objectReference: {fileID: 11400000, guid: 8ceb3d701d3877a4d916c6dfb848d65a, type: 2}
     - target: {fileID: 3726698384394317789, guid: 66b5ef8f8d95ad54798f01c610229577, type: 3}
       propertyPath: maxStats.health
       value: 1
@@ -621,6 +622,10 @@ PrefabInstance:
       propertyPath: data.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: 8861dbaec01528a42b3d7793e4d0b7f7, type: 2}
+    - target: {fileID: 7747726717226406405, guid: ab42ad50237b843cdaea678794c1d76e, type: 3}
+      propertyPath: data.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: be0a650964203164cacb5eaac31d5233, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab42ad50237b843cdaea678794c1d76e, type: 3}
 --- !u!1 &1595331712 stripped
@@ -657,6 +662,62 @@ MonoBehaviour:
   m_listeners:
     initialListenerList:
     - {fileID: 1595331720}
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
+--- !u!1 &1612112726 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4395539471820393107, guid: ab42ad50237b843cdaea678794c1d76e, type: 3}
+  m_PrefabInstance: {fileID: 1580464777}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1612112734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612112726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d55d3c4958f1d8489744d2ee6327987, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: 958ca0ea
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6839aae5af613e34a8944d316257ac57, type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
+--- !u!114 &1612112735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612112726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9bd90cadd7a57344aac9af6e754edfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
     useDefaultListeners: 1
   isEnvironmentAware: 1
   isStaticObject: 0

@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID DEATH_STINGER = 1015288770U;
         static const AkUniqueID DRAGON_DASH = 820321623U;
         static const AkUniqueID DRAGON_DIE = 1541504395U;
         static const AkUniqueID DRAGON_IDLE = 3496330497U;
@@ -32,8 +33,9 @@ namespace AK
         static const AkUniqueID PRESS = 1086439346U;
         static const AkUniqueID ROLLY_DIE = 4270670118U;
         static const AkUniqueID STOPALL_LOCAL = 3853498466U;
+        static const AkUniqueID TEST = 3157003241U;
+        static const AkUniqueID WASP_BUZZ = 733302340U;
         static const AkUniqueID WASP_DIE = 994571083U;
-        static const AkUniqueID WASP_IDLE = 1051796161U;
         static const AkUniqueID WIN_STINGER = 1332089670U;
     } // namespace EVENTS
 
