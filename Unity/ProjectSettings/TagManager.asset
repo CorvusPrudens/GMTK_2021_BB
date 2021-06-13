@@ -8,6 +8,7 @@ TagManager:
   - Pit
   - Spike
   - Enemy
+  - RESET
   layers:
   - Default
   - TransparentFX

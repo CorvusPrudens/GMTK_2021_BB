@@ -8,6 +8,7 @@ public class PlayerStats : MonoBehaviour, IDamageable, IUpdateStats
     private PlayerMovement movement;
     [HideInInspector] public float currentHealth;
     [HideInInspector] public int keys;
+    private GameObject resetGame;
 
     [SerializeField]
     private AK.Wwise.State speedState;
@@ -21,7 +22,7 @@ public class PlayerStats : MonoBehaviour, IDamageable, IUpdateStats
         EventBroker.applyPlayerStats += UpdateMaxStats;
         currentHealth = maxStats.health;
         movement = GetComponent<PlayerMovement>();
-
+        resetGame = GameObject.FindGameObjectWithTag("RESET");
     }
 
     public void UpdateMaxStats(Stats statsToApply)
@@ -72,7 +73,7 @@ public class PlayerStats : MonoBehaviour, IDamageable, IUpdateStats
     {
         AkSoundEngine.PostEvent("Player_Die", this.gameObject);
         AkSoundEngine.PostEvent("Death_Stinger", this.gameObject);
-
+        resetGame.SetActive(true);
         Destroy(gameObject);
     }
 }
