@@ -16,11 +16,19 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="1661994096" Language="SFX" Hash="1070922984">
+		<SoundBank Id="1661994096" Language="SFX" Hash="1671075337">
 			<ObjectPath>\SoundBanks\Default Work Unit\Soundbank</ObjectPath>
 			<ShortName>Soundbank</ShortName>
 			<Path>Soundbank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="1015288770" Name="Death_Stinger" ObjectPath="\Events\Default Work Unit\MX\Death_Stinger" DurationType="OneShot" DurationMin="6.617641" DurationMax="6.617641">
+					<IncludedMemoryFiles>
+						<File Id="188032365" Language="SFX">
+							<ShortName>sfx_death_stinger.wav</ShortName>
+							<Path>SFX\sfx_death_stinger_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="820321623" Name="Dragon_Dash" ObjectPath="\Events\Default Work Unit\SFX\Enemy\DragonFly\Dragon_Dash" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1541504395" Name="Dragon_Die" ObjectPath="\Events\Default Work Unit\SFX\Enemy\DragonFly\Dragon_Die" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.602687">
 					<IncludedMemoryFiles>
