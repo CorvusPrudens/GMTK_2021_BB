@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour, IDamageable, IUpdateStats
 {
     public Stats maxStats;
+    private PlayerMovement movement;
     [HideInInspector] public float currentHealth;
     [HideInInspector] public int keys;
 
@@ -19,6 +20,7 @@ public class PlayerStats : MonoBehaviour, IDamageable, IUpdateStats
     {
         EventBroker.applyPlayerStats += UpdateMaxStats;
         currentHealth = maxStats.health;
+        movement = GetComponent<PlayerMovement>();
 
     }
 
