@@ -35,28 +35,28 @@ public class AnimateObjects : MonoBehaviour
     [SerializeField, Tooltip("The rotation axis of the animated object. It's fine if you just make the axis a cild.")]
     Transform rotationAxis;
     [SerializeField, Tooltip("The individual speed of the gameobject relative to Global Speed")]
-    MovementFunction MovementFunction1 = MovementFunction.SINE;
+    MovementFunction MovementFunction1 = MovementFunction.ROUND_SQUARE;
     [SerializeField, Tooltip("Movement function two. These can be blended together.")]
     MovementFunction MovementFunction2 = MovementFunction.SQUARE;
     [SerializeField, Range(0, 1), Tooltip("Amount of blending between functions.")]
-    public float functionMorph = 0.5f;
+    public float functionMorph = 0f;
 
     [SerializeField, Range(0, 1), Tooltip("Function phase (position within the cycle)")]
     float functionPhase = 0f;
     [SerializeField, Range(0, 1), Tooltip("Function range.")]
-    float functionRange = 1f;
+    float functionRange = 0.2f;
     [SerializeField, Range(0, 1), Tooltip("Function offset.")]
     float functionOffset = 0f;
     [SerializeField, Range(0.05f, 0.35f), Tooltip("Morph between square and sine for ROUND_SQUARE")]
-    float roundedDelta = 0.1f;
+    float roundedDelta = 0.2f;
 
     [Header("Bounce")]
     [SerializeField, Tooltip("The individual speed of the gameobject relative to Global Speed")]
-    MovementFunction BounceFunction = MovementFunction.ROUND_SQUARE;
+    MovementFunction BounceFunction = MovementFunction.SINE;
     [SerializeField, Range(0, 1), Tooltip("Function phase (position within the cycle)")]
     float bounceFunctionPhase = 0f;
     [SerializeField, Range(0, 1), Tooltip("Function range (in units).")]
-    float bounceFunctionRange = 1f;
+    float bounceFunctionRange = 0.25f;
     [SerializeField, Tooltip("The parent of your object's sprites.")]
     Transform spriteContainer;
     
@@ -83,14 +83,36 @@ public class AnimateObjects : MonoBehaviour
 
     public void Stop()
     {
-        isAnimating = false;
-        animationProgress = 0;
-        bounceProgress = 0;
+        if (isAnimating)
+        {
+            isAnimating = false;
+            animationProgress = 0.5f;
+            bounceProgress = 0.5f;
+            AnimateObject();
+        }
     }
 
-    void AnimateObject(int index)
+    void AnimateObject()
     {
-        
+        if (rotationAxis != null)
+        {
+            animationProgress += Time.deltaTime * localSpeed * globalSpeed;
+            int index = (int) (((animationProgress + functionPhase) % 1) * TABLE_SIZE);
+            float func1 = GetFunction(MovementFunction1, index);
+            float func2 = GetFunction(MovementFunction2, index);
+            float result = (1 - functionMorph) * func1 + functionMorph * func2;
+            float range = 180 * functionRange;
+            float offset = 360 * functionOffset;
+            rotationAxis.eulerAngles = new Vector3(0, 0, result * range + offset);
+        }
+        if (spriteContainer != null)
+        {
+            bounceProgress += Time.deltaTime * localSpeed * globalSpeed;
+            int index = (int) (((bounceProgress + bounceFunctionPhase) % 1) * TABLE_SIZE);
+            float func = Mathf.Abs(GetFunction(BounceFunction, index));
+            float range = bounceFunctionRange;
+            spriteContainer.localPosition = new Vector3(0, func * range);
+        }
     }
 
     void OnValidate() 
@@ -166,24 +188,6 @@ public class AnimateObjects : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isAnimating && rotationAxis != null)
-        {
-            animationProgress += Time.deltaTime * localSpeed * globalSpeed;
-            int index = (int) (((animationProgress + functionPhase) % 1) * TABLE_SIZE);
-            float func1 = GetFunction(MovementFunction1, index);
-            float func2 = GetFunction(MovementFunction2, index);
-            float result = (1 - functionMorph) * func1 + functionMorph * func2;
-            float range = 180 * functionRange;
-            float offset = 360 * functionOffset;
-            rotationAxis.eulerAngles = new Vector3(0, 0, result * range + offset);
-        }
-        if (isAnimating && spriteContainer != null)
-        {
-            bounceProgress += Time.deltaTime * localSpeed * globalSpeed;
-            int index = (int) (((bounceProgress + bounceFunctionPhase) % 1) * TABLE_SIZE);
-            float func = Mathf.Abs(GetFunction(BounceFunction, index));
-            float range = bounceFunctionRange;
-            spriteContainer.localPosition = new Vector3(0, func * range);
-        }
+        if (isAnimating) AnimateObject();
     }
 }
