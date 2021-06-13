@@ -16,7 +16,6 @@ public class PlayerDash : MonoBehaviour
     private Vector2 dashDirection;
     private float speedMultiplier = 1.5f;
 
-
     // Start is called before the first frame update
     void Awake()
     {
@@ -47,9 +46,11 @@ public class PlayerDash : MonoBehaviour
         movement.canMove = false;
         dashDirection = movement.movementVector;
 
-        AkSoundEngine.PostEvent("Player_Dash", this.gameObject);
+        int playerLayer = LayerMask.NameToLayer("Player");
+        int enemyLayer = LayerMask.NameToLayer("Enemy");
+        Physics2D.IgnoreLayerCollision(playerLayer, enemyLayer, true);
 
-        print("IS DASHING");
+        AkSoundEngine.PostEvent("Player_Dash", this.gameObject);
     }
 
     void ResetDash()
@@ -57,7 +58,10 @@ public class PlayerDash : MonoBehaviour
         dashTime = startDashTime;
         isDashing = false;
         movement.canMove = true;
-        playerCollider.enabled = true;
+
+        int playerLayer = LayerMask.NameToLayer("Player");
+        int enemyLayer = LayerMask.NameToLayer("Enemy");
+        Physics2D.IgnoreLayerCollision(playerLayer, enemyLayer, false);
     }
 
     void Dash()
@@ -69,19 +73,7 @@ public class PlayerDash : MonoBehaviour
         else
         {
             dashTime -= Time.deltaTime;
-            playerCollider.enabled = false;
             rb.velocity = dashDirection * stats.maxStats.speed * speedMultiplier;
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (isDashing)
-        {
-            if(collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Pit"))
-            {
-                Physics2D.IgnoreLayerCollision(8, 6);
-            }
         }
     }
 }

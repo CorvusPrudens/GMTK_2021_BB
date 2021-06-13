@@ -179,7 +179,6 @@ public class PlayerMovement : MonoBehaviour
         ManageSprites(movementVector);
         ManageTrail();
 
-        //transform.Translate(movementVector * moveSpeed * Time.deltaTime);
         rb.velocity = (movementVector * moveSpeed);
     }
 
