@@ -76,11 +76,24 @@ public class Chest : MonoBehaviour
     private void DisplaySprite(Sprite sprite)
     {
         collectibleRenderer.sprite = sprite;
+        StartCoroutine(FadeOut());
     }
 
-    //private IEnumerator FadeSprite()
-    //{
+    private IEnumerator FadeOut()
+    {
+        yield return new WaitForSeconds(1f);
 
-    //}
+        float currentTime = 0f;
+        float fadeDuration = 2f;
+        while (currentTime < fadeDuration)
+        {
+            currentTime += Time.deltaTime;
+            float newAlpha = Mathf.Lerp(1, 0, currentTime / fadeDuration);
+            collectibleRenderer.color =
+                new Color(collectibleRenderer.color.r, collectibleRenderer.color.g, collectibleRenderer.color.b, newAlpha);
+            yield return null;
+        }
+        yield break;
+    }
 
 }
