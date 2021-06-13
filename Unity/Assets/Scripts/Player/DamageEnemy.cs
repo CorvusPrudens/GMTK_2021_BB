@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class DamageEnemy : MonoBehaviour
 {
+    public GameObject player;
     private PlayerStats playerStats;
     private float multiplier = 0.25f;
 
     private void Awake()
     {
-        playerStats = GetComponent<PlayerStats>();
+        playerStats = player.GetComponent<PlayerStats>();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {

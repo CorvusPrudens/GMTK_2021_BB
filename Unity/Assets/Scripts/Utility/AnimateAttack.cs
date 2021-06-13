@@ -1,0 +1,216 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class AnimateAttack : MonoBehaviour
+{
+
+    public enum RotationAxes {
+        UP,
+        DOWN,
+        LEFT,
+        RIGHT,
+        CENTER,
+        NONE,
+    }
+
+    public enum MovementFunction {
+        SINE,
+        TRIANGLE,
+        SQUARE,
+        ROUND_SQUARE,
+    }
+
+    [System.NonSerialized]
+    public float globalSpeed = 1.0f;
+
+    [SerializeField]
+    public float localSpeed = 1.0f;
+    public bool isAnimating = false;
+    
+    [SerializeField, Tooltip("The GameObjects you want to animate.")]
+    GameObject[] targets;
+
+    public GameObject[] invisibles;
+
+    [Header("Rotation")]
+    [SerializeField, Tooltip("The rotation axis of the animated object. It's fine if you just make the axis a cild.")]
+    Transform rotationAxis;
+    [SerializeField, Tooltip("The individual speed of the gameobject relative to Global Speed")]
+    MovementFunction MovementFunction1 = MovementFunction.ROUND_SQUARE;
+    [SerializeField, Tooltip("Movement function two. These can be blended together.")]
+    MovementFunction MovementFunction2 = MovementFunction.SQUARE;
+    [SerializeField, Range(0, 1), Tooltip("Amount of blending between functions.")]
+    public float functionMorph = 0f;
+
+    [SerializeField, Range(0, 1), Tooltip("Function phase (position within the cycle)")]
+    float functionPhase = 0f;
+    [SerializeField, Range(0, 1), Tooltip("Function range.")]
+    float functionRange = 0.2f;
+    [SerializeField, Range(0, 1), Tooltip("Function offset.")]
+    float functionOffset = 0f;
+    [SerializeField, Range(0.05f, 0.35f), Tooltip("Morph between square and sine for ROUND_SQUARE")]
+    float roundedDelta = 0.2f;
+    [SerializeField, Range(0f, 1f), Tooltip("Attack duration.")]
+    float attackDur = 0.5f;
+    
+
+    float animationProgress = 0;
+    float bounceProgress = 0;
+
+    static int TABLE_SIZE = 128;
+    static float TWO_PI = Mathf.PI * 2;
+    float[] slut = new float[TABLE_SIZE];
+    float[] sqlut = new float[TABLE_SIZE];
+    float[] tlut = new float[TABLE_SIZE];
+    float[] sqrlut = new float[TABLE_SIZE];
+
+    public void Pause()
+    {
+        isAnimating = false;
+    }
+    
+    public void Play()
+    {
+        isAnimating = true;
+    }
+
+    public void Stop()
+    {
+        if (isAnimating)
+        {
+            isAnimating = false;
+            animationProgress = 0.5f;
+            bounceProgress = 0.5f;
+            AnimateObject();
+        }
+    }
+
+    // void OnEnable()
+    // {
+    //     animationProgress = 0;
+    //     reenable.SetActive(false);
+    // }
+
+    public void Attack() {
+        foreach (GameObject invisible in invisibles)
+        {
+            SpriteRenderer rend = invisible.GetComponent<SpriteRenderer>();
+            rend.enabled = false;
+        }
+        foreach (GameObject targ in targets)
+        {
+            targ.SetActive(true);
+        }
+        isAnimating = true;
+        animationProgress = 0;
+    }
+
+    public bool IsAttacking() {
+        return isAnimating;
+    }
+
+    void AnimateObject()
+    {
+        animationProgress += Time.deltaTime * localSpeed * globalSpeed;
+        int index = (int) (((animationProgress + functionPhase) % 1) * TABLE_SIZE);
+        float func1 = GetFunction(MovementFunction1, index);
+        float func2 = GetFunction(MovementFunction2, index);
+        float result = (1 - functionMorph) * func1 + functionMorph * func2;
+        float range = 180 * functionRange;
+        float offset = 360 * functionOffset;
+        // rotationAxis.eulerAngles = new Vector3(0, 0, result * range + offset);
+        foreach(GameObject targ in targets)
+        {
+            targ.transform.eulerAngles = new Vector3(0, 0, result * range + offset);
+        }
+        if (animationProgress >= attackDur) {
+            foreach (GameObject invisible in invisibles)
+            {
+                SpriteRenderer rend = invisible.GetComponent<SpriteRenderer>();
+                rend.enabled = true;
+            }
+            foreach (GameObject targ in targets)
+            {
+                targ.SetActive(false);
+            }
+            isAnimating = false;
+        }
+    }
+
+    void OnValidate() 
+    {
+        for (int i = 0; i < TABLE_SIZE; i++)
+        {
+            float step = (float) i / TABLE_SIZE;
+            sqrlut[i] = (2 / Mathf.PI) * Mathf.Atan(Mathf.Sin(TWO_PI * step) / roundedDelta);
+        }
+    }
+    void Start()
+    {
+        for (int i = 0; i < TABLE_SIZE; i++)
+        {
+            float step = (float) i / TABLE_SIZE;
+            slut[i] = Mathf.Sin(TWO_PI * step);
+            sqlut[i] = slut[i] >= 0 ? 1 : 0;
+            float accum = 0;
+            for (int h = 0; h < 16; h++)
+            {
+                float sign = (h % 2) == 0 ? 1 : -1;
+                float harm = h * 2 + 1;
+                accum += sign*Mathf.Sin(TWO_PI * harm * step) / (harm*harm);
+            }
+            tlut[i] = accum;
+
+            sqrlut[i] = (2 / Mathf.PI) * Mathf.Atan(Mathf.Sin(TWO_PI * step) / roundedDelta);
+
+        }
+
+        if (rotationAxis == null)
+        {
+            bool found = false;
+            int index = 0;
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                if (transform.GetChild(i).GetComponent<RotationAxis>() != null)
+                {
+                    found = true;
+                    index = i;
+                    break;
+                }
+            }
+            if (found) rotationAxis = transform.GetChild(index);
+        }
+        
+        // doing a little shuffle so the rotation axis
+        // becomes this object's parent during gameplay
+        if (rotationAxis != null)
+        {
+            Transform upperParent = transform.parent;
+            rotationAxis.SetParent(upperParent);
+            transform.SetParent(rotationAxis);
+        }
+    }
+
+    float GetFunction(MovementFunction type, int index)
+    {
+        switch (type)
+            {   
+                default:
+                case MovementFunction.SINE:
+                    return slut[index];
+                case MovementFunction.SQUARE:
+                    return sqlut[index];
+                case MovementFunction.TRIANGLE:
+                    return tlut[index];
+                case MovementFunction.ROUND_SQUARE:
+                    return sqrlut[index];
+            }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (isAnimating) AnimateObject();
+    }
+}

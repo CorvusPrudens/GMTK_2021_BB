@@ -8,6 +8,7 @@
  Shader "Unlit/Transparent" {
  Properties {
      _MainTex ("Base (RGB) Trans (A)", 2D) = "white" {}
+     _Color ("Color", Color) = (1, 1, 1, 1)
      _MorphSpeedX ("Texture morph speed x", Range(1, 5)) = 1.3
      _MorphSpeedY ("Texture morph speed y", Range(1, 5)) = 2.7
      _MorphDistance("Texture morph distance", Range(0.005, 0.05)) = 0.025
@@ -31,11 +32,13 @@
              struct appdata_t {
                  float4 vertex : POSITION;
                  float2 texcoord : TEXCOORD0;
+                 float4 color : COLOR;
              };
  
              struct v2f {
                  float4 vertex : SV_POSITION;
                  half2 texcoord : TEXCOORD0;
+                 float4 color : COLOR;
                  UNITY_FOG_COORDS(1)
              };
  
@@ -44,6 +47,7 @@
              float _MorphDistance;
              float _MorphSpeedX;
              float _MorphSpeedY;
+             fixed4 _Color;
              
              v2f vert (appdata_t v)
              {
@@ -55,6 +59,8 @@
                  o.texcoord.x += sin((o.texcoord.x+o.texcoord.y)*8 + _Time.g*_MorphSpeedX)*_MorphDistance;
                  o.texcoord.y += cos((o.texcoord.x-o.texcoord.y)*8 + _Time.g*_MorphSpeedY)*_MorphDistance;
 
+                 o.color = v.color;
+
                  UNITY_TRANSFER_FOG(o,o.vertex);
                  return o;
              }
@@ -63,7 +69,7 @@
              {
 
                  fixed4 col = tex2D(_MainTex, i.texcoord);
-                 col.a *= 0.5;
+                 col.a *= 0.5 * i.color.a;
                  UNITY_APPLY_FOG(i.fogCoord, col);
                  return col;
              }
