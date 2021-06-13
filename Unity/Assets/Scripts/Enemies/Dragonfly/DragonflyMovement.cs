@@ -10,7 +10,7 @@ public class DragonflyMovement : MonoBehaviour
     private float offsetX = 0, offsetY = 0;
     private EnemyStats stats;
     private bool canMove;
-
+    private bool toggle = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,9 +24,27 @@ public class DragonflyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector3 v = transform.position;
         if (canMove)
         {
             Move();
+        }
+        float distance = Vector3.Distance(v, transform.position);
+        if (distance > 0.005f)
+        {
+            if (toggle)
+            {
+                AkSoundEngine.PostEvent("Dragon_Idle", this.gameObject);
+                toggle = false;
+            }
+        }
+        else
+        {
+            if (!toggle)
+            {
+                AkSoundEngine.PostEvent("STOPALL_local", this.gameObject);
+                toggle = true;
+            }
         }
     }
 

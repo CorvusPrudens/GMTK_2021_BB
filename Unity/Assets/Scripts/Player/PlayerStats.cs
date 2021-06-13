@@ -30,20 +30,20 @@ public class PlayerStats : MonoBehaviour, IDamageable, IUpdateStats
         maxStats.health *= statsToApply.health;
         currentHealth *= statsToApply.health;
 
-        //if (adjustedSpeed > maxStats.strength && adjustedSpeed > maxStats.health)
-        //{
-        //    speedState.SetValue();
-        //}
+        if (maxStats.speed > maxStats.strength && maxStats.speed > maxStats.health)
+        {
+            speedState.SetValue();
+        }
 
-        //if (maxStats.health > maxStats.strength && maxStats.health > adjustedSpeed)
-        //{
-        //    healthState.SetValue();
-        //}
+        if (maxStats.health > maxStats.strength && maxStats.health > maxStats.speed)
+        {
+            healthState.SetValue();
+        }
 
-        //if (maxStats.strength > adjustedSpeed && maxStats.strength > maxStats.health)
-        //{
-        //    strengthState.SetValue();
-        //}
+        if (maxStats.strength > maxStats.speed && maxStats.strength > maxStats.health)
+        {
+            strengthState.SetValue();
+        }
 
         EventBroker.CallUpdateStatsUI();
 

@@ -44,18 +44,7 @@ public class EnemyStats : MonoBehaviour, IDamageable
     {
         currentHealth -= damageTaken;
 
-        if (enemyType == EnemyType.Wasp)
-        {
-            AkSoundEngine.PostEvent("Wasp_TakeDamage", this.gameObject);
-        }
-        else if (enemyType == EnemyType.Dragonfly)
-        {
-            AkSoundEngine.PostEvent("Dragon_TakeDamage", this.gameObject);
-        }
-        else if (enemyType == EnemyType.RolyPoly)
-        {
-            AkSoundEngine.PostEvent("Rolly_TakeDamage", this.gameObject);
-        }
+        AkSoundEngine.PostEvent("Enemy_TakeDamage", this.gameObject);
 
         print("DAMAGE TO " + gameObject.name + ": " + damageTaken);
 
