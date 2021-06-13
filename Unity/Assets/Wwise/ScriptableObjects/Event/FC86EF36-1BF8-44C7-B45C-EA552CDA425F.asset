@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71f906ad7c2ae474abb65b26324ea0f1, type: 3}
+  m_Name: FC86EF36-1BF8-44C7-B45C-EA552CDA425F
+  m_EditorClassIdentifier: 
+  objectName: Win_Stinger
+  id: 1332089670
+  guid: FC86EF36-1BF8-44C7-B45C-EA552CDA425F
