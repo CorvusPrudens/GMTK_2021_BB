@@ -102,7 +102,10 @@ public class PlayerMovement : MonoBehaviour
     {
         AnimateAttack atk = attackObj.GetComponent<AnimateAttack>();
         if (!atk.IsAttacking())
+        {
             atk.Attack();
+            AkSoundEngine.PostEvent("Player_Attack", this.gameObject);
+        }
     }
 
     Direction GetDirection(Vector2 v)

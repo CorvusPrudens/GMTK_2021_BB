@@ -385,7 +385,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: ef860cb255a4fa4683dc80f67272beed
     GuidInternal: 
-    m_lastTime: -8585780161021889323
+    m_lastTime: -8585780130485241469
     List:
     - name: Soundbank
       guid: a51ec8a1ebce284aa68ba10d11d5ba78
@@ -413,8 +413,28 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: ff0b084ed1e3e44e95d214517df38595
     GuidInternal: 
-    m_lastTime: -8585780155488317434
+    m_lastTime: -8585780128375222376
     List:
+    - name: Death_Stinger
+      guid: aabb4fa246d6564c9275a7a6cb777436
+      id: 1015288770
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ff0b084ed1e3e44e95d214517df38595
+      - ElementName: MX
+        ObjectType: 4
+        guid: c1c2ba883fd3f74084d7af16c191d99b
+      - ElementName: Death_Stinger
+        ObjectType: 3
+        guid: aabb4fa246d6564c9275a7a6cb777436
+      Path: Events\Default Work Unit\MX\Death_Stinger
+      maxAttenuation: 0
+      maxDuration: 6.617641
+      minDuration: 6.617641
     - name: Dragon_Dash
       guid: 78628316c8f5b643b7ba34875991d341
       id: 820321623

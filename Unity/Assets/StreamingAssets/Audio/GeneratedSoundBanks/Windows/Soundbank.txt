@@ -7,6 +7,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	842135496	Enemy_TakeDamage			\Default Work Unit\SFX\Enemy\Enemy_TakeDamage	
 	909071731	Player_BashDoor			\Default Work Unit\SFX\Player\Player_BashDoor	
 	994571083	Wasp_Die			\Default Work Unit\SFX\Enemy\Wasp\Wasp_Die	
+	1015288770	Death_Stinger			\Default Work Unit\MX\Death_Stinger	
 	1086439346	Press			\Default Work Unit\SFX\UI\Press	
 	1332089670	Win_Stinger			\Default Work Unit\MX\Win_Stinger	
 	1516819876	Player_OpenChest			\Default Work Unit\SFX\Player\Player_OpenChest	
@@ -53,6 +54,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	130267092	sfx_wasp_buzz	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Windows\SFX\sfx_wasp_idle_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemy\Wasp\sfx_wasp_buzz		2823548
 	130596390	sfx_wasp_die	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Windows\SFX\sfx_wasp_die_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemy\Wasp\Wasp_Die\sfx_wasp_die		132208
 	160036161	sfx_enemy_takedamage_03	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Windows\SFX\sfx_enemy_takedamage_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemy\Enemy_TakeDamage\sfx_enemy_takedamage_03		37580
+	188032365	sfx_death_stinger	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Windows\SFX\sfx_death_stinger_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Death_Stinger\sfx_death_stinger		1167496
 	257110889	Bash_Door	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Windows\SFX\Player_BashDoor_T_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Bash_Door		198284
 	298740606	5_4_136_level_layer_HP_36	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Windows\SFX\5.4_136_level_layer_HP_36_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Level_Music_1\Level_1\5_4_136_level_layer_HP_36		15568044
 	341342922	Unlock_Door	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Windows\SFX\sfx_unlock_door_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Unlock_Door		252992
