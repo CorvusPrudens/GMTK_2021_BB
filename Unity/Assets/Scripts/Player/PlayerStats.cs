@@ -6,8 +6,7 @@ public class PlayerStats : MonoBehaviour, IDamageable, IUpdateStats
 {
     public Stats maxStats;
     [HideInInspector] public float currentHealth;
-
-
+    [HideInInspector] public int keys;
 
     [SerializeField]
     private AK.Wwise.State speedState;
