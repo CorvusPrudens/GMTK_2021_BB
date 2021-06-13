@@ -315,6 +315,9 @@ MonoBehaviour:
     speed: 8
     strength: 2
   enemyType: 0
+  DragonSoul: {fileID: 4670190186952338031, guid: 49eff798034063986bb13cc924c9625b, type: 3}
+  RolySoul: {fileID: 4670190186952338031, guid: 1053697f65f8b064184ea459a70ce181, type: 3}
+  WaspSoul: {fileID: 4670190186952338031, guid: 41116173cdf1f2d99b914cab7e96d58d, type: 3}
 --- !u!114 &4395539471820393129
 MonoBehaviour:
   m_ObjectHideFlags: 0
