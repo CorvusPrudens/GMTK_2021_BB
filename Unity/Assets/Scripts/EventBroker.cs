@@ -18,4 +18,11 @@ public static class EventBroker
     {
     updateStatsUI?.Invoke();
     }
+
+    public static event Action resetGame;
+
+    public static void CallResetGame()
+    {
+        resetGame?.Invoke();
+    }
 }
