@@ -15,7 +15,11 @@ public class DamageEnemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (!collision.gameObject.CompareTag("Enemy"))
+        {
+            return;
+        }
+        else
         {
             EnemyStats enemy = collision.gameObject.GetComponent<EnemyStats>();
             enemy.TakeDamage(playerStats.maxStats.strength * multiplier);
