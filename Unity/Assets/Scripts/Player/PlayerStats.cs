@@ -28,6 +28,7 @@ public class PlayerStats : MonoBehaviour, IDamageable, IUpdateStats
         maxStats.speed += statsToApply.speed;
         maxStats.strength += statsToApply.strength;
         maxStats.health *= statsToApply.health;
+        currentHealth *= statsToApply.health;
 
         //if (adjustedSpeed > maxStats.strength && adjustedSpeed > maxStats.health)
         //{
@@ -44,7 +45,6 @@ public class PlayerStats : MonoBehaviour, IDamageable, IUpdateStats
         //    strengthState.SetValue();
         //}
 
-        currentHealth += statsToApply.health;
         EventBroker.CallUpdateStatsUI();
 
         print("health: " + maxStats.health + " strength: " + maxStats.strength + " speed: " + maxStats.speed);
