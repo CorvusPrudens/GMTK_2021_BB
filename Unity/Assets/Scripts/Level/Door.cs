@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Door : MonoBehaviour 
+public class Door : MonoBehaviour
 {
-    
+
     public bool isLockable = false;
     public bool isLocked = false;
     public float HP = 10;
@@ -142,6 +142,8 @@ public class Door : MonoBehaviour
         stats.keys--;
         EventBroker.CallUpdateStatsUI();
 
+        AkSoundEngine.PostEvent("Player_UnlockDoor", this.gameObject);
+
         switch (position)
         {
             case Position.UP_L:
@@ -157,7 +159,7 @@ public class Door : MonoBehaviour
                 position = Position.RIGHT;
                     break;
         }
-        
+
         SetVisuals();
     }
 

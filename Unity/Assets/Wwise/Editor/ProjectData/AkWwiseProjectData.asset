@@ -413,7 +413,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: ff0b084ed1e3e44e95d214517df38595
     GuidInternal: 
-    m_lastTime: -8585780128375222376
+    m_lastTime: -8585780017909291094
     List:
     - name: Death_Stinger
       guid: aabb4fa246d6564c9275a7a6cb777436
@@ -726,8 +726,8 @@ MonoBehaviour:
         guid: 8217ad5a4302b64f942aa91dd35af214
       Path: Events\Default Work Unit\SFX\Player\Player_CollectKey
       maxAttenuation: 0
-      maxDuration: 0.110295
-      minDuration: 0.110295
+      maxDuration: 0.310295
+      minDuration: 0.310295
     - name: Player_CollectSoul
       guid: c7de4addd7b70a4ca91ee82215c42011
       id: 513291760
