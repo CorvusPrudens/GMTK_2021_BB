@@ -142,6 +142,8 @@ public class Door : MonoBehaviour
         stats.keys--;
         EventBroker.CallUpdateStatsUI();
 
+        AkSoundEngine.PostEvent("Player_UnlockDoor", this.gameObject);
+
         switch (position)
         {
             case Position.UP_L:
