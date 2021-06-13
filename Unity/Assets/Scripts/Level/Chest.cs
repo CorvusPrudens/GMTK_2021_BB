@@ -13,6 +13,10 @@ public class Chest : MonoBehaviour
     [SerializeField] private Sprite openSprite;
     private SpriteRenderer renderer;
 
+    [SerializeField] private Sprite key;
+    [SerializeField] private Sprite heart;
+    [SerializeField] private SpriteRenderer collectibleRenderer;
+
     private PlayerStats stats;
 
     private void Awake()
@@ -42,10 +46,12 @@ public class Chest : MonoBehaviour
         {
             stats.maxStats.health += healthAwarded;
             stats.currentHealth += healthAwarded;
+            DisplaySprite(heart);
         }
         else if(chestType == ChestType.Key)
         {
             stats.keys++;
+            DisplaySprite(key);
         }
 
         EventBroker.CallUpdateStatsUI();
@@ -66,5 +72,15 @@ public class Chest : MonoBehaviour
             canOpen = false;
         }
     }
+
+    private void DisplaySprite(Sprite sprite)
+    {
+        collectibleRenderer.sprite = sprite;
+    }
+
+    //private IEnumerator FadeSprite()
+    //{
+
+    //}
 
 }
