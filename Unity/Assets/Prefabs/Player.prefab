@@ -102,10 +102,10 @@ MonoBehaviour:
   MovementFunction1: 3
   MovementFunction2: 2
   functionMorph: 0
-  functionPhase: 0
+  functionPhase: 0.5
   functionRange: 0.2
   functionOffset: 0
-  roundedDelta: 0.2
+  roundedDelta: 0.265
   BounceFunction: 0
   bounceFunctionPhase: 0
   bounceFunctionRange: 0.25
@@ -212,10 +212,10 @@ MonoBehaviour:
   MovementFunction1: 3
   MovementFunction2: 2
   functionMorph: 0
-  functionPhase: 0
+  functionPhase: 0.5
   functionRange: 0.071
   functionOffset: 0
-  roundedDelta: 0.2
+  roundedDelta: 0.265
   BounceFunction: 0
   bounceFunctionPhase: 0
   bounceFunctionRange: 0.25
@@ -792,7 +792,7 @@ MonoBehaviour:
   functionPhase: 0
   functionRange: 0
   functionOffset: 0
-  roundedDelta: 0.25
+  roundedDelta: 0.287
   BounceFunction: 3
   bounceFunctionPhase: 0
   bounceFunctionRange: 1
@@ -900,9 +900,9 @@ MonoBehaviour:
   MovementFunction2: 3
   functionMorph: 0
   functionPhase: 0
-  functionRange: 0.209
+  functionRange: 0.064
   functionOffset: 0
-  roundedDelta: 0.228
+  roundedDelta: 0.285
   BounceFunction: 3
   bounceFunctionPhase: 0
   bounceFunctionRange: 1
@@ -1619,10 +1619,10 @@ MonoBehaviour:
   MovementFunction1: 3
   MovementFunction2: 2
   functionMorph: 0
-  functionPhase: 0
+  functionPhase: 0.5
   functionRange: 0.2
   functionOffset: 0
-  roundedDelta: 0.182
+  roundedDelta: 0.241
   BounceFunction: 3
   bounceFunctionPhase: 0
   bounceFunctionRange: 1
@@ -1730,9 +1730,9 @@ MonoBehaviour:
   MovementFunction2: 2
   functionMorph: 0
   functionPhase: 0.5
-  functionRange: 0.2
+  functionRange: 0.12
   functionOffset: 0
-  roundedDelta: 0.2
+  roundedDelta: 0.261
   BounceFunction: 0
   bounceFunctionPhase: 0
   bounceFunctionRange: 0.25
@@ -1797,7 +1797,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6501289090538349239
 Transform:
   m_ObjectHideFlags: 0
@@ -1837,7 +1837,7 @@ MonoBehaviour:
   roundedDelta: 0.1
   BounceFunction: 0
   bounceFunctionPhase: 0
-  bounceFunctionRange: 0.253
+  bounceFunctionRange: 0.318
   spriteContainer: {fileID: 3615465802842386927}
 --- !u!114 &7566005591039931085
 MonoBehaviour:
@@ -2005,7 +2005,7 @@ MonoBehaviour:
   roundedDelta: 0.1
   BounceFunction: 0
   bounceFunctionPhase: 0
-  bounceFunctionRange: 0.25
+  bounceFunctionRange: 0.308
   spriteContainer: {fileID: 5325217798673384331}
 --- !u!114 &3209874451254898467
 MonoBehaviour:
@@ -2133,9 +2133,9 @@ MonoBehaviour:
   MovementFunction2: 2
   functionMorph: 0
   functionPhase: 0
-  functionRange: 0.2
+  functionRange: 0.055
   functionOffset: 0
-  roundedDelta: 0.2
+  roundedDelta: 0.282
   BounceFunction: 0
   bounceFunctionPhase: 0
   bounceFunctionRange: 0.25
@@ -2551,7 +2551,7 @@ MonoBehaviour:
   functionPhase: 0
   functionRange: 0.2
   functionOffset: 0
-  roundedDelta: 0.2
+  roundedDelta: 0.281
   BounceFunction: 0
   bounceFunctionPhase: 0
   bounceFunctionRange: 0.25
@@ -2704,7 +2704,7 @@ MonoBehaviour:
   functionPhase: 0
   functionRange: 0.055
   functionOffset: 0
-  roundedDelta: 0.2
+  roundedDelta: 0.259
   BounceFunction: 0
   bounceFunctionPhase: 0
   bounceFunctionRange: 0.25
@@ -3022,10 +3022,10 @@ MonoBehaviour:
   MovementFunction1: 3
   MovementFunction2: 2
   functionMorph: 0
-  functionPhase: 0
-  functionRange: 0.2
+  functionPhase: 0.5
+  functionRange: 0.122
   functionOffset: 0
-  roundedDelta: 0.2
+  roundedDelta: 0.274
   BounceFunction: 0
   bounceFunctionPhase: 0
   bounceFunctionRange: 0.25
@@ -3176,7 +3176,7 @@ MonoBehaviour:
   MovementFunction2: 2
   functionMorph: 0
   functionPhase: 0
-  functionRange: 0.2
+  functionRange: 0.077
   functionOffset: 0
   roundedDelta: 0.2
   BounceFunction: 0
@@ -3328,10 +3328,10 @@ MonoBehaviour:
   MovementFunction1: 3
   MovementFunction2: 2
   functionMorph: 0
-  functionPhase: 0.5
+  functionPhase: 0
   functionRange: 0.2
   functionOffset: 0
-  roundedDelta: 0.2
+  roundedDelta: 0.283
   BounceFunction: 0
   bounceFunctionPhase: 0
   bounceFunctionRange: 0.25
@@ -3361,7 +3361,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6685740679770119341}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.3, y: -2.16, z: 0}
+  m_LocalPosition: {x: 0.3, y: -2.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 858324494452677566}
@@ -3637,7 +3637,7 @@ MonoBehaviour:
   functionPhase: 0.5
   functionRange: 0.23
   functionOffset: 0
-  roundedDelta: 0.19
+  roundedDelta: 0.258
   BounceFunction: 3
   bounceFunctionPhase: 0
   bounceFunctionRange: 1
@@ -3744,7 +3744,7 @@ MonoBehaviour:
   MovementFunction1: 3
   MovementFunction2: 2
   functionMorph: 0
-  functionPhase: 0.5
+  functionPhase: 0
   functionRange: 0.2
   functionOffset: 0
   roundedDelta: 0.2
@@ -3857,7 +3857,7 @@ MonoBehaviour:
   functionPhase: 0
   functionRange: 0.195
   functionOffset: 0
-  roundedDelta: 0.189
+  roundedDelta: 0.243
   BounceFunction: 3
   bounceFunctionPhase: 0
   bounceFunctionRange: 1
@@ -4075,9 +4075,9 @@ MonoBehaviour:
   MovementFunction2: 2
   functionMorph: 0
   functionPhase: 0.5
-  functionRange: 0.2
+  functionRange: 0.04
   functionOffset: 0
-  roundedDelta: 0.2
+  roundedDelta: 0.252
   BounceFunction: 0
   bounceFunctionPhase: 0
   bounceFunctionRange: 0.25
@@ -4244,6 +4244,10 @@ MonoBehaviour:
   moveSpeed: 6.5
   movementVector: {x: 0, y: 0}
   canMove: 0
+  spriteLeft: {fileID: 4917738705322167305}
+  spriteRight: {fileID: 5173642111624795110}
+  spriteUp: {fileID: 9159943334610896712}
+  spriteDown: {fileID: 7683373039122109785}
 --- !u!114 &771845245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4371,9 +4375,9 @@ MonoBehaviour:
   MovementFunction2: 2
   functionMorph: 0
   functionPhase: 0
-  functionRange: 0.2
+  functionRange: 0.077
   functionOffset: 0
-  roundedDelta: 0.2
+  roundedDelta: 0.265
   BounceFunction: 0
   bounceFunctionPhase: 0
   bounceFunctionRange: 0.25
@@ -4526,7 +4530,7 @@ MonoBehaviour:
   functionPhase: 0
   functionRange: 0.114
   functionOffset: 0
-  roundedDelta: 0.201
+  roundedDelta: 0.28
   BounceFunction: 3
   bounceFunctionPhase: 0
   bounceFunctionRange: 1
@@ -4548,7 +4552,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6660822678540695664
 Transform:
   m_ObjectHideFlags: 0
@@ -4638,7 +4642,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7753039977742137685}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3, y: -2.16, z: 0}
+  m_LocalPosition: {x: -0.3, y: -2.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7099238269091527993}
@@ -4761,7 +4765,7 @@ MonoBehaviour:
   functionPhase: 0.5
   functionRange: 0.2
   functionOffset: 0
-  roundedDelta: 0.2
+  roundedDelta: 0.261
   BounceFunction: 0
   bounceFunctionPhase: 0
   bounceFunctionRange: 0.25
@@ -5036,10 +5040,10 @@ MonoBehaviour:
   MovementFunction1: 3
   MovementFunction2: 0
   functionMorph: 0
-  functionPhase: 0.5
+  functionPhase: 0
   functionRange: 0.23
   functionOffset: 0
-  roundedDelta: 0.18
+  roundedDelta: 0.239
   BounceFunction: 3
   bounceFunctionPhase: 0
   bounceFunctionRange: 1
@@ -5182,7 +5186,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5598671319507476150
 Transform:
   m_ObjectHideFlags: 0
@@ -5222,7 +5226,7 @@ MonoBehaviour:
   roundedDelta: 0.1
   BounceFunction: 0
   bounceFunctionPhase: 0
-  bounceFunctionRange: 0.252
+  bounceFunctionRange: 0.397
   spriteContainer: {fileID: 2265414350410947478}
 --- !u!114 &7110804123684733756
 MonoBehaviour:
