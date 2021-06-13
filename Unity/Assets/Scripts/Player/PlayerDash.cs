@@ -8,6 +8,7 @@ public class PlayerDash : MonoBehaviour
     private PlayerStats stats;
     private BoxCollider2D playerCollider;
     private PlayerMovement movement;
+    private Rigidbody2D rb;
     //Dash parameters
     private float startDashTime = 0.2f;
     private float dashTime;
@@ -21,12 +22,13 @@ public class PlayerDash : MonoBehaviour
         stats = GetComponent<PlayerStats>();
         playerCollider = GetComponent<BoxCollider2D>();
         movement = GetComponent<PlayerMovement>();
+        rb = GetComponent<Rigidbody2D>();
 
         dashTime = startDashTime;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing)
         {
@@ -67,7 +69,18 @@ public class PlayerDash : MonoBehaviour
         {
             dashTime -= Time.deltaTime;
             playerCollider.enabled = false;
-            transform.Translate(dashDirection * stats.maxStats.speed * Time.deltaTime);
+            rb.velocity = dashDirection * stats.maxStats.speed;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (isDashing)
+        {
+            if(collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Pit"))
+            {
+                Physics2D.IgnoreLayerCollision(8, 6);
+            }
         }
     }
 }
