@@ -13,6 +13,12 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID DRAGON_ATTACK = 482261039U;
+        static const AkUniqueID DRAGON_DASH = 820321623U;
+        static const AkUniqueID DRAGON_DIE = 1541504395U;
+        static const AkUniqueID DRAGON_TAKEDAMAGE = 3037277281U;
+        static const AkUniqueID HOVER = 3753593413U;
+        static const AkUniqueID LEVEL_PLAY = 70953078U;
         static const AkUniqueID PLAYER_ATTACK = 2824512041U;
         static const AkUniqueID PLAYER_BASHDOOR = 909071731U;
         static const AkUniqueID PLAYER_COLLECTKEY = 3510314130U;
@@ -23,7 +29,33 @@ namespace AK
         static const AkUniqueID PLAYER_OPENCHEST = 1516819876U;
         static const AkUniqueID PLAYER_TAKEDAMAGE = 3870290027U;
         static const AkUniqueID PLAYER_UNLOCKDOOR = 1891408857U;
+        static const AkUniqueID PRESS = 1086439346U;
+        static const AkUniqueID ROLLY_ATTACK = 736689176U;
+        static const AkUniqueID ROLLY_DIE = 4270670118U;
+        static const AkUniqueID ROLLY_TAKEDAMAGE = 1889715514U;
+        static const AkUniqueID WASP_ATTACK = 3932795119U;
+        static const AkUniqueID WASP_DIE = 994571083U;
+        static const AkUniqueID WASP_TAKEDAMAGE = 2772886561U;
+        static const AkUniqueID WIN_STINGER = 1332089670U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace MUSIC_STATE
+        {
+            static const AkUniqueID GROUP = 3826569560U;
+
+            namespace STATE
+            {
+                static const AkUniqueID ATTACK = 180661997U;
+                static const AkUniqueID HP = 1769415205U;
+                static const AkUniqueID NA = 1668749442U;
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID SPEED = 640949982U;
+            } // namespace STATE
+        } // namespace MUSIC_STATE
+
+    } // namespace STATES
 
     namespace BANKS
     {

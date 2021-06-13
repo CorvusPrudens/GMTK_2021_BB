@@ -303,7 +303,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 77a7fbbf8a390040a166d7fa9a914093
     GuidInternal: 
-    m_lastTime: -8585780900148632033
+    m_lastTime: -8585780734761523073
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -365,7 +365,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: ef860cb255a4fa4683dc80f67272beed
     GuidInternal: 
-    m_lastTime: -8585780900148251949
+    m_lastTime: -8585780665696089472
     List:
     - name: Soundbank
       guid: a51ec8a1ebce284aa68ba10d11d5ba78
@@ -393,7 +393,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: ff0b084ed1e3e44e95d214517df38595
     GuidInternal: 
-    m_lastTime: -8585780900147671809
+    m_lastTime: -8585780663437506018
     List:
     - name: Dragon_Attack
       guid: 07b00ab959dd7a44b6d6d69411ae9c06
@@ -563,8 +563,45 @@ MonoBehaviour:
         guid: 99e67631ed2369499577d1a1d94d5e03
       Path: Events\Default Work Unit\SFX\UI\Hover
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 0.02
+      minDuration: 0.02
+    - name: Level_Play
+      guid: cc09703e88af2844a813d11bcc519fc1
+      id: 70953078
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ff0b084ed1e3e44e95d214517df38595
+      - ElementName: MX
+        ObjectType: 4
+        guid: c1c2ba883fd3f74084d7af16c191d99b
+      - ElementName: Level_Play
+        ObjectType: 3
+        guid: cc09703e88af2844a813d11bcc519fc1
+      Path: Events\Default Work Unit\MX\Level_Play
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: MX
+      guid: c1c2ba883fd3f74084d7af16c191d99b
+      id: 1685527054
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ff0b084ed1e3e44e95d214517df38595
+      - ElementName: MX
+        ObjectType: 4
+        guid: c1c2ba883fd3f74084d7af16c191d99b
+      Path: Events\Default Work Unit\MX
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Player
       guid: 3bfe3732dbbcc145b713765fd56ddfb1
       id: 1069431850
@@ -606,8 +643,8 @@ MonoBehaviour:
         guid: ea6f986ba8ecea429eea92a8308db1b8
       Path: Events\Default Work Unit\SFX\Player\Player_Attack
       maxAttenuation: 0
-      maxDuration: 0.785333
-      minDuration: 0.785333
+      maxDuration: 0.427417
+      minDuration: 0.424
     - name: Player_BashDoor
       guid: 8f77842778e6f349b7bb7bb0a21c457b
       id: 909071731
@@ -675,8 +712,8 @@ MonoBehaviour:
         guid: c7de4addd7b70a4ca91ee82215c42011
       Path: Events\Default Work Unit\SFX\Player\Player_CollectSoul
       maxAttenuation: 0
-      maxDuration: 1.032396
-      minDuration: 1.032396
+      maxDuration: 1.79575
+      minDuration: 1.79575
     - name: Player_Dash
       guid: 7ef9fd6989a5db46876be667c71c9b05
       id: 2394582229
@@ -698,8 +735,8 @@ MonoBehaviour:
         guid: 7ef9fd6989a5db46876be667c71c9b05
       Path: Events\Default Work Unit\SFX\Player\Player_Dash
       maxAttenuation: 0
-      maxDuration: 0.807958
-      minDuration: 0.807958
+      maxDuration: 0.250146
+      minDuration: 0.250146
     - name: Player_Die
       guid: 0d3e166b284a64408f8e782965dfb1fd
       id: 1542330065
@@ -721,8 +758,8 @@ MonoBehaviour:
         guid: 0d3e166b284a64408f8e782965dfb1fd
       Path: Events\Default Work Unit\SFX\Player\Player_Die
       maxAttenuation: 0
-      maxDuration: 0.926083
-      minDuration: 0.926083
+      maxDuration: 0.687229
+      minDuration: 0.687229
     - name: Player_GetHP
       guid: 8d90192d252ce540bb37dae346902889
       id: 137430303
@@ -767,8 +804,8 @@ MonoBehaviour:
         guid: b6dfe572e7ca164e9d0a62e386e8ad6b
       Path: Events\Default Work Unit\SFX\Player\Player_OpenChest
       maxAttenuation: 0
-      maxDuration: 1.242646
-      minDuration: 1.242646
+      maxDuration: 1
+      minDuration: 1
     - name: Player_TakeDamage
       guid: ebb7920cc1ae9f408b74329d56724a59
       id: 3870290027
@@ -790,8 +827,8 @@ MonoBehaviour:
         guid: ebb7920cc1ae9f408b74329d56724a59
       Path: Events\Default Work Unit\SFX\Player\Player_TakeDamage
       maxAttenuation: 0
-      maxDuration: 1.084375
-      minDuration: 1.084375
+      maxDuration: 0.268813
+      minDuration: 0.230062
     - name: Player_UnlockDoor
       guid: eed4b956cbc94a4592f4c6d4830b8692
       id: 1891408857
@@ -836,8 +873,8 @@ MonoBehaviour:
         guid: c13b75741601234da71c4a26c8f385a8
       Path: Events\Default Work Unit\SFX\UI\Press
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 0.05
+      minDuration: 0.05
     - name: Rolly_Attack
       guid: b2b962ac8937724cb03f12c348e25ca9
       id: 736689176
@@ -1077,6 +1114,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Win_Stinger
+      guid: 36ef86fcf81bc744b45cea552cda425f
+      id: 1332089670
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ff0b084ed1e3e44e95d214517df38595
+      - ElementName: MX
+        ObjectType: 4
+        guid: c1c2ba883fd3f74084d7af16c191d99b
+      - ElementName: Win_Stinger
+        ObjectType: 3
+        guid: 36ef86fcf81bc744b45cea552cda425f
+      Path: Events\Default Work Unit\MX\Win_Stinger
+      maxAttenuation: 0
+      maxDuration: 11
+      minDuration: 11
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -1103,8 +1160,106 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 1d23add6dbc81041b0a498c7cfd2bc14
     GuidInternal: 
-    m_lastTime: -8585780900148501997
-    List: []
+    m_lastTime: -8585780738508852918
+    List:
+    - name: Music_State
+      guid: 87b54c064986654ab82f3044007f2d36
+      id: 3826569560
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1d23add6dbc81041b0a498c7cfd2bc14
+      - ElementName: Music_State
+        ObjectType: 9
+        guid: 87b54c064986654ab82f3044007f2d36
+      Path: States\Default Work Unit\Music_State
+      values:
+      - name: Attack
+        guid: c6ed0fa201bec14da8c108ae606ef7b9
+        id: 180661997
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 1d23add6dbc81041b0a498c7cfd2bc14
+        - ElementName: Music_State
+          ObjectType: 9
+          guid: 87b54c064986654ab82f3044007f2d36
+        - ElementName: Attack
+          ObjectType: 8
+          guid: c6ed0fa201bec14da8c108ae606ef7b9
+      - name: HP
+        guid: 603d81e47c8d7148a3a4cc340b2b0b69
+        id: 1769415205
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 1d23add6dbc81041b0a498c7cfd2bc14
+        - ElementName: Music_State
+          ObjectType: 9
+          guid: 87b54c064986654ab82f3044007f2d36
+        - ElementName: HP
+          ObjectType: 8
+          guid: 603d81e47c8d7148a3a4cc340b2b0b69
+      - name: NA
+        guid: eb9cfbfaf6c04b41b7c7f7fd8caf1aa3
+        id: 1668749442
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 1d23add6dbc81041b0a498c7cfd2bc14
+        - ElementName: Music_State
+          ObjectType: 9
+          guid: 87b54c064986654ab82f3044007f2d36
+        - ElementName: NA
+          ObjectType: 8
+          guid: eb9cfbfaf6c04b41b7c7f7fd8caf1aa3
+      - name: None
+        guid: ac101d5c7b0673479c9b12f42801e87c
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 1d23add6dbc81041b0a498c7cfd2bc14
+        - ElementName: Music_State
+          ObjectType: 9
+          guid: 87b54c064986654ab82f3044007f2d36
+        - ElementName: None
+          ObjectType: 8
+          guid: ac101d5c7b0673479c9b12f42801e87c
+      - name: Speed
+        guid: 2370814699d16e4483125e47fa1007fe
+        id: 640949982
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 1d23add6dbc81041b0a498c7cfd2bc14
+        - ElementName: Music_State
+          ObjectType: 9
+          guid: 87b54c064986654ab82f3044007f2d36
+        - ElementName: Speed
+          ObjectType: 8
+          guid: 2370814699d16e4483125e47fa1007fe
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -1117,7 +1272,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 57a4323b65effb4b9560843ea842fb18
     GuidInternal: 
-    m_lastTime: -8585780900148602027
+    m_lastTime: -8585780738508772901
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -1133,8 +1288,8 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8585780900148662041
     List: []
-  ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 05000000dd000000de000000df00000007010000080100007d0100007e01000081060000
+  ExpandedFileSystemItemIds: 01000000050000000600000007000000080000000c0000000d0000000e0000001b0000002800000033000000dd000000de000000df00000007010000080100007d0100007e01000081060000
+  ExpandedWaapiItemIds: 0100000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000001b0000001c0000001d0000001f00000020000000210000002800000033000000dd000000de000000df00000007010000080100007d0100007e01000081060000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
