@@ -46,7 +46,11 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream:Unity/Assets/Sprites/Placeholders/level_background.png.meta
   spritePixelsToUnits: 100
+=======
+  spritePixelsToUnits: 152
+>>>>>>> Stashed changes:Unity/Assets/Sprites/Level/level_background.png.meta
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
