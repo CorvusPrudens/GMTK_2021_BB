@@ -86,10 +86,12 @@ public class Room : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        for (int i = 0; i < transform.childCount - 2; i++)
+        {
+            transform.GetChild(i).gameObject.SetActive(false);
+        }
     }
 
     void OnValidate()

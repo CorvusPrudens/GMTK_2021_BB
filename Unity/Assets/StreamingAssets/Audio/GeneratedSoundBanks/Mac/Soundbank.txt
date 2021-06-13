@@ -1,24 +1,83 @@
 Event	ID	Name			Wwise Object Path	Notes
+	70953078	Level_Play			\Default Work Unit\MX\Level_Play	
 	137430303	Player_GetHP			\Default Work Unit\SFX\Player\Player_GetHP	
 	513291760	Player_CollectSoul			\Default Work Unit\SFX\Player\Player_CollectSoul	
+	733302340	Wasp_Buzz			\Default Work Unit\SFX\Enemy\Wasp\Wasp_Buzz	
+	820321623	Dragon_Dash			\Default Work Unit\SFX\Enemy\DragonFly\Dragon_Dash	
+	842135496	Enemy_TakeDamage			\Default Work Unit\SFX\Enemy\Enemy_TakeDamage	
 	909071731	Player_BashDoor			\Default Work Unit\SFX\Player\Player_BashDoor	
+	994571083	Wasp_Die			\Default Work Unit\SFX\Enemy\Wasp\Wasp_Die	
+	1015288770	Death_Stinger			\Default Work Unit\MX\Death_Stinger	
+	1086439346	Press			\Default Work Unit\SFX\UI\Press	
+	1332089670	Win_Stinger			\Default Work Unit\MX\Win_Stinger	
 	1516819876	Player_OpenChest			\Default Work Unit\SFX\Player\Player_OpenChest	
+	1541504395	Dragon_Die			\Default Work Unit\SFX\Enemy\DragonFly\Dragon_Die	
 	1542330065	Player_Die			\Default Work Unit\SFX\Player\Player_Die	
 	1891408857	Player_UnlockDoor			\Default Work Unit\SFX\Player\Player_UnlockDoor	
 	2394582229	Player_Dash			\Default Work Unit\SFX\Player\Player_Dash	
 	2824512041	Player_Attack			\Default Work Unit\SFX\Player\Player_Attack	
+	3157003241	TEST			\Default Work Unit\SFX\TEST	
+	3496330497	Dragon_Idle			\Default Work Unit\SFX\Enemy\DragonFly\Dragon_Idle	
 	3510314130	Player_CollectKey			\Default Work Unit\SFX\Player\Player_CollectKey	
+	3753593413	Hover			\Default Work Unit\SFX\UI\Hover	
+	3853498466	STOPALL_local			\Default Work Unit\STOPALL_local	
 	3870290027	Player_TakeDamage			\Default Work Unit\SFX\Player\Player_TakeDamage	
+	4270670118	Rolly_Die			\Default Work Unit\SFX\Enemy\RollyPolly\Rolly_Die	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	3826569560	Music_State			\Default Work Unit\Music_State	
+
+State	ID	Name	State Group			Notes
+	180661997	Attack	Music_State			
+	640949982	Speed	Music_State			
+	748895195	None	Music_State			
+	1668749442	NA	Music_State			
+	1769415205	HP	Music_State			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	209745283	HP	Music_State	\Interactive Music Hierarchy\Default Work Unit\Level_Music_1\Level_1\5_4_136_level_layer_SPD_36		
+	266689757	NA	Music_State	\Interactive Music Hierarchy\Default Work Unit\Level_Music_1\Level_1\5_4_136_level_layer_HP_36		
+	302010629	Attack	Music_State	\Interactive Music Hierarchy\Default Work Unit\Level_Music_1\Level_1\5_4_136_level_layer_HP_36		
+	480959060	NA	Music_State	\Interactive Music Hierarchy\Default Work Unit\Level_Music_1\Level_1\5_4_136_level_layer_ATK_36		
+	640066446	Attack	Music_State	\Interactive Music Hierarchy\Default Work Unit\Level_Music_1\Level_1\5_4_136_level_layer_SPD_36		
+	740392521	HP	Music_State	\Interactive Music Hierarchy\Default Work Unit\Level_Music_1\Level_1\5_4_136_level_layer_ATK_36		
+	744307832	NA	Music_State	\Interactive Music Hierarchy\Default Work Unit\Level_Music_1\Level_1\5_4_136_level_layer_SPD_36		
+	780789542	Speed	Music_State	\Interactive Music Hierarchy\Default Work Unit\Level_Music_1\Level_1\5_4_136_level_layer_ATK_36		
+	932251673	Speed	Music_State	\Interactive Music Hierarchy\Default Work Unit\Level_Music_1\Level_1\5_4_136_level_layer_HP_36		
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	838557547	Wwise Tone Generator	Wwise Tone Generator		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\TEST\Wwise Tone Generator	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	37139171	Collect_Key	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\Player_CollectKey_T_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Collect_Key		198280
-	75437915	Player_TakesDamage_T	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\Player_TakesDamage_T_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Takes_Damage\Player_TakesDamage_T		208264
-	176956555	Dash	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\Player_Dash_T_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Dash		155192
+	39189074	sfx_roly_die	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\sfx_roly_die_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemy\RollyPolly\Rolly_Die\sfx_roly_die		84596
+	62168100	sfx_player_attack_03	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\sfx_player_attack_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Attack\sfx_player_attack_03		81472
+	130267092	sfx_wasp_buzz	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\sfx_wasp_idle_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemy\Wasp\sfx_wasp_buzz		2823548
+	130596390	sfx_wasp_die	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\sfx_wasp_die_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemy\Wasp\Wasp_Die\sfx_wasp_die		132208
+	160036161	sfx_enemy_takedamage_03	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\sfx_enemy_takedamage_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemy\Enemy_TakeDamage\sfx_enemy_takedamage_03		37580
+	188032365	sfx_death_stinger	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\sfx_death_stinger_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Death_Stinger\sfx_death_stinger		1167496
 	257110889	Bash_Door	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\Player_BashDoor_T_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Bash_Door		198284
-	486180910	Collect_Soul	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\Player_CollectSoul_T_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Collect_Soul		198284
+	298740606	5_4_136_level_layer_HP_36	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\5.4_136_level_layer_HP_36_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Level_Music_1\Level_1\5_4_136_level_layer_HP_36		15568044
+	341342922	Unlock_Door	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\sfx_unlock_door_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Unlock_Door		252992
+	359768790	sfx_enemy_takedamage_02	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\sfx_enemy_takedamage_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemy\Enemy_TakeDamage\sfx_enemy_takedamage_02		41660
+	376026972	Collect_Soul	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\sfx_player_collectsoul_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Collect_Soul		306448
+	385953715	Press	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\sfx_ui_click_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Press		252992
+	392674267	Collect_Key	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\sfx_collect_key_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Collect_Key		19520
+	507942075	Hover	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\sfx_ui_hover_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\Hover		252992
+	533375175	outro_stinger	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\outro_stinger_REAL_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Win_Stinger\outro_stinger		1940464
+	535089721	sfx_player_takedamage_03	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\sfx_player_takedamage_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Takes_Damage\sfx_player_takedamage_03		49020
 	552273355	GetHP	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\Player_GetHP_T_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\GetHP		238652
-	581694431	Dies	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\Player_Dies_T_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Dies		177872
-	724613463	Open_Chests	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\Player_OpenChest_T_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Open_Chests		238652
-	793636448	Player_Attack_T	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\Player_Attack_T_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Attack\Player_Attack_T		150848
-	967850174	Unlock_Door	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\Player_UnlockDoor_T_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Unlock_Door		238652
+	620583625	sfx_player_takedamage_02	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\sfx_player_takedamage_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Takes_Damage\sfx_player_takedamage_02		51676
+	659400364	5_4_136_level_layer_SPD_36	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\5.4_136_level_layer_SPD_36_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Level_Music_1\Level_1\5_4_136_level_layer_SPD_36		15568044
+	676935544	sfx_player_attack_01	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\sfx_player_attack_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Attack\sfx_player_attack_01		82128
+	752384942	Dies	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\sfx_player_die_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Dies		132012
+	792668813	5_4_136_level_intro_1	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\5.4_136_level_intro_1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Level_Music_1\Intro\5_4_136_level_intro_1		2490420
+	821661056	Dash	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\sfx_player_dash_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Dash		48092
+	824147832	sfx_player_takedamage_01	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\sfx_player_takedamage_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Takes_Damage\sfx_player_takedamage_01		44236
+	852303882	5_4_136_level_layer_ATK_36	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\5.4_136_level_layer_ATK_36_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Level_Music_1\Level_1\5_4_136_level_layer_ATK_36		15568044
+	880281348	sfx_player_attack_02	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\sfx_player_attack_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Attack\sfx_player_attack_02		81712
+	930530947	sfx_dragon_idle	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\sfx_dragon_idle_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemy\Dragonfly\sfx_dragon_idle		6727504
+	995213799	sfx_enemy_takedamage_01	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\sfx_enemy_takedamage_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemy\Enemy_TakeDamage\sfx_enemy_takedamage_01		43396
+	997469406	Open_Chests	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\sfx_open_chest_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Open_Chests		176464
+	1019927396	5_4_136_level_main_36	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\5.4_136_level_main_36_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Level_Music_1\Level_1\5_4_136_level_main_36		15568044
+	1064531123	sfx_dragon_die	C:\Users\Ben\OneDrive\Desktop\Manual Backup\GAMES\Jams\GMTK_2021\GMTK_Wwise_Project\.cache\Mac\SFX\sfx_dragon_die_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemy\Dragonfly\Dragon_Die\sfx_dragon_die		115780
 

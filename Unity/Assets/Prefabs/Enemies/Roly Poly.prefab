@@ -10,14 +10,14 @@ GameObject:
   m_Component:
   - component: {fileID: 561307287484860363}
   - component: {fileID: 8898174899272753782}
-  - component: {fileID: 2770663571067503690}
+  - component: {fileID: 3133293388614852180}
   - component: {fileID: 1080633295810573898}
   - component: {fileID: 8581120017940343689}
   - component: {fileID: 4535154915568050415}
   - component: {fileID: 101814255}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Roly Poly
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,8 +58,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &2770663571067503690
-BoxCollider2D:
+--- !u!58 &3133293388614852180
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -71,19 +71,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.010846853, y: -0.03254068}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1.2681434, y: 1.2049186}
-  m_EdgeRadius: 0
+  m_Radius: 0.5
 --- !u!114 &1080633295810573898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,8 +87,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statsToApply:
-    health: -2
-    speed: 3
+    health: 1.35
+    speed: -1.5
     strength: -2
 --- !u!114 &8581120017940343689
 MonoBehaviour:
@@ -113,10 +103,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxStats:
-    health: 20
+    health: 12.5
     speed: 5
-    strength: 3
+    strength: 1
   enemyType: 1
+  DragonSoul: {fileID: 4670190186952338031, guid: 49eff798034063986bb13cc924c9625b, type: 3}
+  RolySoul: {fileID: 4670190186952338031, guid: 1053697f65f8b064184ea459a70ce181, type: 3}
+  WaspSoul: {fileID: 4670190186952338031, guid: 41116173cdf1f2d99b914cab7e96d58d, type: 3}
 --- !u!114 &4535154915568050415
 MonoBehaviour:
   m_ObjectHideFlags: 0

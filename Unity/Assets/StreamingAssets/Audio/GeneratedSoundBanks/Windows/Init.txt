@@ -1,3 +1,13 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	3826569560	Music_State			\Default Work Unit\Music_State	
+
+State	ID	Name	State Group			Notes
+	180661997	Attack	Music_State			
+	640949982	Speed	Music_State			
+	748895195	None	Music_State			
+	1668749442	NA	Music_State			
+	1769415205	HP	Music_State			
+
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	504532776	Brick			\Factory Acoustic Textures\Textures\Brick	
 	513139656	Mountain			\Factory Acoustic Textures\Textures\Mountain	
@@ -17,6 +27,7 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	33300213	MX_Bus			\Default Work Unit\Master Audio Bus\MX_Bus	
 	213475909	SFX_Bus			\Default Work Unit\Master Audio Bus\SFX_Bus	
+	1411040840	Enemy_Bus			\Default Work Unit\Master Audio Bus\SFX_Bus\Enemy_Bus	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 
 Audio Devices	ID	Name	Type				Notes

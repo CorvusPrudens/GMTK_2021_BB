@@ -8,12 +8,13 @@ public class PlayerDash : MonoBehaviour
     private PlayerStats stats;
     private BoxCollider2D playerCollider;
     private PlayerMovement movement;
+    [HideInInspector] public Rigidbody2D rb;
     //Dash parameters
     private float startDashTime = 0.2f;
     private float dashTime;
     private bool isDashing;
     private Vector2 dashDirection;
-
+    private float speedMultiplier = 1.5f;
 
     // Start is called before the first frame update
     void Awake()
@@ -21,12 +22,13 @@ public class PlayerDash : MonoBehaviour
         stats = GetComponent<PlayerStats>();
         playerCollider = GetComponent<BoxCollider2D>();
         movement = GetComponent<PlayerMovement>();
+        rb = GetComponent<Rigidbody2D>();
 
         dashTime = startDashTime;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing)
         {
@@ -44,9 +46,11 @@ public class PlayerDash : MonoBehaviour
         movement.canMove = false;
         dashDirection = movement.movementVector;
 
-        AkSoundEngine.PostEvent("Player_Dash", this.gameObject);
+        int playerLayer = LayerMask.NameToLayer("Player");
+        int enemyLayer = LayerMask.NameToLayer("Enemy");
+        Physics2D.IgnoreLayerCollision(playerLayer, enemyLayer, true);
 
-        print("IS DASHING");
+        AkSoundEngine.PostEvent("Player_Dash", this.gameObject);
     }
 
     void ResetDash()
@@ -54,7 +58,10 @@ public class PlayerDash : MonoBehaviour
         dashTime = startDashTime;
         isDashing = false;
         movement.canMove = true;
-        playerCollider.enabled = true;
+
+        int playerLayer = LayerMask.NameToLayer("Player");
+        int enemyLayer = LayerMask.NameToLayer("Enemy");
+        Physics2D.IgnoreLayerCollision(playerLayer, enemyLayer, false);
     }
 
     void Dash()
@@ -66,8 +73,7 @@ public class PlayerDash : MonoBehaviour
         else
         {
             dashTime -= Time.deltaTime;
-            playerCollider.enabled = false;
-            transform.Translate(dashDirection * stats.maxStats.speed * Time.deltaTime);
+            rb.velocity = dashDirection * stats.maxStats.speed * speedMultiplier;
         }
     }
 }

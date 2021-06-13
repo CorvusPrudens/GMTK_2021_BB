@@ -354,6 +354,8 @@ public class Level : MonoBehaviour
                     }
                 }
 
+                temproom.GetComponent<Room>().FadeIn();
+
             }
         }
     }

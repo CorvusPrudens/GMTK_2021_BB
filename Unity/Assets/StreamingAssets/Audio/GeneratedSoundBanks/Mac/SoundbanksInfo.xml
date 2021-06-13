@@ -11,21 +11,105 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="4252176608">
+		<SoundBank Id="1355168291" Language="SFX" Hash="3627273996">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="1661994096" Language="SFX" Hash="3487571633">
+		<SoundBank Id="1661994096" Language="SFX" Hash="1671075337">
 			<ObjectPath>\SoundBanks\Default Work Unit\Soundbank</ObjectPath>
 			<ShortName>Soundbank</ShortName>
 			<Path>Soundbank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2824512041" Name="Player_Attack" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_Attack" DurationType="OneShot" DurationMin="0.785333" DurationMax="0.785333">
+				<Event Id="1015288770" Name="Death_Stinger" ObjectPath="\Events\Default Work Unit\MX\Death_Stinger" DurationType="OneShot" DurationMin="6.617641" DurationMax="6.617641">
 					<IncludedMemoryFiles>
-						<File Id="793636448" Language="SFX">
-							<ShortName>Player_Attack_T.wav</ShortName>
-							<Path>SFX\Player_Attack_T_10C4C929.wem</Path>
+						<File Id="188032365" Language="SFX">
+							<ShortName>sfx_death_stinger.wav</ShortName>
+							<Path>SFX\sfx_death_stinger_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="820321623" Name="Dragon_Dash" ObjectPath="\Events\Default Work Unit\SFX\Enemy\DragonFly\Dragon_Dash" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1541504395" Name="Dragon_Die" ObjectPath="\Events\Default Work Unit\SFX\Enemy\DragonFly\Dragon_Die" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.602687">
+					<IncludedMemoryFiles>
+						<File Id="1064531123" Language="SFX">
+							<ShortName>sfx_dragon_die.wav</ShortName>
+							<Path>SFX\sfx_dragon_die_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3496330497" Name="Dragon_Idle" ObjectPath="\Events\Default Work Unit\SFX\Enemy\DragonFly\Dragon_Idle" MaxAttenuation="20.000000" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="930530947" Language="SFX">
+							<ShortName>sfx_dragon_idle.wav</ShortName>
+							<Path>SFX\sfx_dragon_idle_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="842135496" Name="Enemy_TakeDamage" ObjectPath="\Events\Default Work Unit\SFX\Enemy\Enemy_TakeDamage" DurationType="OneShot" DurationMin="0.195396" DurationMax="0.225688">
+					<IncludedMemoryFiles>
+						<File Id="160036161" Language="SFX">
+							<ShortName>sfx_enemy_takedamage_03.wav</ShortName>
+							<Path>SFX\sfx_enemy_takedamage_03_10C4C929.wem</Path>
+						</File>
+						<File Id="359768790" Language="SFX">
+							<ShortName>sfx_enemy_takedamage_02.wav</ShortName>
+							<Path>SFX\sfx_enemy_takedamage_02_10C4C929.wem</Path>
+						</File>
+						<File Id="995213799" Language="SFX">
+							<ShortName>sfx_enemy_takedamage_01.wav</ShortName>
+							<Path>SFX\sfx_enemy_takedamage_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3753593413" Name="Hover" ObjectPath="\Events\Default Work Unit\SFX\UI\Hover" DurationType="OneShot" DurationMin="1.433832" DurationMax="1.433832">
+					<IncludedMemoryFiles>
+						<File Id="507942075" Language="SFX">
+							<ShortName>sfx_ui_hover.wav</ShortName>
+							<Path>SFX\sfx_ui_hover_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="70953078" Name="Level_Play" ObjectPath="\Events\Default Work Unit\MX\Level_Play" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="298740606" Language="SFX">
+							<ShortName>5.4_136_level_layer_HP_36.wav</ShortName>
+							<Path>SFX\5.4_136_level_layer_HP_36_D79FB2B7.wem</Path>
+						</File>
+						<File Id="659400364" Language="SFX">
+							<ShortName>5.4_136_level_layer_SPD_36.wav</ShortName>
+							<Path>SFX\5.4_136_level_layer_SPD_36_D79FB2B7.wem</Path>
+						</File>
+						<File Id="792668813" Language="SFX">
+							<ShortName>5.4_136_level_intro_1.wav</ShortName>
+							<Path>SFX\5.4_136_level_intro_1_D79FB2B7.wem</Path>
+						</File>
+						<File Id="852303882" Language="SFX">
+							<ShortName>5.4_136_level_layer_ATK_36.wav</ShortName>
+							<Path>SFX\5.4_136_level_layer_ATK_36_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1019927396" Language="SFX">
+							<ShortName>5.4_136_level_main_36.wav</ShortName>
+							<Path>SFX\5.4_136_level_main_36_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<ActionSetState>
+						<ActionSetStateEntry Id="1668749442" Name="NA" ObjectPath="\States\Default Work Unit\Music_State\NA"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="2824512041" Name="Player_Attack" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_Attack" DurationType="OneShot" DurationMin="0.424000" DurationMax="0.427417">
+					<IncludedMemoryFiles>
+						<File Id="62168100" Language="SFX">
+							<ShortName>sfx_player_attack_03.wav</ShortName>
+							<Path>SFX\sfx_player_attack_03_10C4C929.wem</Path>
+						</File>
+						<File Id="676935544" Language="SFX">
+							<ShortName>sfx_player_attack_01.wav</ShortName>
+							<Path>SFX\sfx_player_attack_01_10C4C929.wem</Path>
+						</File>
+						<File Id="880281348" Language="SFX">
+							<ShortName>sfx_player_attack_02.wav</ShortName>
+							<Path>SFX\sfx_player_attack_02_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -37,35 +121,35 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3510314130" Name="Player_CollectKey" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_CollectKey" DurationType="OneShot" DurationMin="1.032375" DurationMax="1.032375">
+				<Event Id="3510314130" Name="Player_CollectKey" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_CollectKey" DurationType="OneShot" DurationMin="0.110295" DurationMax="0.110295">
 					<IncludedMemoryFiles>
-						<File Id="37139171" Language="SFX">
-							<ShortName>Player_CollectKey_T.wav</ShortName>
-							<Path>SFX\Player_CollectKey_T_10C4C929.wem</Path>
+						<File Id="392674267" Language="SFX">
+							<ShortName>sfx_collect_key.wav</ShortName>
+							<Path>SFX\sfx_collect_key_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="513291760" Name="Player_CollectSoul" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_CollectSoul" DurationType="OneShot" DurationMin="1.032396" DurationMax="1.032396">
+				<Event Id="513291760" Name="Player_CollectSoul" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_CollectSoul" DurationType="OneShot" DurationMin="1.795750" DurationMax="1.795750">
 					<IncludedMemoryFiles>
-						<File Id="486180910" Language="SFX">
-							<ShortName>Player_CollectSoul_T.wav</ShortName>
-							<Path>SFX\Player_CollectSoul_T_10C4C929.wem</Path>
+						<File Id="376026972" Language="SFX">
+							<ShortName>sfx_player_collectsoul.wav</ShortName>
+							<Path>SFX\sfx_player_collectsoul_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2394582229" Name="Player_Dash" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_Dash" DurationType="OneShot" DurationMin="0.807958" DurationMax="0.807958">
+				<Event Id="2394582229" Name="Player_Dash" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_Dash" DurationType="OneShot" DurationMin="0.250146" DurationMax="0.250146">
 					<IncludedMemoryFiles>
-						<File Id="176956555" Language="SFX">
-							<ShortName>Player_Dash_T.wav</ShortName>
-							<Path>SFX\Player_Dash_T_10C4C929.wem</Path>
+						<File Id="821661056" Language="SFX">
+							<ShortName>sfx_player_dash.wav</ShortName>
+							<Path>SFX\sfx_player_dash_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1542330065" Name="Player_Die" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_Die" DurationType="OneShot" DurationMin="0.926083" DurationMax="0.926083">
+				<Event Id="1542330065" Name="Player_Die" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_Die" DurationType="OneShot" DurationMin="0.687229" DurationMax="0.687229">
 					<IncludedMemoryFiles>
-						<File Id="581694431" Language="SFX">
-							<ShortName>Player_Dies_T.wav</ShortName>
-							<Path>SFX\Player_Dies_T_10C4C929.wem</Path>
+						<File Id="752384942" Language="SFX">
+							<ShortName>sfx_player_die.wav</ShortName>
+							<Path>SFX\sfx_player_die_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -77,31 +161,92 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1516819876" Name="Player_OpenChest" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_OpenChest" DurationType="OneShot" DurationMin="1.242646" DurationMax="1.242646">
+				<Event Id="1516819876" Name="Player_OpenChest" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_OpenChest" DurationType="OneShot" DurationMin="1.000000" DurationMax="1.000000">
 					<IncludedMemoryFiles>
-						<File Id="724613463" Language="SFX">
-							<ShortName>Player_OpenChest_T.wav</ShortName>
-							<Path>SFX\Player_OpenChest_T_10C4C929.wem</Path>
+						<File Id="997469406" Language="SFX">
+							<ShortName>sfx_open_chest.wav</ShortName>
+							<Path>SFX\sfx_open_chest_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3870290027" Name="Player_TakeDamage" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_TakeDamage" DurationType="OneShot" DurationMin="1.084375" DurationMax="1.084375">
+				<Event Id="3870290027" Name="Player_TakeDamage" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_TakeDamage" DurationType="OneShot" DurationMin="0.230062" DurationMax="0.268813">
 					<IncludedMemoryFiles>
-						<File Id="75437915" Language="SFX">
-							<ShortName>Player_TakesDamage_T.wav</ShortName>
-							<Path>SFX\Player_TakesDamage_T_10C4C929.wem</Path>
+						<File Id="535089721" Language="SFX">
+							<ShortName>sfx_player_takedamage_03.wav</ShortName>
+							<Path>SFX\sfx_player_takedamage_03_10C4C929.wem</Path>
+						</File>
+						<File Id="620583625" Language="SFX">
+							<ShortName>sfx_player_takedamage_02.wav</ShortName>
+							<Path>SFX\sfx_player_takedamage_02_10C4C929.wem</Path>
+						</File>
+						<File Id="824147832" Language="SFX">
+							<ShortName>sfx_player_takedamage_01.wav</ShortName>
+							<Path>SFX\sfx_player_takedamage_01_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1891408857" Name="Player_UnlockDoor" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_UnlockDoor" DurationType="OneShot" DurationMin="1.242646" DurationMax="1.242646">
+				<Event Id="1891408857" Name="Player_UnlockDoor" ObjectPath="\Events\Default Work Unit\SFX\Player\Player_UnlockDoor" DurationType="OneShot" DurationMin="1.433832" DurationMax="1.433832">
 					<IncludedMemoryFiles>
-						<File Id="967850174" Language="SFX">
-							<ShortName>Player_UnlockDoor_T.wav</ShortName>
-							<Path>SFX\Player_UnlockDoor_T_10C4C929.wem</Path>
+						<File Id="341342922" Language="SFX">
+							<ShortName>sfx_unlock_door.wav</ShortName>
+							<Path>SFX\sfx_unlock_door_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1086439346" Name="Press" ObjectPath="\Events\Default Work Unit\SFX\UI\Press" DurationType="OneShot" DurationMin="1.433832" DurationMax="1.433832">
+					<IncludedMemoryFiles>
+						<File Id="385953715" Language="SFX">
+							<ShortName>sfx_ui_click.wav</ShortName>
+							<Path>SFX\sfx_ui_click_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4270670118" Name="Rolly_Die" ObjectPath="\Events\Default Work Unit\SFX\Enemy\RollyPolly\Rolly_Die" DurationType="OneShot" DurationMin="0.440271" DurationMax="0.440271">
+					<IncludedMemoryFiles>
+						<File Id="39189074" Language="SFX">
+							<ShortName>sfx_roly_die.wav</ShortName>
+							<Path>SFX\sfx_roly_die_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3853498466" Name="STOPALL_local" ObjectPath="\Events\Default Work Unit\STOPALL_local" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3157003241" Name="TEST" ObjectPath="\Events\Default Work Unit\SFX\TEST" DurationType="OneShot" DurationMin="1.000000" DurationMax="1.000000"/>
+				<Event Id="733302340" Name="Wasp_Buzz" ObjectPath="\Events\Default Work Unit\SFX\Enemy\Wasp\Wasp_Buzz" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="14.705646" DurationMax="14.705646">
+					<IncludedMemoryFiles>
+						<File Id="130267092" Language="SFX">
+							<ShortName>sfx_wasp_idle.wav</ShortName>
+							<Path>SFX\sfx_wasp_idle_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="994571083" Name="Wasp_Die" ObjectPath="\Events\Default Work Unit\SFX\Enemy\Wasp\Wasp_Die" DurationType="OneShot" DurationMin="0.688250" DurationMax="0.688250">
+					<IncludedMemoryFiles>
+						<File Id="130596390" Language="SFX">
+							<ShortName>sfx_wasp_die.wav</ShortName>
+							<Path>SFX\sfx_wasp_die_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1332089670" Name="Win_Stinger" ObjectPath="\Events\Default Work Unit\MX\Win_Stinger" DurationType="OneShot" DurationMin="11.000000" DurationMax="11.000000">
+					<IncludedMemoryFiles>
+						<File Id="533375175" Language="SFX">
+							<ShortName>outro_stinger_REAL.wav</ShortName>
+							<Path>SFX\outro_stinger_REAL_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="930530947" Language="SFX">
+					<ShortName>sfx_dragon_idle.wav</ShortName>
+					<Path>SFX\sfx_dragon_idle_D79FB2B7.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+			<StateGroups>
+				<StateGroup Id="1668749442" Name="NA" ObjectPath="\States\Default Work Unit\Music_State\NA">
+					<States/>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

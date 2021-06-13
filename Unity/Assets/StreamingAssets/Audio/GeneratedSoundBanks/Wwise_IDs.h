@@ -13,6 +13,13 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID DEATH_STINGER = 1015288770U;
+        static const AkUniqueID DRAGON_DASH = 820321623U;
+        static const AkUniqueID DRAGON_DIE = 1541504395U;
+        static const AkUniqueID DRAGON_IDLE = 3496330497U;
+        static const AkUniqueID ENEMY_TAKEDAMAGE = 842135496U;
+        static const AkUniqueID HOVER = 3753593413U;
+        static const AkUniqueID LEVEL_PLAY = 70953078U;
         static const AkUniqueID PLAYER_ATTACK = 2824512041U;
         static const AkUniqueID PLAYER_BASHDOOR = 909071731U;
         static const AkUniqueID PLAYER_COLLECTKEY = 3510314130U;
@@ -23,7 +30,32 @@ namespace AK
         static const AkUniqueID PLAYER_OPENCHEST = 1516819876U;
         static const AkUniqueID PLAYER_TAKEDAMAGE = 3870290027U;
         static const AkUniqueID PLAYER_UNLOCKDOOR = 1891408857U;
+        static const AkUniqueID PRESS = 1086439346U;
+        static const AkUniqueID ROLLY_DIE = 4270670118U;
+        static const AkUniqueID STOPALL_LOCAL = 3853498466U;
+        static const AkUniqueID TEST = 3157003241U;
+        static const AkUniqueID WASP_BUZZ = 733302340U;
+        static const AkUniqueID WASP_DIE = 994571083U;
+        static const AkUniqueID WIN_STINGER = 1332089670U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace MUSIC_STATE
+        {
+            static const AkUniqueID GROUP = 3826569560U;
+
+            namespace STATE
+            {
+                static const AkUniqueID ATTACK = 180661997U;
+                static const AkUniqueID HP = 1769415205U;
+                static const AkUniqueID NA = 1668749442U;
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID SPEED = 640949982U;
+            } // namespace STATE
+        } // namespace MUSIC_STATE
+
+    } // namespace STATES
 
     namespace BANKS
     {
@@ -33,6 +65,7 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID ENEMY_BUS = 1411040840U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MX_BUS = 33300213U;
         static const AkUniqueID SFX_BUS = 213475909U;

@@ -6,6 +6,7 @@ public class WaspMovement : MonoBehaviour
 {
     private GameObject player;
     private EnemyStats stats;
+    private Rigidbody2D rb;
     public float aggroSpeedMultiplier;
     [HideInInspector] public float baseSpeed;
     [HideInInspector] public float speed;
@@ -14,6 +15,7 @@ public class WaspMovement : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         stats = GetComponent<EnemyStats>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void Start()
@@ -23,13 +25,13 @@ public class WaspMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void LateUpdate()
+    void FixedUpdate()
     {
-        Move(player.transform.position);
+        Move();
     }
 
-    void Move(Vector3 target)
+    void Move()
     {
-        transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
     }   
 }

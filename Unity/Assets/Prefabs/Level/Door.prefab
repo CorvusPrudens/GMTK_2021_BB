@@ -47,6 +47,9 @@ MonoBehaviour:
   isLockable: 0
   isLocked: 0
   HP: 10
+  lockedSprite: {fileID: 21300000, guid: 4823b2e35f5a265f7b027d284189d648, type: 3}
+  brokenSprite: {fileID: 21300000, guid: f0525b3e18978130d8331f83ff1a4b0d, type: 3}
+  openSprite: {fileID: 21300000, guid: f0525b3e18978130d8331f83ff1a4b0d, type: 3}
   position: 0
 --- !u!1 &230820950463176157
 GameObject:
@@ -74,7 +77,7 @@ Transform:
   m_GameObject: {fileID: 230820950463176157}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 230820950035198062}
   m_RootOrder: 0
@@ -119,7 +122,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 52b477c9755fc6042a12752ca5d6085c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f0525b3e18978130d8331f83ff1a4b0d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

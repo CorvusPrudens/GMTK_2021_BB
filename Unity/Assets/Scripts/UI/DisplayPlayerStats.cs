@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-enum Stat { health, strength, speed };
+enum Stat { health, strength, speed, keys };
 
 public class DisplayPlayerStats : MonoBehaviour
 {
@@ -30,13 +30,16 @@ public class DisplayPlayerStats : MonoBehaviour
         switch (statToDisplay)
         {
             case Stat.health:
-                text.text = "Health :" + playerStats.currentHealth;
+                text.text = "Health : " + Mathf.RoundToInt(playerStats.currentHealth);
                 break;
             case Stat.strength:
-                text.text = "Strength :" + playerStats.maxStats.strength;
+                text.text = "Strength : " + Mathf.RoundToInt(playerStats.maxStats.strength);
                 break;
             case Stat.speed:
-                text.text = "Speed :" + playerStats.maxStats.speed;
+                text.text = "Speed : " + Mathf.RoundToInt(playerStats.maxStats.speed);
+                break;
+            case Stat.keys:
+                text.text = "Keys : " + playerStats.keys;
                 break;
         }
     }

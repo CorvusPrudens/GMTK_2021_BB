@@ -303,8 +303,28 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 77a7fbbf8a390040a166d7fa9a914093
     GuidInternal: 
-    m_lastTime: -8585780900148632033
+    m_lastTime: -8585780516740385237
     List:
+    - name: Enemy_Bus
+      guid: 9672a315f5897e4e916425c4bf09d568
+      id: 1411040840
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 77a7fbbf8a390040a166d7fa9a914093
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX_Bus
+        ObjectType: 2
+        guid: 86c74529c78c394da84284dcb61f6926
+      - ElementName: Enemy_Bus
+        ObjectType: 2
+        guid: 9672a315f5897e4e916425c4bf09d568
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX_Bus\Enemy_Bus
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
       id: 3803692087
@@ -365,7 +385,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: ef860cb255a4fa4683dc80f67272beed
     GuidInternal: 
-    m_lastTime: -8585780900148251949
+    m_lastTime: -8585780130485241469
     List:
     - name: Soundbank
       guid: a51ec8a1ebce284aa68ba10d11d5ba78
@@ -393,11 +413,11 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: ff0b084ed1e3e44e95d214517df38595
     GuidInternal: 
-    m_lastTime: -8585780900147671809
+    m_lastTime: -8585780128375222376
     List:
-    - name: Dragon_Attack
-      guid: 07b00ab959dd7a44b6d6d69411ae9c06
-      id: 482261039
+    - name: Death_Stinger
+      guid: aabb4fa246d6564c9275a7a6cb777436
+      id: 1015288770
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -405,22 +425,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: ff0b084ed1e3e44e95d214517df38595
-      - ElementName: SFX
+      - ElementName: MX
         ObjectType: 4
-        guid: b91b8be590d0a241850375bc9f4ade83
-      - ElementName: Enemy
-        ObjectType: 4
-        guid: 6524e3307c64a045aaadd4dc5598c1e0
-      - ElementName: DragonFly
-        ObjectType: 4
-        guid: 5adbd1b68de9fa4ca1d60983c3c68310
-      - ElementName: Dragon_Attack
+        guid: c1c2ba883fd3f74084d7af16c191d99b
+      - ElementName: Death_Stinger
         ObjectType: 3
-        guid: 07b00ab959dd7a44b6d6d69411ae9c06
-      Path: Events\Default Work Unit\SFX\Enemy\DragonFly\Dragon_Attack
+        guid: aabb4fa246d6564c9275a7a6cb777436
+      Path: Events\Default Work Unit\MX\Death_Stinger
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 6.617641
+      minDuration: 6.617641
     - name: Dragon_Dash
       guid: 78628316c8f5b643b7ba34875991d341
       id: 820321623
@@ -471,11 +485,11 @@ MonoBehaviour:
         guid: 8299522c07a94a41bf295fce03e0e310
       Path: Events\Default Work Unit\SFX\Enemy\DragonFly\Dragon_Die
       maxAttenuation: 0
-      maxDuration: 0
+      maxDuration: 0.602687
       minDuration: 0
-    - name: Dragon_TakeDamage
-      guid: 8b712fc27b4d3c4b87d3ea1726c8bbfa
-      id: 3037277281
+    - name: Dragon_Idle
+      guid: d44fa58cc85745459569763cea809a91
+      id: 3496330497
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -492,13 +506,13 @@ MonoBehaviour:
       - ElementName: DragonFly
         ObjectType: 4
         guid: 5adbd1b68de9fa4ca1d60983c3c68310
-      - ElementName: Dragon_TakeDamage
+      - ElementName: Dragon_Idle
         ObjectType: 3
-        guid: 8b712fc27b4d3c4b87d3ea1726c8bbfa
-      Path: Events\Default Work Unit\SFX\Enemy\DragonFly\Dragon_TakeDamage
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+        guid: d44fa58cc85745459569763cea809a91
+      Path: Events\Default Work Unit\SFX\Enemy\DragonFly\Dragon_Idle
+      maxAttenuation: 20
+      maxDuration: -1
+      minDuration: -1
     - name: DragonFly
       guid: 5adbd1b68de9fa4ca1d60983c3c68310
       id: 3028993147
@@ -542,6 +556,29 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Enemy_TakeDamage
+      guid: fe750c203525424d8537d7bea7d51a23
+      id: 842135496
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ff0b084ed1e3e44e95d214517df38595
+      - ElementName: SFX
+        ObjectType: 4
+        guid: b91b8be590d0a241850375bc9f4ade83
+      - ElementName: Enemy
+        ObjectType: 4
+        guid: 6524e3307c64a045aaadd4dc5598c1e0
+      - ElementName: Enemy_TakeDamage
+        ObjectType: 3
+        guid: fe750c203525424d8537d7bea7d51a23
+      Path: Events\Default Work Unit\SFX\Enemy\Enemy_TakeDamage
+      maxAttenuation: 0
+      maxDuration: 0.225688
+      minDuration: 0.195396
     - name: Hover
       guid: 99e67631ed2369499577d1a1d94d5e03
       id: 3753593413
@@ -563,8 +600,45 @@ MonoBehaviour:
         guid: 99e67631ed2369499577d1a1d94d5e03
       Path: Events\Default Work Unit\SFX\UI\Hover
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 1.433832
+      minDuration: 1.433832
+    - name: Level_Play
+      guid: cc09703e88af2844a813d11bcc519fc1
+      id: 70953078
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ff0b084ed1e3e44e95d214517df38595
+      - ElementName: MX
+        ObjectType: 4
+        guid: c1c2ba883fd3f74084d7af16c191d99b
+      - ElementName: Level_Play
+        ObjectType: 3
+        guid: cc09703e88af2844a813d11bcc519fc1
+      Path: Events\Default Work Unit\MX\Level_Play
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: MX
+      guid: c1c2ba883fd3f74084d7af16c191d99b
+      id: 1685527054
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ff0b084ed1e3e44e95d214517df38595
+      - ElementName: MX
+        ObjectType: 4
+        guid: c1c2ba883fd3f74084d7af16c191d99b
+      Path: Events\Default Work Unit\MX
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Player
       guid: 3bfe3732dbbcc145b713765fd56ddfb1
       id: 1069431850
@@ -606,8 +680,8 @@ MonoBehaviour:
         guid: ea6f986ba8ecea429eea92a8308db1b8
       Path: Events\Default Work Unit\SFX\Player\Player_Attack
       maxAttenuation: 0
-      maxDuration: 0.785333
-      minDuration: 0.785333
+      maxDuration: 0.427417
+      minDuration: 0.424
     - name: Player_BashDoor
       guid: 8f77842778e6f349b7bb7bb0a21c457b
       id: 909071731
@@ -652,8 +726,8 @@ MonoBehaviour:
         guid: 8217ad5a4302b64f942aa91dd35af214
       Path: Events\Default Work Unit\SFX\Player\Player_CollectKey
       maxAttenuation: 0
-      maxDuration: 1.032375
-      minDuration: 1.032375
+      maxDuration: 0.110295
+      minDuration: 0.110295
     - name: Player_CollectSoul
       guid: c7de4addd7b70a4ca91ee82215c42011
       id: 513291760
@@ -675,8 +749,8 @@ MonoBehaviour:
         guid: c7de4addd7b70a4ca91ee82215c42011
       Path: Events\Default Work Unit\SFX\Player\Player_CollectSoul
       maxAttenuation: 0
-      maxDuration: 1.032396
-      minDuration: 1.032396
+      maxDuration: 1.79575
+      minDuration: 1.79575
     - name: Player_Dash
       guid: 7ef9fd6989a5db46876be667c71c9b05
       id: 2394582229
@@ -698,8 +772,8 @@ MonoBehaviour:
         guid: 7ef9fd6989a5db46876be667c71c9b05
       Path: Events\Default Work Unit\SFX\Player\Player_Dash
       maxAttenuation: 0
-      maxDuration: 0.807958
-      minDuration: 0.807958
+      maxDuration: 0.250146
+      minDuration: 0.250146
     - name: Player_Die
       guid: 0d3e166b284a64408f8e782965dfb1fd
       id: 1542330065
@@ -721,8 +795,8 @@ MonoBehaviour:
         guid: 0d3e166b284a64408f8e782965dfb1fd
       Path: Events\Default Work Unit\SFX\Player\Player_Die
       maxAttenuation: 0
-      maxDuration: 0.926083
-      minDuration: 0.926083
+      maxDuration: 0.687229
+      minDuration: 0.687229
     - name: Player_GetHP
       guid: 8d90192d252ce540bb37dae346902889
       id: 137430303
@@ -767,8 +841,8 @@ MonoBehaviour:
         guid: b6dfe572e7ca164e9d0a62e386e8ad6b
       Path: Events\Default Work Unit\SFX\Player\Player_OpenChest
       maxAttenuation: 0
-      maxDuration: 1.242646
-      minDuration: 1.242646
+      maxDuration: 1
+      minDuration: 1
     - name: Player_TakeDamage
       guid: ebb7920cc1ae9f408b74329d56724a59
       id: 3870290027
@@ -790,8 +864,8 @@ MonoBehaviour:
         guid: ebb7920cc1ae9f408b74329d56724a59
       Path: Events\Default Work Unit\SFX\Player\Player_TakeDamage
       maxAttenuation: 0
-      maxDuration: 1.084375
-      minDuration: 1.084375
+      maxDuration: 0.268813
+      minDuration: 0.230062
     - name: Player_UnlockDoor
       guid: eed4b956cbc94a4592f4c6d4830b8692
       id: 1891408857
@@ -813,8 +887,8 @@ MonoBehaviour:
         guid: eed4b956cbc94a4592f4c6d4830b8692
       Path: Events\Default Work Unit\SFX\Player\Player_UnlockDoor
       maxAttenuation: 0
-      maxDuration: 1.242646
-      minDuration: 1.242646
+      maxDuration: 1.433832
+      minDuration: 1.433832
     - name: Press
       guid: c13b75741601234da71c4a26c8f385a8
       id: 1086439346
@@ -836,34 +910,8 @@ MonoBehaviour:
         guid: c13b75741601234da71c4a26c8f385a8
       Path: Events\Default Work Unit\SFX\UI\Press
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Rolly_Attack
-      guid: b2b962ac8937724cb03f12c348e25ca9
-      id: 736689176
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: ff0b084ed1e3e44e95d214517df38595
-      - ElementName: SFX
-        ObjectType: 4
-        guid: b91b8be590d0a241850375bc9f4ade83
-      - ElementName: Enemy
-        ObjectType: 4
-        guid: 6524e3307c64a045aaadd4dc5598c1e0
-      - ElementName: RollyPolly
-        ObjectType: 4
-        guid: eaa298879062e6489f9ee451d0083d67
-      - ElementName: Rolly_Attack
-        ObjectType: 3
-        guid: b2b962ac8937724cb03f12c348e25ca9
-      Path: Events\Default Work Unit\SFX\Enemy\RollyPolly\Rolly_Attack
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 1.433832
+      minDuration: 1.433832
     - name: Rolly_Die
       guid: 35264716bbf4b543bbe2f275f5e71bf3
       id: 4270670118
@@ -888,34 +936,8 @@ MonoBehaviour:
         guid: 35264716bbf4b543bbe2f275f5e71bf3
       Path: Events\Default Work Unit\SFX\Enemy\RollyPolly\Rolly_Die
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Rolly_TakeDamage
-      guid: 7c39dc4562d4d643872c18020d20588a
-      id: 1889715514
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: ff0b084ed1e3e44e95d214517df38595
-      - ElementName: SFX
-        ObjectType: 4
-        guid: b91b8be590d0a241850375bc9f4ade83
-      - ElementName: Enemy
-        ObjectType: 4
-        guid: 6524e3307c64a045aaadd4dc5598c1e0
-      - ElementName: RollyPolly
-        ObjectType: 4
-        guid: eaa298879062e6489f9ee451d0083d67
-      - ElementName: Rolly_TakeDamage
-        ObjectType: 3
-        guid: 7c39dc4562d4d643872c18020d20588a
-      Path: Events\Default Work Unit\SFX\Enemy\RollyPolly\Rolly_TakeDamage
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 0.440271
+      minDuration: 0.440271
     - name: RollyPolly
       guid: eaa298879062e6489f9ee451d0083d67
       id: 3072444211
@@ -956,6 +978,43 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: STOPALL_local
+      guid: 6393bf8a80e7e54a9f93fb783190bed4
+      id: 3853498466
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ff0b084ed1e3e44e95d214517df38595
+      - ElementName: STOPALL_local
+        ObjectType: 3
+        guid: 6393bf8a80e7e54a9f93fb783190bed4
+      Path: Events\Default Work Unit\STOPALL_local
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: TEST
+      guid: 63f507b7d28e414286d43be7ae10c327
+      id: 3157003241
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ff0b084ed1e3e44e95d214517df38595
+      - ElementName: SFX
+        ObjectType: 4
+        guid: b91b8be590d0a241850375bc9f4ade83
+      - ElementName: TEST
+        ObjectType: 3
+        guid: 63f507b7d28e414286d43be7ae10c327
+      Path: Events\Default Work Unit\SFX\TEST
+      maxAttenuation: 0
+      maxDuration: 1
+      minDuration: 1
     - name: UI
       guid: 651d4df59f97954eb5273ba35a1b2b71
       id: 1551306167
@@ -999,9 +1058,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Wasp_Attack
-      guid: 061b81db4ac2bd4e9a7817162858cf8a
-      id: 3932795119
+    - name: Wasp_Buzz
+      guid: 5278fb859565c34b82df425d95f9c882
+      id: 733302340
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -1018,13 +1077,13 @@ MonoBehaviour:
       - ElementName: Wasp
         ObjectType: 4
         guid: bd91038c2c725842960dc3b8089b507d
-      - ElementName: Wasp_Attack
+      - ElementName: Wasp_Buzz
         ObjectType: 3
-        guid: 061b81db4ac2bd4e9a7817162858cf8a
-      Path: Events\Default Work Unit\SFX\Enemy\Wasp\Wasp_Attack
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+        guid: 5278fb859565c34b82df425d95f9c882
+      Path: Events\Default Work Unit\SFX\Enemy\Wasp\Wasp_Buzz
+      maxAttenuation: 20
+      maxDuration: 14.705646
+      minDuration: 14.705646
     - name: Wasp_Die
       guid: 148c9574aa1a5046bbfefd2bc5b43e35
       id: 994571083
@@ -1049,11 +1108,11 @@ MonoBehaviour:
         guid: 148c9574aa1a5046bbfefd2bc5b43e35
       Path: Events\Default Work Unit\SFX\Enemy\Wasp\Wasp_Die
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Wasp_TakeDamage
-      guid: 052129d371ff7d408dbd7bc4b5492081
-      id: 2772886561
+      maxDuration: 0.68825
+      minDuration: 0.68825
+    - name: Win_Stinger
+      guid: 36ef86fcf81bc744b45cea552cda425f
+      id: 1332089670
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -1061,22 +1120,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: ff0b084ed1e3e44e95d214517df38595
-      - ElementName: SFX
+      - ElementName: MX
         ObjectType: 4
-        guid: b91b8be590d0a241850375bc9f4ade83
-      - ElementName: Enemy
-        ObjectType: 4
-        guid: 6524e3307c64a045aaadd4dc5598c1e0
-      - ElementName: Wasp
-        ObjectType: 4
-        guid: bd91038c2c725842960dc3b8089b507d
-      - ElementName: Wasp_TakeDamage
+        guid: c1c2ba883fd3f74084d7af16c191d99b
+      - ElementName: Win_Stinger
         ObjectType: 3
-        guid: 052129d371ff7d408dbd7bc4b5492081
-      Path: Events\Default Work Unit\SFX\Enemy\Wasp\Wasp_TakeDamage
+        guid: 36ef86fcf81bc744b45cea552cda425f
+      Path: Events\Default Work Unit\MX\Win_Stinger
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 11
+      minDuration: 11
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -1103,8 +1156,106 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 1d23add6dbc81041b0a498c7cfd2bc14
     GuidInternal: 
-    m_lastTime: -8585780900148501997
-    List: []
+    m_lastTime: -8585780738508852918
+    List:
+    - name: Music_State
+      guid: 87b54c064986654ab82f3044007f2d36
+      id: 3826569560
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1d23add6dbc81041b0a498c7cfd2bc14
+      - ElementName: Music_State
+        ObjectType: 9
+        guid: 87b54c064986654ab82f3044007f2d36
+      Path: States\Default Work Unit\Music_State
+      values:
+      - name: Attack
+        guid: c6ed0fa201bec14da8c108ae606ef7b9
+        id: 180661997
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 1d23add6dbc81041b0a498c7cfd2bc14
+        - ElementName: Music_State
+          ObjectType: 9
+          guid: 87b54c064986654ab82f3044007f2d36
+        - ElementName: Attack
+          ObjectType: 8
+          guid: c6ed0fa201bec14da8c108ae606ef7b9
+      - name: HP
+        guid: 603d81e47c8d7148a3a4cc340b2b0b69
+        id: 1769415205
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 1d23add6dbc81041b0a498c7cfd2bc14
+        - ElementName: Music_State
+          ObjectType: 9
+          guid: 87b54c064986654ab82f3044007f2d36
+        - ElementName: HP
+          ObjectType: 8
+          guid: 603d81e47c8d7148a3a4cc340b2b0b69
+      - name: NA
+        guid: eb9cfbfaf6c04b41b7c7f7fd8caf1aa3
+        id: 1668749442
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 1d23add6dbc81041b0a498c7cfd2bc14
+        - ElementName: Music_State
+          ObjectType: 9
+          guid: 87b54c064986654ab82f3044007f2d36
+        - ElementName: NA
+          ObjectType: 8
+          guid: eb9cfbfaf6c04b41b7c7f7fd8caf1aa3
+      - name: None
+        guid: ac101d5c7b0673479c9b12f42801e87c
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 1d23add6dbc81041b0a498c7cfd2bc14
+        - ElementName: Music_State
+          ObjectType: 9
+          guid: 87b54c064986654ab82f3044007f2d36
+        - ElementName: None
+          ObjectType: 8
+          guid: ac101d5c7b0673479c9b12f42801e87c
+      - name: Speed
+        guid: 2370814699d16e4483125e47fa1007fe
+        id: 640949982
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 1d23add6dbc81041b0a498c7cfd2bc14
+        - ElementName: Music_State
+          ObjectType: 9
+          guid: 87b54c064986654ab82f3044007f2d36
+        - ElementName: Speed
+          ObjectType: 8
+          guid: 2370814699d16e4483125e47fa1007fe
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -1117,7 +1268,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 57a4323b65effb4b9560843ea842fb18
     GuidInternal: 
-    m_lastTime: -8585780900148602027
+    m_lastTime: -8585780738508772901
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -1133,9 +1284,9 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8585780900148662041
     List: []
-  ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 05000000dd000000de000000df00000007010000080100007d0100007e01000081060000
-  AutoSyncSelection: 0
-  autoPopulateEnabled: 1
+  ExpandedFileSystemItemIds: 010000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000e0000000f00000013000000160000001a0000001b0000001c0000001d0000001f00000020000000210000002200000023000000260000002800000031000000330000003500000038000000dd000000de000000df00000007010000080100007d0100007e01000081060000
+  ExpandedWaapiItemIds: 010000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f00000013000000160000001a0000001b0000001c0000001d0000001f0000002100000022000000230000002400000026000000270000002800000031000000320000003300000035000000360000003800000039000000dd000000de000000df00000007010000080100007d0100007e01000081060000
+  AutoSyncSelection: 1
+  autoPopulateEnabled: 0
   currentDataSource: 0
   CurrentPluginConfig: 
