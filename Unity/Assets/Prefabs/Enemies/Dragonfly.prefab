@@ -218,7 +218,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4395539471820393111
 Transform:
   m_ObjectHideFlags: 0
@@ -294,9 +294,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statsToApply:
-    health: -1
-    speed: 15
-    strength: 1
+    health: 0.8
+    speed: 5
+    strength: -2
 --- !u!114 &4395539471820393110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,7 +310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxStats:
-    health: 5
+    health: 2.5
     speed: 8
     strength: 2
   enemyType: 0

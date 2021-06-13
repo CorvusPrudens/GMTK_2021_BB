@@ -14,6 +14,7 @@ public class PlayerDash : MonoBehaviour
     private float dashTime;
     private bool isDashing;
     private Vector2 dashDirection;
+    private float speedMultiplier = 1.5f;
 
 
     // Start is called before the first frame update
@@ -69,7 +70,7 @@ public class PlayerDash : MonoBehaviour
         {
             dashTime -= Time.deltaTime;
             playerCollider.enabled = false;
-            rb.velocity = dashDirection * stats.maxStats.speed;
+            rb.velocity = dashDirection * stats.maxStats.speed * speedMultiplier;
         }
     }
 
