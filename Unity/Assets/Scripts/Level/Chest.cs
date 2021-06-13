@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spawn : MonoBehaviour
+public class Chest : MonoBehaviour
 {
-
     // Start is called before the first frame update
     void Start()
     {
@@ -15,11 +14,5 @@ public class Spawn : MonoBehaviour
     void Update()
     {
         
-    }
-
-    void OnDrawGizmos()
-    {
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, 0.5f);
     }
 }
