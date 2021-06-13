@@ -87,9 +87,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statsToApply:
-    health: 3
-    speed: -5
-    strength: -1
+    health: 1.35
+    speed: -1.5
+    strength: -2
 --- !u!114 &8581120017940343689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,9 +103,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxStats:
-    health: 20
+    health: 12.5
     speed: 5
-    strength: 2
+    strength: 1
   enemyType: 1
 --- !u!114 &4535154915568050415
 MonoBehaviour:

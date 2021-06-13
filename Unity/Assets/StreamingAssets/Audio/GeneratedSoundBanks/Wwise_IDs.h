@@ -13,10 +13,10 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID DRAGON_ATTACK = 482261039U;
         static const AkUniqueID DRAGON_DASH = 820321623U;
         static const AkUniqueID DRAGON_DIE = 1541504395U;
-        static const AkUniqueID DRAGON_TAKEDAMAGE = 3037277281U;
+        static const AkUniqueID DRAGON_IDLE = 3496330497U;
+        static const AkUniqueID ENEMY_TAKEDAMAGE = 842135496U;
         static const AkUniqueID HOVER = 3753593413U;
         static const AkUniqueID LEVEL_PLAY = 70953078U;
         static const AkUniqueID PLAYER_ATTACK = 2824512041U;
@@ -30,12 +30,10 @@ namespace AK
         static const AkUniqueID PLAYER_TAKEDAMAGE = 3870290027U;
         static const AkUniqueID PLAYER_UNLOCKDOOR = 1891408857U;
         static const AkUniqueID PRESS = 1086439346U;
-        static const AkUniqueID ROLLY_ATTACK = 736689176U;
         static const AkUniqueID ROLLY_DIE = 4270670118U;
-        static const AkUniqueID ROLLY_TAKEDAMAGE = 1889715514U;
-        static const AkUniqueID WASP_ATTACK = 3932795119U;
+        static const AkUniqueID STOPALL_LOCAL = 3853498466U;
         static const AkUniqueID WASP_DIE = 994571083U;
-        static const AkUniqueID WASP_TAKEDAMAGE = 2772886561U;
+        static const AkUniqueID WASP_IDLE = 1051796161U;
         static const AkUniqueID WIN_STINGER = 1332089670U;
     } // namespace EVENTS
 
@@ -65,6 +63,7 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID ENEMY_BUS = 1411040840U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MX_BUS = 33300213U;
         static const AkUniqueID SFX_BUS = 213475909U;

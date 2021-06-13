@@ -6,6 +6,7 @@ public class DamageEnemy : MonoBehaviour
 {
     public GameObject player;
     private PlayerStats playerStats;
+    private float multiplier = 0.25f;
 
     private void Awake()
     {
@@ -17,7 +18,7 @@ public class DamageEnemy : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             EnemyStats enemy = collision.gameObject.GetComponent<EnemyStats>();
-            enemy.TakeDamage(playerStats.maxStats.strength);
+            enemy.TakeDamage(playerStats.maxStats.strength * multiplier);
         }
     }
 }
