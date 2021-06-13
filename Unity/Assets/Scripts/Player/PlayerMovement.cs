@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float moveSpeed;
     private float inputVertical;
     private float inputHorizontal;
+    private Rigidbody2D rb;
     [HideInInspector] public Vector2 movementVector;
     [HideInInspector] public bool canMove;
 
@@ -124,9 +125,10 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         canMove = true;
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (canMove)
         {
@@ -142,6 +144,7 @@ public class PlayerMovement : MonoBehaviour
 
         ManageSprites(movementVector);
 
-        transform.Translate(movementVector * moveSpeed * Time.deltaTime);
+        //transform.Translate(movementVector * moveSpeed * Time.deltaTime);
+        rb.velocity = (movementVector * moveSpeed);
     }
 }

@@ -91,7 +91,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3246522613573677960}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pit
   m_TagString: Untagged
   m_Icon: {fileID: 0}

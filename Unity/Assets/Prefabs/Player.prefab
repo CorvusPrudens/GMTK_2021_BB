@@ -4140,7 +4140,7 @@ GameObject:
   - component: {fileID: 7235167978934911336}
   - component: {fileID: 771845245}
   - component: {fileID: 1576542239}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -4184,7 +4184,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &7235167978934911339
 BoxCollider2D:
@@ -4229,6 +4229,25 @@ MonoBehaviour:
     speed: 15
     strength: 5
   currentHealth: 0
+  speedAdjustment: 41.26
+  speedState:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  strengthState:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  healthState:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!114 &7235167978934911336
 MonoBehaviour:
   m_ObjectHideFlags: 0
