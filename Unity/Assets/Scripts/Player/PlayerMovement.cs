@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject spriteUp;
     public GameObject spriteDown;
 
+    public GameObject attackObj;
+
     enum Direction {
         UP,
         DOWN,
@@ -96,12 +98,19 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    void Attack()
+    {
+        AnimateAttack atk = attackObj.GetComponent<AnimateAttack>();
+        if (!atk.IsAttacking())
+            atk.Attack();
+    }
+
     Direction GetDirection(Vector2 v)
     {
         float angle = Mathf.Atan2(v.y, v.x);
-        if (angle > -Mathf.PI * 0.25 && angle < Mathf.PI * 0.25) return Direction.RIGHT;
-        else if (angle > Mathf.PI * 0.25 && angle < Mathf.PI * 0.75) return Direction.UP;
-        else if (angle > Mathf.PI * 0.75 || angle < -Mathf.PI * 0.75) return Direction.LEFT;
+        if (angle >= -Mathf.PI * 0.25 && angle < Mathf.PI * 0.25) return Direction.RIGHT;
+        else if (angle >= Mathf.PI * 0.25 && angle < Mathf.PI * 0.75) return Direction.UP;
+        else if (angle >= Mathf.PI * 0.75 || angle < -Mathf.PI * 0.75) return Direction.LEFT;
         return Direction.DOWN;
     }
 
@@ -146,6 +155,11 @@ public class PlayerMovement : MonoBehaviour
         canMove = true;
         trail.Add((Vector2)  transform.position);
         rb = GetComponent<Rigidbody2D>();
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown("space")) Attack();
     }
 
     void FixedUpdate()
