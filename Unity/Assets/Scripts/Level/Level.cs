@@ -31,6 +31,8 @@ public class Level : MonoBehaviour
 
     GameObject[,] GennedRooms;
 
+    public GameObject[] RoomPrefabs;
+
     static float XFAC = 18;
     static float YFAC = 13;
 
@@ -233,8 +235,39 @@ public class Level : MonoBehaviour
         return (direction, pos, smallest);
     }
 
+    int FindMatch(List<Door.Position> doorlist)
+    {
+        List<Door.Position> cleanlist = new List<Door.Position>();
+        foreach (Door.Position p in doorlist)
+        {
+            if ((int) p > 3)
+                cleanlist.Add((Door.Position) ((int) p - 4));
+            else 
+                cleanlist.Add(p);
+        }
+        for (int i = 0; i < RoomPrefabs.Length; i++)
+        {
+            List<Door.Position> templist = RoomPrefabs[i].GetComponent<Room>().GetDoors();
+            if (templist.Count == cleanlist.Count)
+            {
+                
+                for (int j = 0; j < cleanlist.Count; j++)
+                {
+                    if (!templist.Contains(cleanlist[j]))
+                    {
+                        return -1;
+                    }
+                }
+                Debug.Log("GOT HERE");
+                return i;
+            }
+        }
+        return -1;
+    }
+
     void GenerateLevel(int maxAttempts=10)
     {
+
         int attempts = 1;
         float[] scores = new float[maxAttempts];
         List<Room[,]> generated = new List<Room[,]>();
@@ -356,8 +389,14 @@ public class Level : MonoBehaviour
             {
                 // NOTE -- temporary for testing, needs to be replaced by real
                 // room selection code
-                GameObject temproom = Instantiate(RoomTemplate);
-                
+                int INDEX = FindMatch(generated[idx][x, y].doorList);
+
+                GameObject temproom = new GameObject();
+                if (INDEX == -1)
+                   temproom = Instantiate(RoomTemplate);
+                else
+                    temproom = Instantiate(RoomPrefabs[INDEX]);
+
                 temproom.transform.SetParent(parent);
                 temproom.transform.position = new Vector3(x * XFAC, -y * YFAC, 0);
                 temproom.GetComponent<Room>().cam = cam;
@@ -396,17 +435,16 @@ public class Level : MonoBehaviour
                         d.GetComponent<Door>().position = Door.Lock(d.GetComponent<Door>().position);
                         continue;
                     }
-                    if (!doorlist.Contains(temppos))
-                    {
-                        d.gameObject.SetActive(false);
-                    }
+                    // if (!doorlist.Contains(temppos))
+                    // {
+                    //     d.gameObject.SetActive(false);
+                    // }
                 }
 
                 // temproom.GetComponent<Room>().FadeIn();
                 GennedRooms[x,y] = temproom;
             }
         }
-
         // foreach (Room[,] r in generated)
         // {
         //     CleanRooms(r);
