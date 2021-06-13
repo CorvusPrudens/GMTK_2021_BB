@@ -200,4 +200,11 @@ public class PlayerMovement : MonoBehaviour
         //do something
         print("RESET");
     }
+
+    public void Knockback()
+    {
+        rb.AddForce(rb.velocity * -4, ForceMode2D.Impulse);
+        rb.velocity = new Vector2(0, 0);
+        print("KNOCKBACK");
+    }
 }

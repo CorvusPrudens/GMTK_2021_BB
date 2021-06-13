@@ -54,6 +54,7 @@ public class PlayerStats : MonoBehaviour, IDamageable, IUpdateStats
     public void TakeDamage(float damageTaken)
     {
         currentHealth -= damageTaken;
+        movement.Knockback();
         EventBroker.CallUpdateStatsUI();
 
         AkSoundEngine.PostEvent("Player_TakeDamage", this.gameObject);
