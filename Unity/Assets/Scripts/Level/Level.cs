@@ -12,7 +12,19 @@ public class Level : MonoBehaviour
     [SerializeField, Range(3, 10)]
     public int height = 5;
 
+    public bool fadeAll = false;
+    bool prevFadeAll = false;
+
+    // TODO -- remove debug elements
+    public GameObject S;
+    public GameObject E;
+
+    public GameObject cam;
+
     Room[,] RoomList;
+
+    public GameObject PlayerTemplate;
+    GameObject player;
 
     bool ValidOption(Room[,] rooms, RoomPosition pos, List<RoomPosition> excluded, bool checkVisited=true)
     {
@@ -51,7 +63,28 @@ public class Level : MonoBehaviour
                 // rooms[i,j] = tempr;
                 // Instantiate(rooms[i,j]);
                 rooms[i,j] = gameObject.AddComponent<Room>();
+                rooms[i,j].player = player;
+                rooms[i,j].cam = cam;
             }
+        }
+    }
+
+    // void CleanRooms(Room[,] rooms)
+    // {
+    //     for (int i = 0; i < rooms.GetLength(0); i++)
+    //     {
+    //         for (int j = 0; j < rooms.GetLength(1); j++)
+    //         {
+    //             Destroy(rooms[i,j]);
+    //         }
+    //     }
+    // }
+    void CleanRooms()
+    {
+        Component[] r = GetComponents(typeof(Room));
+        foreach (Component room in r)
+        {
+            Destroy(room);
         }
     }
     
@@ -317,17 +350,22 @@ public class Level : MonoBehaviour
                 GameObject temproom = Instantiate(RoomTemplate);
                 temproom.transform.SetParent(parent);
                 temproom.transform.position = new Vector3(x * 17, -y * 11, 0);
+                temproom.GetComponent<Room>().cam = cam;
+                temproom.GetComponent<Room>().player = player;
                 GameObject doorcontainer = temproom.GetComponent<Room>().Doors;
                 List<Door.Position> doorlist = generated[idx][x, y].doorList;
 
                 if (generated[idx][x, y].type == "start")
                 {
-                    temproom.transform.GetChild(temproom.transform.childCount - 1).GetComponent<SpriteRenderer>().color = Color.gray;
+                    // temproom.transform.GetChild(temproom.transform.childCount - 1).GetComponent<SpriteRenderer>().color = Color.gray;
+                    S.transform.position = temproom.transform.position;
+                    player.transform.position = temproom.transform.position;
                 }
 
                 if (generated[idx][x, y].type == "end")
                 {
-                    temproom.transform.GetChild(temproom.transform.childCount - 1).GetComponent<SpriteRenderer>().color = Color.black;
+                    // temproom.transform.GetChild(temproom.transform.childCount - 1).GetComponent<SpriteRenderer>().color = Color.black;
+                    E.transform.position = temproom.transform.position;
                 }
 
                 if (generated[idx][x, y].dead_end)
@@ -344,8 +382,8 @@ public class Level : MonoBehaviour
                     Door.Position temppos = d.GetComponent<Door>().position;
                     if (doorlist.Contains(Door.Lock(temppos)))
                     {
-                        d.GetChild(0).GetComponent<SpriteRenderer>().color = Color.red;
-                        Debug.Log("GOT HERE");
+                        // d.GetChild(0).GetComponent<SpriteRenderer>().color = Color.red;
+                        d.GetComponent<Door>().position = Door.Lock(d.GetComponent<Door>().position);
                         continue;
                     }
                     if (!doorlist.Contains(temppos))
@@ -354,20 +392,38 @@ public class Level : MonoBehaviour
                     }
                 }
 
-                temproom.GetComponent<Room>().FadeIn();
+                // temproom.GetComponent<Room>().FadeIn();
 
             }
         }
+
+        // foreach (Room[,] r in generated)
+        // {
+        //     CleanRooms(r);
+        // }
+
     }
 
     void Start()
     {
+        player = Instantiate(PlayerTemplate);
         GenerateLevel();
+        CleanRooms();
     }
 
     
     void Update()
     {
-        
+        if (fadeAll != prevFadeAll)
+        {
+            prevFadeAll = fadeAll;
+            foreach (Transform t in transform.GetChild(0))
+            {
+                if (fadeAll)
+                    t.gameObject.GetComponent<Room>().FadeIn();
+                else
+                    t.gameObject.GetComponent<Room>().FadeOut();
+            }
+        }
     }
 }

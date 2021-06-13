@@ -71,6 +71,7 @@ public class Door : MonoBehaviour
         switch (position)
         {
             case Position.UP:
+                transform.eulerAngles = new Vector3(0, 0, 0);
                 break;
             case Position.DOWN:
                 transform.eulerAngles = new Vector3(0, 0, 180);
@@ -84,18 +85,19 @@ public class Door : MonoBehaviour
 
             case Position.UP_L:
                 rend.sprite = lockedSprite;
+                transform.eulerAngles = new Vector3(0, 0, 180);
                 break;
             case Position.DOWN_L:
                 rend.sprite = lockedSprite;
-                transform.eulerAngles = new Vector3(0, 0, 180);
+                transform.eulerAngles = new Vector3(0, 0, 0);
                 break;
             case Position.LEFT_L:
                 rend.sprite = lockedSprite;
-                transform.eulerAngles = new Vector3(0, 0, 90);
+                transform.eulerAngles = new Vector3(0, 0, -90);
                 break;
             case Position.RIGHT_L:
                 rend.sprite = lockedSprite;
-                transform.eulerAngles = new Vector3(0, 0, -90);
+                transform.eulerAngles = new Vector3(0, 0, 90);
                 break;
         }
     }
