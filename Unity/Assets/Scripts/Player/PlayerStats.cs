@@ -69,6 +69,7 @@ public class PlayerStats : MonoBehaviour, IDamageable, IUpdateStats
     public  void Kill()
     {
         AkSoundEngine.PostEvent("Player_Die", this.gameObject);
+        AkSoundEngine.PostEvent("Death_Stinger", this.gameObject);
 
         Destroy(gameObject);
     }

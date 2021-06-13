@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID DEATH_STINGER = 1015288770U;
         static const AkUniqueID DRAGON_DASH = 820321623U;
         static const AkUniqueID DRAGON_DIE = 1541504395U;
         static const AkUniqueID DRAGON_IDLE = 3496330497U;

@@ -39,7 +39,7 @@ public class EnemyStats : MonoBehaviour, IDamageable
         }
         else if (enemyType == EnemyType.Dragonfly)
         {
-            AkSoundEngine.PostEvent("Dragon_Die", this.gameObject);
+            //AkSoundEngine.PostEvent("Dragon_Die", this.gameObject);
             soul = Instantiate(DragonSoul, transform.position, new Quaternion(), p.transform.parent);
         }
         else if (enemyType == EnemyType.RolyPoly)
