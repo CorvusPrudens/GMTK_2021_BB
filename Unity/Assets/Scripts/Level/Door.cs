@@ -9,6 +9,10 @@ public class Door : MonoBehaviour
     public bool isLocked = false;
     public float HP = 10;
 
+    public Sprite lockedSprite;
+    public Sprite brokenSprite;
+    public Sprite openSprite;
+
     public enum Position {
         UP,
         DOWN,
@@ -61,9 +65,49 @@ public class Door : MonoBehaviour
 
     public Position position = Position.UP;
 
+    void SetVisuals()
+    {
+        SpriteRenderer rend = transform.GetChild(0).GetComponent<SpriteRenderer>();
+        switch (position)
+        {
+            case Position.UP:
+                break;
+            case Position.DOWN:
+                transform.eulerAngles = new Vector3(0, 0, 180);
+                break;
+            case Position.LEFT:
+                transform.eulerAngles = new Vector3(0, 0, 90);
+                break;
+            case Position.RIGHT:
+                transform.eulerAngles = new Vector3(0, 0, -90);
+                break;
+
+            case Position.UP_L:
+                rend.sprite = lockedSprite;
+                break;
+            case Position.DOWN_L:
+                rend.sprite = lockedSprite;
+                transform.eulerAngles = new Vector3(0, 0, 180);
+                break;
+            case Position.LEFT_L:
+                rend.sprite = lockedSprite;
+                transform.eulerAngles = new Vector3(0, 0, 90);
+                break;
+            case Position.RIGHT_L:
+                rend.sprite = lockedSprite;
+                transform.eulerAngles = new Vector3(0, 0, -90);
+                break;
+        }
+    }
+
     void Start()
     {
+        SetVisuals();
+    }
 
+    void OnEnable()
+    {
+        SetVisuals();
     }
 
     void Update()
