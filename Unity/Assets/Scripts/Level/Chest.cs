@@ -36,6 +36,7 @@ public class Chest : MonoBehaviour
     {
         renderer.sprite = openSprite;
         isOpen = true;
+        AkSoundEngine.PostEvent("Player_OpenChest", this.gameObject);
 
         if (chestType == ChestType.HP)
         {
