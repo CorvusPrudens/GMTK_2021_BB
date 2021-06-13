@@ -44,12 +44,14 @@ public class Chest : MonoBehaviour
 
         if (chestType == ChestType.HP)
         {
+            AkSoundEngine.PostEvent("Player_CollectSoul", this.gameObject);
             stats.maxStats.health += healthAwarded;
             stats.currentHealth += healthAwarded;
             DisplaySprite(heart);
         }
         else if(chestType == ChestType.Key)
         {
+            AkSoundEngine.PostEvent("Player_CollectKey", this.gameObject);
             stats.keys++;
             DisplaySprite(key);
         }
