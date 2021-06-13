@@ -5,9 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class ResetGame : MonoBehaviour
 {
-    private void Start()
+    private void Awake()
+    {
+        EventBroker.resetGame += DoIt;
+    }
+
+    private void DoIt()
     {
         StartCoroutine(Reset());
+
     }
 
     private IEnumerator Reset()
